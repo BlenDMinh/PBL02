@@ -1,9 +1,4 @@
-D:/coding/c++/year2/PBL02/build/CMakeFiles/Experimental.dir
-D:/coding/c++/year2/PBL02/build/CMakeFiles/Nightly.dir
-D:/coding/c++/year2/PBL02/build/CMakeFiles/Continuous.dir
-D:/coding/c++/year2/PBL02/build/CMakeFiles/NightlyMemoryCheck.dir
-D:/coding/c++/year2/PBL02/build/CMakeFiles/CMakeLists.dir
-D:/coding/c++/year2/PBL02/build/CMakeFiles/PACKAGE.dir
-D:/coding/c++/year2/PBL02/build/CMakeFiles/RUN_TESTS.dir
+D:/coding/c++/year2/PBL02/build/CMakeFiles/UltralightSDK.dir
+D:/coding/c++/year2/PBL02/build/CMakeFiles/MyApp.dir
 D:/coding/c++/year2/PBL02/build/CMakeFiles/ALL_BUILD.dir
 D:/coding/c++/year2/PBL02/build/CMakeFiles/ZERO_CHECK.dir

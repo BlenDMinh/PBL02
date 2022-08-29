@@ -1,0 +1,10 @@
+^D:\CODING\C++\YEAR2\PBL02\BUILD\CMAKEFILES\88984D64A6BE05D9A8CE609D8E1D1B0C\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/coding/c++/year2/PBL02 -BD:/coding/c++/year2/PBL02/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/coding/c++/year2/PBL02/build/MyApp.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

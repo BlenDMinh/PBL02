@@ -1,12 +1,9 @@
 #include "MyApp.h"
 
-#define WINDOW_WIDTH  600
-#define WINDOW_HEIGHT 400
+#define WINDOW_WIDTH  1500
+#define WINDOW_HEIGHT 800
 
 MyApp::MyApp() {
-    ///
-    /// Create our main App instance.
-    ///
     app_ = App::Create();
 
     ///

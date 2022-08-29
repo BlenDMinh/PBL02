@@ -105,12 +105,12 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\180643e11ee58b9278e957bd87bdc852\UltralightSDK-mkdir.rule">
+    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\f0d8e8026000797686715ef9c3d96ff0\UltralightSDK-mkdir.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-mkdir
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -119,13 +119,13 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Creating directories for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Release -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-mkdir
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -134,13 +134,13 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Creating directories for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/MinSizeRel -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-mkdir
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -149,13 +149,13 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Creating directories for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/RelWithDebInfo -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-mkdir
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -164,25 +164,25 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\180643e11ee58b9278e957bd87bdc852\UltralightSDK-download.rule">
+    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\f0d8e8026000797686715ef9c3d96ff0\UltralightSDK-download.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (download, verify and extract) for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 cd D:\coding\c++\year2\PBL02\build
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-download
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -190,8 +190,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing download step (download, verify and extract) for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
@@ -199,13 +199,13 @@ cd D:\coding\c++\year2\PBL02\build
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-download
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -213,8 +213,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Performing download step (download, verify and extract) for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
@@ -222,13 +222,13 @@ cd D:\coding\c++\year2\PBL02\build
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-download
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -236,8 +236,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Performing download step (download, verify and extract) for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
@@ -245,13 +245,13 @@ cd D:\coding\c++\year2\PBL02\build
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-download
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -259,18 +259,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\180643e11ee58b9278e957bd87bdc852\UltralightSDK-update.rule">
+    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\f0d8e8026000797686715ef9c3d96ff0\UltralightSDK-update.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No update step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-update
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-update
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -278,14 +278,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No update step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-update
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-update
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -293,14 +293,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No update step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-update
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-update
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -308,14 +308,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No update step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-update
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-update
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -323,18 +323,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\180643e11ee58b9278e957bd87bdc852\UltralightSDK-patch.rule">
+    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\f0d8e8026000797686715ef9c3d96ff0\UltralightSDK-patch.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-patch
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -342,14 +342,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No patch step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-patch
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -357,14 +357,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No patch step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-patch
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -372,14 +372,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No patch step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-patch
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -387,22 +387,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\180643e11ee58b9278e957bd87bdc852\UltralightSDK-configure.rule">
+    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\f0d8e8026000797686715ef9c3d96ff0\UltralightSDK-configure.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No configure step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 cd D:\coding\c++\year2\PBL02\build\SDK
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-configure
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -410,8 +410,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No configure step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
@@ -419,9 +419,9 @@ cd D:\coding\c++\year2\PBL02\build\SDK
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-configure
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -429,8 +429,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No configure step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
@@ -438,9 +438,9 @@ cd D:\coding\c++\year2\PBL02\build\SDK
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-configure
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -448,8 +448,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No configure step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
@@ -457,9 +457,9 @@ cd D:\coding\c++\year2\PBL02\build\SDK
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-configure
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -467,22 +467,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\180643e11ee58b9278e957bd87bdc852\UltralightSDK-build.rule">
+    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\f0d8e8026000797686715ef9c3d96ff0\UltralightSDK-build.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No build step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 cd D:\coding\c++\year2\PBL02\build\SDK
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -490,8 +490,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No build step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
@@ -499,9 +499,9 @@ cd D:\coding\c++\year2\PBL02\build\SDK
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -509,8 +509,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No build step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
@@ -518,9 +518,9 @@ cd D:\coding\c++\year2\PBL02\build\SDK
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -528,8 +528,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No build step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
@@ -537,9 +537,9 @@ cd D:\coding\c++\year2\PBL02\build\SDK
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -547,22 +547,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\180643e11ee58b9278e957bd87bdc852\UltralightSDK-install.rule">
+    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\f0d8e8026000797686715ef9c3d96ff0\UltralightSDK-install.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No install step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 cd D:\coding\c++\year2\PBL02\build\SDK
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-install
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -570,8 +570,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No install step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
@@ -579,9 +579,9 @@ cd D:\coding\c++\year2\PBL02\build\SDK
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-install
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -589,8 +589,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No install step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
@@ -598,9 +598,9 @@ cd D:\coding\c++\year2\PBL02\build\SDK
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-install
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -608,8 +608,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No install step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
@@ -617,9 +617,9 @@ cd D:\coding\c++\year2\PBL02\build\SDK
 if %errorlevel% neq 0 goto :cmEnd
 D:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-install
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -627,20 +627,20 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\3b2ee6379975585533a004adcd8d209f\UltralightSDK-complete.rule">
+    <CustomBuild Include="D:\coding\c++\year2\PBL02\build\CMakeFiles\54e2c5922f26dc47e6863e4125a7e80d\UltralightSDK-complete.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/coding/c++/year2/PBL02/build/CMakeFiles/$(Configuration)
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/coding/c++/year2/PBL02/build/CMakeFiles/Debug
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/CMakeFiles/$(Configuration)/UltralightSDK-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/CMakeFiles/Debug/UltralightSDK-complete
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-done
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -648,16 +648,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-install;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-mkdir;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-download;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-update;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-patch;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-configure;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\$(Configuration)\UltralightSDK-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-install;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-mkdir;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-download;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-update;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-patch;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-configure;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\Debug\UltralightSDK-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Completed 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/coding/c++/year2/PBL02/build/CMakeFiles/$(Configuration)
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/coding/c++/year2/PBL02/build/CMakeFiles/Release
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/CMakeFiles/$(Configuration)/UltralightSDK-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/CMakeFiles/Release/UltralightSDK-complete
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-done
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -665,16 +665,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-install;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-mkdir;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-download;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-update;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-patch;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-configure;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\$(Configuration)\UltralightSDK-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-install;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-mkdir;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-download;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-update;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-patch;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-configure;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\Release\UltralightSDK-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Completed 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/coding/c++/year2/PBL02/build/CMakeFiles/$(Configuration)
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/coding/c++/year2/PBL02/build/CMakeFiles/MinSizeRel
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/CMakeFiles/$(Configuration)/UltralightSDK-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/CMakeFiles/MinSizeRel/UltralightSDK-complete
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-done
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -682,16 +682,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-install;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-mkdir;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-download;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-update;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-patch;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-configure;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\$(Configuration)\UltralightSDK-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-install;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-mkdir;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-download;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-update;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-patch;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-configure;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\MinSizeRel\UltralightSDK-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Completed 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/coding/c++/year2/PBL02/build/CMakeFiles/$(Configuration)
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/coding/c++/year2/PBL02/build/CMakeFiles/RelWithDebInfo
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/CMakeFiles/$(Configuration)/UltralightSDK-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/CMakeFiles/RelWithDebInfo/UltralightSDK-complete
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/$(Configuration)/UltralightSDK-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-done
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -699,8 +699,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-install;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-mkdir;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-download;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-update;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-patch;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-configure;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\$(Configuration)\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\$(Configuration)\UltralightSDK-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-install;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-mkdir;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-download;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-update;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-patch;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-configure;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\RelWithDebInfo\UltralightSDK-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -714,7 +714,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\$(Configuration)\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\Debug\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\UltralightSDK</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
@@ -726,7 +726,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\$(Configuration)\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\Release\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\UltralightSDK</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
@@ -738,7 +738,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\$(Configuration)\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\MinSizeRel\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\UltralightSDK</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
@@ -750,7 +750,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\$(Configuration)\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\RelWithDebInfo\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\UltralightSDK</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
@@ -761,7 +761,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <UseUtf8Encoding>Always</UseUtf8Encoding>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/coding/c++/year2/PBL02/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/coding/c++/year2/PBL02 -BD:/coding/c++/year2/PBL02/build --check-stamp-file D:/coding/c++/year2/PBL02/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/coding/c++/year2/PBL02 -BD:/coding/c++/year2/PBL02/build --check-stamp-file D:/coding/c++/year2/PBL02/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -769,12 +769,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\download.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCXXCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeRCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeSystem.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;D:\coding\c++\year2\PBL02\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeCXXCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeRCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeSystem.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;D:\coding\c++\year2\PBL02\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/coding/c++/year2/PBL02/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/coding/c++/year2/PBL02 -BD:/coding/c++/year2/PBL02/build --check-stamp-file D:/coding/c++/year2/PBL02/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/coding/c++/year2/PBL02 -BD:/coding/c++/year2/PBL02/build --check-stamp-file D:/coding/c++/year2/PBL02/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -782,12 +782,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\download.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCXXCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeRCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeSystem.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;D:\coding\c++\year2\PBL02\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeCXXCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeRCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeSystem.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;D:\coding\c++\year2\PBL02\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/coding/c++/year2/PBL02/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/coding/c++/year2/PBL02 -BD:/coding/c++/year2/PBL02/build --check-stamp-file D:/coding/c++/year2/PBL02/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/coding/c++/year2/PBL02 -BD:/coding/c++/year2/PBL02/build --check-stamp-file D:/coding/c++/year2/PBL02/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -795,12 +795,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\download.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCXXCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeRCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeSystem.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;D:\coding\c++\year2\PBL02\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeCXXCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeRCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeSystem.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;D:\coding\c++\year2\PBL02\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/coding/c++/year2/PBL02/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/coding/c++/year2/PBL02 -BD:/coding/c++/year2/PBL02/build --check-stamp-file D:/coding/c++/year2/PBL02/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/coding/c++/year2/PBL02 -BD:/coding/c++/year2/PBL02/build --check-stamp-file D:/coding/c++/year2/PBL02/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -808,7 +808,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\download.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeCXXCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeRCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.23.22060601-MSVC_2\CMakeSystem.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;D:\coding\c++\year2\PBL02\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeCXXCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeRCCompiler.cmake;D:\coding\c++\year2\PBL02\build\CMakeFiles\3.24.0\CMakeSystem.cmake;D:\coding\c++\year2\PBL02\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;D:\coding\c++\year2\PBL02\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\coding\c++\year2\PBL02\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>

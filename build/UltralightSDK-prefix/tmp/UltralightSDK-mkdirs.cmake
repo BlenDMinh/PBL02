@@ -17,3 +17,6 @@ set(configSubDirs Debug;Release;MinSizeRel;RelWithDebInfo)
 foreach(subDir IN LISTS configSubDirs)
     file(MAKE_DIRECTORY "D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp/${subDir}")
 endforeach()
+if(cfgdir)
+  file(MAKE_DIRECTORY "D:/coding/c++/year2/PBL02/build/UltralightSDK-prefix/src/UltralightSDK-stamp${cfgdir}") # cfgdir has leading slash
+endif()

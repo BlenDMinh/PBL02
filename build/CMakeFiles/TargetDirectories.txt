@@ -1,4 +1,0 @@
-D:/coding/c++/year2/PBL02/build/CMakeFiles/UltralightSDK.dir
-D:/coding/c++/year2/PBL02/build/CMakeFiles/MyApp.dir
-D:/coding/c++/year2/PBL02/build/CMakeFiles/ALL_BUILD.dir
-D:/coding/c++/year2/PBL02/build/CMakeFiles/ZERO_CHECK.dir

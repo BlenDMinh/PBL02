@@ -55,6 +55,7 @@ MyApp::MyApp() {
 }
 
 MyApp::~MyApp() {
+
 }
 
 void MyApp::Run() {
@@ -91,15 +92,53 @@ void MyApp::OnFinishLoading(ultralight::View* caller,
     ///
 }
 
+JSValueRef ButtonClick(JSContextRef ctx, JSObjectRef function, JSObjectRef thisObject, size_t argumentCount, const JSValueRef arguments[], JSValueRef* exception) {
+    const char* str = 
+    "document.getElementById('result').innerText = 'Ultralight rocks!'";
+  
+    // Create our string of JavaScript
+    JSStringRef script = JSStringCreateWithUTF8CString(str);
+
+    // Execute it with JSEvaluateScript, ignoring other parameters for now
+    JSEvaluateScript(ctx, script, 0, 0, 0, 0);
+
+    // Release our string (we only Release what we Create)
+    JSStringRelease(script);
+    return JSValueMakeNull(ctx);
+}
+
 void MyApp::OnDOMReady(ultralight::View* caller,
     uint64_t frame_id,
     bool is_main_frame,
     const String& url) {
-    ///
-    /// This is called when a frame's DOM has finished loading on the page.
-    ///
-    /// This is the best time to setup any JavaScript bindings.
-    ///
+    // Acquire the JS execution context for the current page.
+    //
+    // This call will lock the execution context for the current
+    // thread as long as the Ref<> is alive.
+    //
+    RefPtr<JSContext> context = caller->LockJSContext();
+
+    // Get the underlying JSContextRef for use with the
+    // JavaScriptCore C API.
+    JSContextRef ctx = context.get() -> ctx();
+
+    // Create a JavaScript String containing the name of our callback.
+    JSStringRef name = JSStringCreateWithUTF8CString("ButtonClick");
+
+    // Create a garbage-collected JavaScript function that is bound to our
+    // native C callback 'OnButtonClick()'.
+    JSObjectRef func = JSObjectMakeFunctionWithCallback(ctx, name, 
+                                                        ButtonClick);
+
+    // Get the global JavaScript object (aka 'window')
+    JSObjectRef globalObj = JSContextGetGlobalObject(ctx);
+
+    // Store our function in the page's global JavaScript object so that it
+    // accessible from the page as 'OnButtonClick()'.
+    JSObjectSetProperty(ctx, globalObj, name, func, 0, 0);
+
+    // Release the JavaScript String we created earlier.
+    JSStringRelease(name);
 }
 
 void MyApp::OnChangeCursor(ultralight::View* caller,

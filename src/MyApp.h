@@ -1,5 +1,8 @@
 #pragma once
 #include <AppCore/AppCore.h>
+#include <Ultralight/Ultralight.h>
+#include <JavaScriptCore/JavaScript.h>
+#include <iostream>
 
 using namespace ultralight;
 

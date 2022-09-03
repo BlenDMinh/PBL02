@@ -43,10 +43,23 @@ void MyApp::OnFinishLoading(ultralight::View* caller, uint64_t frame_id, bool is
 }
 
 JSValueRef ButtonClick(JSContextRef ctx, JSObjectRef function, JSObjectRef thisObject, size_t argumentCount, const JSValueRef arguments[], JSValueRef* exception) {
-    const char* str = 
-    "document.getElementById('result').innerText = 'Ultralight rocks!'";
-    // Create our string of JavaScript
-    JSStringRef script = JSStringCreateWithUTF8CString(str);
+
+    // Reading Content From CSV file
+    std::vector<std::vector<std::string>> content = ReadCSV("./assets/test.csv");
+
+    // Creating a JS Script to Display CSV Content when pressed
+    std::string jsScript = 
+    "var tag = document.createElement('p')\nvar text = '";
+    for(std::vector<std::string> row : content) {
+        for(std::string word : row)
+            jsScript += word + " ";
+        jsScript += "<br/>";
+    }
+
+    jsScript += 
+    "'\ntag.innerHTML = text\nvar element = document.getElementById('result')\nelement.appendChild(tag)\n";
+
+    JSStringRef script = JSStringCreateWithUTF8CString(jsScript.c_str());
     // Execute it with JSEvaluateScript, ignoring other parameters for now
     JSEvaluateScript(ctx, script, 0, 0, 0, 0);
     // Release our string (we only Release what we Create)

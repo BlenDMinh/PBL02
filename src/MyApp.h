@@ -2,6 +2,7 @@
 #include <AppCore/AppCore.h>
 #include <Ultralight/Ultralight.h>
 #include <JavaScriptCore/JavaScript.h>
+#include "IOUtility.h"
 
 using namespace ultralight;
 

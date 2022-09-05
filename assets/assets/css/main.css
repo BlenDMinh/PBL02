@@ -1,0 +1,23 @@
+#app {
+    background-color: #b6b7bc;
+}
+
+.header {
+    padding-top: 10px;
+}
+
+.header .header-text {
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.header .header-text {
+    padding: 0 20px;
+    line-height: 50px;
+    background-color: #004c8a;
+}
+
+.header-text span {
+    font-size: 1.5em;
+}

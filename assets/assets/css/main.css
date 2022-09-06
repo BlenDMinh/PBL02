@@ -7,12 +7,12 @@
 .header-content {
     padding: 8px 0;
     margin-top: 15px;
-    background-color: #004c8a;
+    background-color: #ffffff;
 }
 
 .header .header-text {
     margin: 0;
-    color: white;
+    color: rgb(77, 181, 255);
     cursor: default;
     padding: 0 20px;
     font-weight: 700;
@@ -30,7 +30,7 @@
     margin: 0 20px;
     border-radius: 4px;
     align-items: center;
-    background-color: #3a4f63;
+    background-color: #ffffff;
     justify-content: space-between;
 }
 
@@ -41,21 +41,21 @@
 }
 
 .nav .nav-task {
+    background: rgb(77, 181, 255);;
     margin-right: 8px;
     padding: 8px 20px;
-    border: 1px solid white;
     border-radius: 4px;
     text-align: center;
 }
 
 .nav-task a {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1.2em;
     text-decoration: none;
 }
 
 .nav .nav-task:hover {
-    color: #004c8a;
+    color: #3d6382;
     background-color: #bfcbd6;
 }
 
@@ -66,7 +66,9 @@
 
 /* Body */
 .container {
-    background-color: white;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px
 }
 
 .container .body {

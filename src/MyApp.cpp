@@ -1,23 +1,21 @@
 #include "MyApp.h"
 
-#define WINDOW_WIDTH  1500
-#define WINDOW_HEIGHT 800
+#define WINDOW_WIDTH  1920
+#define WINDOW_HEIGHT 1080
 
 MyApp::MyApp() {
     app_ = App::Create();
     window_ = Window::Create(app_->main_monitor(), WINDOW_WIDTH, WINDOW_HEIGHT, false, kWindowFlags_Titled | kWindowFlags_Resizable);
     overlay_ = Overlay::Create(window_, 1, 1, 0, 0);
     OnResize(window_.get(), window_->width(), window_->height());
-    overlay_->view()->LoadURL("file:///app.html");
+    overlay_->view()->LoadURL("file:///index.html");
     app_->set_listener(this);
     window_->set_listener(this);
     overlay_->view()->set_load_listener(this);
     overlay_->view()->set_view_listener(this);
 }
 
-MyApp::~MyApp() {
-
-}
+MyApp::~MyApp() {}
 
 void MyApp::Run() {
     app_->Run();

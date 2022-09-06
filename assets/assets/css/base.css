@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: inherit;
 }
 
@@ -7,6 +9,14 @@ html {
     line-height: 1.6rem;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: #b6b7bc;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .grid {

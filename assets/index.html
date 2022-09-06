@@ -7,7 +7,11 @@
     <title>PBL02</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/main.css">\
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./assets/js/main.js"></script>
 </head>
 <body>
     <div id="app">
@@ -46,7 +50,7 @@
             <div class="body">
                 <div class="body-table">
                     <p class="table-name">Lớp học phần: </p>
-                    <table>
+                    <table id="mainTable">
                         <tr class="table-title">
                             <th>TT</th>
                             <th>Họ & tên sinh viên</th>
@@ -54,18 +58,26 @@
                             <th>Số thẻ sinh viên</th>
                         </tr>
                         <tr class="table-normal">
-                            <th>1</th>
+                            <th class="table-id"></th>
                             <th class="table-jtf">Phạm Trung Hiếu</th>
                             <th>21TCLC_NHAT1</th>
                             <th>102210034</th>
                         </tr>
                         <tr class="table-normal">
-                            <th>2</th>
+                            <th class="table-id"></th>
                             <th class="table-jtf">Nguyễn Trương Anh Minh</th>
                             <th>21TCLC_NHAT1</th>
                             <th></th>
                         </tr>
                     </table>
+                    <script>
+                        var allTableData = document.getElementById("mainTable");
+                        var totalNumbeOfRows = allTableData.rows.length;
+                        for (var i = 1; i <= totalNumbeOfRows; i++) {
+                            var x = document.getElementsByClassName("table-id");
+                            x[i - 1].innerHTML = i;
+                        }
+                    </script>
                 </div>
             </div>
         </div>

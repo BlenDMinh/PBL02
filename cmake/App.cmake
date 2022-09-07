@@ -1,5 +1,6 @@
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# Ultralight
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON) 
 include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
 
 set(SDK_ROOT "${CMAKE_BINARY_DIR}/SDK/")
@@ -101,3 +102,19 @@ MACRO(ADD_APP source_list)
     
   add_dependencies(${APP_NAME} UltralightSDK)
 ENDMACRO()
+
+
+# fmt
+set(FMT_ROOT "${CMAKE_BINARY_DIR}/fmt/")
+set(FMT_INCLUDE_DIR "${FMT_ROOT}/include")
+
+ExternalProject_Add(fmt
+  URL https://github.com/fmtlib/fmt/releases/download/9.0.0/fmt-9.0.0.zip
+  SOURCE_DIR "${FMT_ROOT}"
+  BUILD_IN_SOURCE 1
+  CONFIGURE_COMMAND ""
+  BUILD_COMMAND ""
+  INSTALL_COMMAND ""
+)
+
+include_directories("${FMT_INCLUDE_DIR}")

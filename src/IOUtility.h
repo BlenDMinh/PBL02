@@ -5,3 +5,4 @@
 #include<vector>
 
 std::vector<std::vector<std::string>> ReadCSV(std::string);
+std::string ReadAll(std::string);

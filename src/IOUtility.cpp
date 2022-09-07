@@ -20,3 +20,15 @@ std::vector<std::vector<std::string>> ReadCSV(std::string path) {
 
     return content;
 }
+
+std::string ReadAll(std::string path) {
+    std::ifstream f(path); //taking file as inputstream
+    std::string str;
+    if(f) {
+        std::ostringstream ss;
+        ss << f.rdbuf(); // reading data
+        str = ss.str();
+    } else
+        std::cout << "Could not open the file\n";
+    return str;
+}

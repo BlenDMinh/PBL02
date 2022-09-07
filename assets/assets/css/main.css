@@ -5,40 +5,32 @@
 
 /* Header */
 .header-content {
-    padding: 8px 0;
+    padding: 12px 0;
     margin-top: 15px;
+    border-radius: 12px;
     background-color: #ffffff;
 }
 
-.header .nav .nav-menu .header-text {
-    margin: 0;
-    color: rgb(17, 125, 202);
-    cursor: default;
-    padding: 0 20px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 40px;
-    text-transform: uppercase;
-}
-
-.header-text span {
-    font-size: 1.5em;
-}
-
-/* Navigation bar */
 .header .nav {
     display: flex;
-    margin: 0 20px;
+    margin: 0 32px;
     border-radius: 4px;
     align-items: center;
     background-color: #ffffff;
     justify-content: space-between;
 }
 
+.nav .header-text {
+    margin: 0;
+    cursor: default;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: rgb(17, 125, 202);
+}
+
 .nav .nav-menu {
     display: flex;
-    margin: 8px 12px;
-    font-size: 1.2em;
 }
 
 .nav .nav-task {
@@ -49,9 +41,9 @@
 }
 
 .nav-task a {
-    color: rgb(17, 125, 202);
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-decoration: none;
+    color: rgb(17, 125, 202);
 }
 
 .nav .nav-task:hover {
@@ -59,11 +51,9 @@
 }
 
 .nav-login {
-    margin-right: 8px;
     padding: 8px 20px;
     border-radius: 4px;
     background: rgb(17, 125, 202);
-    margin: 0 10px;
 }
 
 .nav-login a {

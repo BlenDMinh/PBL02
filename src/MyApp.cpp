@@ -1,4 +1,5 @@
 #include "MyApp.h"
+#include "Student.h"
 #define FMT_HEADER_ONLY
 #include <fmt/core.h>
 
@@ -90,8 +91,12 @@ std::string StudentTableScript(std::string container, std::string csvPath) {
 
 
 void MyApp::OnDOMReady(ultralight::View* caller, uint64_t frame_id, bool is_main_frame, const String& url) {
+    auto list = Student::LoadFromCSV("./assets/21TCLC_Nhat1.csv");
+    for(Student s : list) {
+        std::cout << s.GetName() << " " << s.GetClass() << " " << s.GetId() << std::endl;
+    }
     std::string script = StudentTableScript("mainTable", "./assets/21TCLC_Nhat1.csv");
-    std::cout << script << std::endl;
+    // std::cout << script << std::endl;
 
     caller->EvaluateScript(script.c_str());
     // Acquire the JS execution context for the current page.

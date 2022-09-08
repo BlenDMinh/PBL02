@@ -1,11 +1,11 @@
 :root {
-    --main-c1: #FBD3E9;
-    --main-c2: #BB377D;
+    --main-c1: #b06ab3;
+    --main-c2: #4568dc;
     --main-c2-darker: rgb(150, 44, 100);
 }
 
 body {
-    background-image: linear-gradient(120deg, #FBD3E9, #BB377D);
+    background: linear-gradient(to bottom, #4568dc, #b06ab3);
 }
 
 #login-box {

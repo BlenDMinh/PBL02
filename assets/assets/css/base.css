@@ -8,15 +8,20 @@ html {
     font-size: 70%;
     line-height: 1.5rem;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
 }
 
 body {
-    background-color: #b6b7bc;
+    background: linear-gradient(to bottom, #4568dc, #b06ab3);
 }
 
 ul {
     list-style-type: none;
+}
+
+:root {
+    --main-c1: #4568dc;
+    --main-c2: #b06ab3;
 }
 
 .grid {

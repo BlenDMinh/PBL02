@@ -36,12 +36,12 @@
 .nav .nav-task {
     margin: auto;
     padding: 8px 20px;
-    font-weight: 800;
     text-align: center;
 }
 
 .nav-task a {
-    font-size: 1.3em;
+    font-size: 1.4em;
+    font-weight: bold;
     text-decoration: none;
     color: rgb(17, 125, 202);
 }
@@ -58,10 +58,9 @@
 
 .nav-login a {
     color: white;
-    text-decoration: none;
-    font-weight: 600;
     font-size: 1.4em;
     text-align: center;
+    text-decoration: none;
 }
 
 .nav-login:hover {

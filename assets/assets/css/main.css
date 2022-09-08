@@ -120,3 +120,8 @@
 .table-normal .table-jtf {
     text-align: justify;
 }
+
+/* Footer */
+.footer {
+    min-height: 85px;
+}

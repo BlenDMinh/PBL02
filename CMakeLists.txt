@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.3.2)
 
 include(cmake/App.cmake)
 include(cmake/FMT.cmake)
+include(copy-assets.cmake)
 
 set(SOURCES "src/IOUtility.h"
             "src/IOUtility.cpp"

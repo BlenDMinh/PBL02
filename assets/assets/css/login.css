@@ -1,12 +1,110 @@
-#login-box {
-    border: 1px solid;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
+body {
+    background-image: linear-gradient(120deg, #33ccff, #ff99cc);
 }
 
-#login-box #login-form {
+#login-box {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10% auto;
+    width: 500px;
+    height: 600px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#login-box #login-button {
+    border: 0px;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #09bbf7;
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+#login-box #login-button:hover {
+    transition: .5s;
+    cursor: pointer;
+    border: 0px;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #099dce;
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+#login-box .text_field {
+    position: relative;
+    border-bottom: 2px solid rgb(151, 151, 151);
+    margin: 40px 0;
+    width: 300px;
+}
+
+.text_field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 32px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.text_field label {
     position: absolute;
     top: 50%;
+    left: 5px;
     transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 16px;
+    color: rgb(151, 151, 151);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: .2s;
+}
+
+.text_field span::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #09bbf7;
+    transition: .5s;
+}
+
+.text_field input:focus ~label,
+.text_field input:valid ~label {
+    top: -5px;
+    color: #09bbf7;
+}
+
+.text_field input:focus ~span::before,
+.text_field input:valid ~span::before {
+    width: 100%;
+}
+
+#forgot-password {
+    color: rgb(151, 151, 151);
+    cursor: pointer;
+    align-self: flex-start;
+    margin: -50px 0 20px 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#forgot-password:hover {
+    transition: .5s;
+    color: #09bbf7;
+    cursor: pointer;
+    align-self: flex-start;
+    margin: -50px 0 20px 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

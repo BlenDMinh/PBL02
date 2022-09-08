@@ -1,7 +1,7 @@
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON) 
-add_subdirectory(${CMAKE_SOURCE_DIR}/src/plugins/fmt/)
-include_directories("${CMAKE_SOURCE_DIR}/src/plugins/fmt/include/")
+add_subdirectory(${CMAKE_SOURCE_DIR}/plugins/fmt/)
+include_directories("${CMAKE_SOURCE_DIR}/plugins/fmt/include/")
 # include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
 
 # # fmt

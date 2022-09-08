@@ -109,14 +109,16 @@
     background-color: #fff1a7;
 }
 
-.body-table .table-normal {
-    font-weight: normal;
-}
-
+.body-table .table-normal,
 .table-normal th {
     font-weight: normal;
 }
 
 .table-normal .table-jtf {
     text-align: justify;
+}
+
+/* Footer */
+.footer {
+    min-height: 85px;
 }

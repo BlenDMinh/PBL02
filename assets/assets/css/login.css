@@ -1,5 +1,11 @@
+:root {
+    --main-c1: #FBD3E9;
+    --main-c2: #BB377D;
+    --main-c2-darker: rgb(150, 44, 100);
+}
+
 body {
-    background-image: linear-gradient(120deg, #33ccff, #ff99cc);
+    background-image: linear-gradient(120deg, #FBD3E9, #BB377D);
 }
 
 #login-box {
@@ -21,21 +27,21 @@ body {
     font-size: 20px;
     font-weight: bold;
     color: white;
-    background-color: #09bbf7;
+    background-color: var(--main-c2);
     width: 300px;
     height: 50px;
     border-radius: 20px;
 }
 
 #login-box #login-button:hover {
-    transition: .5s;
+    transition: .3s;
     cursor: pointer;
     border: 0px;
     font-family: 'Quicksand';
     font-size: 20px;
     font-weight: bold;
     color: white;
-    background-color: #099dce;
+    background-color: var(--main-c2-darker);
     width: 300px;
     height: 50px;
     border-radius: 20px;
@@ -49,6 +55,7 @@ body {
 }
 
 .text_field input {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 100%;
     padding: 0 5px;
     height: 32px;
@@ -77,14 +84,14 @@ body {
     left: 0;
     width: 0%;
     height: 2px;
-    background: #09bbf7;
+    background: var(--main-c2);
     transition: .5s;
 }
 
 .text_field input:focus ~label,
 .text_field input:valid ~label {
     top: -5px;
-    color: #09bbf7;
+    color: var(--main-c2);
 }
 
 .text_field input:focus ~span::before,
@@ -102,7 +109,7 @@ body {
 
 #forgot-password:hover {
     transition: .5s;
-    color: #09bbf7;
+    color: var(--main-c2);
     cursor: pointer;
     align-self: flex-start;
     margin: -50px 0 20px 100px;

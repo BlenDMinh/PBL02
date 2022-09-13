@@ -71,7 +71,7 @@ void MyApp::OnFinishLoading(ultralight::View* caller, uint64_t frame_id, bool is
 // temp
 std::string StudentTableScript(std::string container, std::string csvPath) {
     std::string JScript = ReadAll("./assets/CJavaScript/StudentTable.js");
-    std::cout << JScript << std::endl;
+    // std::cout << JScript << std::endl;
 
     std::string HTMLTemplate = ReadAll("./assets/CHTML/StudentTableRow.html");
     std::string content = "";
@@ -92,9 +92,9 @@ std::string StudentTableScript(std::string container, std::string csvPath) {
 
 void MyApp::OnDOMReady(ultralight::View* caller, uint64_t frame_id, bool is_main_frame, const String& url) {
     auto list = Student::LoadFromCSV("./assets/21TCLC_Nhat1.csv");
-    for(Student s : list) {
-        std::cout << s.GetName() << " " << s.GetClass() << " " << s.GetId() << std::endl;
-    }
+    // for(Student s : list) {
+    //     std::cout << s.GetName() << " " << s.GetClass() << " " << s.GetId() << std::endl;
+    // }
     std::string script = StudentTableScript("mainTable", "./assets/21TCLC_Nhat1.csv");
     // std::cout << script << std::endl;
 

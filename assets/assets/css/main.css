@@ -1,34 +1,20 @@
-#app {
-    min-height: 850px;
-}
-
-.header-content {
-    padding: 24px 0;
-    margin-top: 15px;
+.header {
     overflow: hidden;
     position: relative;
 }
 
-.sticky {
-    top: 0;
-    width: 100%;
-    position: fixed;
-    max-width: 1200px;
-}
-
 .header .nav {
     display: flex;
-    padding-top: 20px;
-    border-radius: 4px;
+    padding: 24px 0;
     align-items: center;
     justify-content: space-between;
 }
 
 .nav .header-text {
     cursor: default;
-    font-size: 1.2em;
-    color: aliceblue;
+    font-size: 1.5rem;
     font-weight: bold;
+    color: aliceblue;
     text-transform: uppercase;
 }
 
@@ -37,14 +23,13 @@
 }
 
 .nav .nav-task {
-    margin: auto;
-    padding: 8px 20px;
+    padding: 12px 20px;
     text-align: center;
 }
 
 .nav-task a {
-    font-size: 1.4em;
     font-weight: bold;
+    font-size: 1.5rem;
     color: aliceblue;
     text-decoration: none;
 }
@@ -61,19 +46,19 @@
 
 .nav-login a {
     color: white;
-    font-size: 1.4em;
+    font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
 }
 
 .nav-login:hover {
-    background: var(--main-c2);
+    background: aliceblue;
 }
 
 /* Body */
 .container {
+    margin-top: 20px;
     border-radius: 5px;
-    margin-top: 52px;
     box-shadow: 0px 0px 10px;
     background-color: rgb(255, 255, 255);
 }
@@ -88,14 +73,12 @@
 
 .container .body-title h3 {
     color: red;
-    font-size: 1.6em;
     text-transform: uppercase;
 }
 
 /* Body table */
 .body .body-table {
     margin: 12px;
-    font-size: 1.2em;
 }
 
 .body .body-table table, th, td {

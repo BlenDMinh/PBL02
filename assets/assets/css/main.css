@@ -55,6 +55,10 @@
     background: aliceblue;
 }
 
+.nav-login:hover a {
+    color: black;
+}
+
 /* Body */
 .container {
     margin-top: 20px;

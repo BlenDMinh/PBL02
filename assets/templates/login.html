@@ -1,0 +1,31 @@
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    </head>
+    <body>
+        <div id="login-box">
+            <p style="font-family: 'Quicksand';font-weight: 900;font-size: 50px;margin-bottom: -10px; cursor: default;">Login</p>
+            <form action="" id="login-form">
+                <div class="text_field">
+                    <input type="text" id="studentid" name="studentid" required>
+                    <span></span>
+                    <label for="studentid">Student ID</label>
+                </div>
+                <div class="text_field">
+                    <input type="password" id="password" name="password" required>
+                    <span></span>
+                    <label for="studentid">Password</label>
+                </div>
+            </form>
+            <p id="forgot-password">Forgot password?</p>
+            <!-- <input type="submit" id="login-button" value="Login"></input> -->
+            <button id="login-button">Login</button>
+            <p style="font-family: 'Quicksand'; font-size: 14px; padding: 10px; cursor: default;">Contract school's administrator if you don't have an account</p>
+        </div>
+    </body>
+</html>

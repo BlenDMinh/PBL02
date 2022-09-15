@@ -97,6 +97,7 @@
 
 .body-table .table-normal,
 .table-normal th {
+    font-size: 1.5rem;
     font-weight: normal;
 }
 

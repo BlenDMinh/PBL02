@@ -8,7 +8,7 @@ import logging
 
 def home(request):
     # temporary table
-    csv_data = csv.reader(open('./assets/21TCLC_Nhat1.csv'), delimiter = ',')
+    csv_data = csv.reader(open('./assets/21TCLC_Nhat1.csv', encoding="utf-8"), delimiter = ',')
     logger = logging.getLogger('root')
     content = ''
     for line in csv_data:

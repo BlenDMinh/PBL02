@@ -6,8 +6,8 @@
         <th>Lớp</th>
         <th>Số điện thoại</th>
     </tr>
-    <tr *ngFor="let i of Student">
-        <th>{{i}}</th>
+    <tr *ngFor="let i of Student; index as j">
+        <th>{{j}}</th>
         <th>{{i.studentId}}</th>
         <th>{{i.name}}</th>
         <th>{{i.class}}</th>

@@ -9,5 +9,15 @@ class Student(User):
         str = f'{self.GetUserID()} {self.GetUserName()} {self.GetUserSex()} {self.GetClassName()}'
         return str
     
+    def AsDist(self):
+        return {
+            'studentId': self.GetUserID(),
+            'name': self.GetUserName(),
+            'sex': self.GetUserSex(),
+            'class': self.GetClassName(),
+            'phoneNumber': self.GetUserPhoneNumber(),
+            'birthday': self.GetUserBirthday()
+        }
+    
     def GetClassName(self):
         return self.__classname

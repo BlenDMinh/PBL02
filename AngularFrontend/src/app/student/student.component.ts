@@ -14,11 +14,17 @@ export class StudentComponent implements OnInit {
   constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
-    this.getStudent();
+    this.getAllStudents();
   }
 
-  getStudent(): void {
-    this.studentService.getStudent().subscribe(student => this.Student = student);
+  getAllStudents(): void {
+    this.studentService.getAllStudents().subscribe(
+      data => {
+        this.Student = data;
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
-
 }

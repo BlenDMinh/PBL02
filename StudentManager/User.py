@@ -16,7 +16,7 @@ class User:
         self.__sex = sex
         self.__phone_number = phone_number
         self.__birthday = birthday
-    
+        
     def GetUserID(self):
         return self.__userid
     

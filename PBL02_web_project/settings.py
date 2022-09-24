@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'SubjectEnroll.apps.SubjectenrollConfig',
+    'StudentManager.apps.StudentmanagerConfig',
     'corsheaders',
 ]
 
@@ -57,7 +58,7 @@ MIDDLEWARE = [
 #CORS
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:8081',
+    'http://localhost:8080',
 )
 
 ROOT_URLCONF = 'PBL02_web_project.urls'

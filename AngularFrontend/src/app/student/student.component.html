@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <th>TT</th>
+        <th>MSSV</th>
+        <th>Họ và tên</th>
+        <th>Lớp</th>
+        <th>Số điện thoại</th>
+    </tr>
+    <tr *ngFor="let i of Student">
+        <th>{{i}}</th>
+        <th>{{i.studentId}}</th>
+        <th>{{i.name}}</th>
+        <th>{{i.class}}</th>
+        <th>{{i.phoneNumber}}</th>
+    </tr>
+</table>

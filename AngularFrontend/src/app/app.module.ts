@@ -8,13 +8,15 @@ import { SubjectEnrollDetailsComponent } from './components/subject-enroll-detai
 import { SubjectEnrollListComponent } from './components/subject-enroll-list/subject-enroll-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddSubjectEnrollComponent,
     SubjectEnrollDetailsComponent,
-    SubjectEnrollListComponent
+    SubjectEnrollListComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,

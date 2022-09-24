@@ -1,15 +1,17 @@
 from django.shortcuts import render
 from rest_framework import status
 from rest_framework.decorators import api_view
+from rest_framework.parsers import JSONParser
 from django.http import JsonResponse
 
 import SubjectEnroll
+from SubjectEnroll.models import TestData
 
 # Create your views here.
 
 @api_view(['GET', 'POST', 'DELETE'])
 def SubjectEnroll_list(request):
-    print("IT WORKS")
+    print(request.data)
     return JsonResponse({'message': 'The TestData yeah'}, status=status.HTTP_200_OK)
 
 @api_view(['GET', 'PUT', 'DELETE'])

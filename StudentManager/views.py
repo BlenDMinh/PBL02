@@ -20,7 +20,7 @@ def Debug(request):
 @api_view(['GET'])
 def GetStudentList(request):
     studentList = []
-    with open('./assets/21TCLC_Nhat1.csv') as file:
+    with open('./assets/21TCLC_Nhat1.csv', encoding="UTF-8") as file:
         data = csv.reader(file, delimiter=',', quotechar='|')
         for row in data:
             studentList.append(Student(row[1], row[2], Sex.MALE, row[4], '', row[3]).AsDist())

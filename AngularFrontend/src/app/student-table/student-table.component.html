@@ -1,0 +1,16 @@
+<table *ngIf="student">
+    <tr class="table-header">
+        <th>TT</th>
+        <th>MSSV</th>
+        <th>Họ và tên</th>
+        <th>Lớp</th>
+        <th>Số điện thoại</th>
+    </tr>
+    <tr *ngFor="let i of student; index as j">
+        <th>{{j + 1}}</th>
+        <th>{{i.studentId}}</th>
+        <th style="text-align: justify;">{{i.name}}</th>
+        <th>{{i.class}}</th>
+        <th>{{i.phoneNumber}}</th>
+    </tr>
+</table>

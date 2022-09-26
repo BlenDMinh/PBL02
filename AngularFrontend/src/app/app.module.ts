@@ -9,6 +9,7 @@ import { SubjectEnrollListComponent } from './components/subject-enroll-list/sub
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentComponent } from './student/student.component';
+import { StudentTableComponent } from './student-table/student-table.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { StudentComponent } from './student/student.component';
     AddSubjectEnrollComponent,
     SubjectEnrollDetailsComponent,
     SubjectEnrollListComponent,
-    StudentComponent
+    StudentComponent,
+    StudentTableComponent
   ],
   imports: [
     BrowserModule,

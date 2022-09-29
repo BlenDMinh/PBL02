@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Student } from './student';
 
 const baseurl = 'http://localhost:8000/api/StudentManager';
 @Injectable({

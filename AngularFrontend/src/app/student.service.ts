@@ -5,11 +5,10 @@ import { Student } from './student';
 
 const baseurl = 'http://localhost:8000/api/StudentManager';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class StudentService {
-  
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAllStudents(): Observable<any> {
     const response = this.http.get(`${baseurl}`);

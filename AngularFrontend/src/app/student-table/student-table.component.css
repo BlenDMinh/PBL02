@@ -1,24 +1,24 @@
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .table-header th {
-    color: white;
-    font-weight: bold;
-    background-color: #04AA6D;
+  color: white;
+  font-weight: bold;
+  background-color: #04aa6d;
 }
 
 th {
-    border-right: 1px solid;
-    font-weight: normal;
-    padding: 8px;
+  border-right: 1px solid;
+  font-weight: normal;
+  padding: 8px;
 }
 
 th:last-child {
-    border-right: none;
+  border-right: none;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }

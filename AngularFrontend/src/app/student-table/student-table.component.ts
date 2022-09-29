@@ -5,14 +5,12 @@ import { StudentService } from '../student.service';
 @Component({
   selector: 'app-student-table',
   templateUrl: './student-table.component.html',
-  styleUrls: ['./student-table.component.css']
+  styleUrls: ['./student-table.component.css'],
 })
 export class StudentTableComponent implements OnInit {
   @Input() student?: Student[];
 
-  constructor(private studentService: StudentService) { }
+  constructor(private studentService: StudentService) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -5,12 +5,12 @@ import { StudentService } from '../student.service';
 @Component({
   selector: 'app-student',
   templateUrl: './student.component.html',
-  styleUrls: ['./student.component.css']
+  styleUrls: ['./student.component.css'],
 })
 export class StudentComponent implements OnInit {
   Student: Student[] = [];
 
-  constructor(private studentService: StudentService) { }
+  constructor(private studentService: StudentService) {}
 
   ngOnInit(): void {
     this.getAllStudents();
@@ -18,10 +18,10 @@ export class StudentComponent implements OnInit {
 
   getAllStudents(): void {
     this.studentService.getAllStudents().subscribe(
-      data => {
+      (data) => {
         this.Student = data;
       },
-      error => {
+      (error) => {
         console.log(error);
       }
     );

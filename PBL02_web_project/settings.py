@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'SubjectEnroll.apps.SubjectenrollConfig',
     'StudentManager.apps.StudentmanagerConfig',
     'corsheaders',
 ]

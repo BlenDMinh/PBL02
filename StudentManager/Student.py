@@ -1,4 +1,5 @@
 from StudentManager.User import User
+from Database import StudentDatabase
 
 class Student(User):
     def __init__(self, userid, name, sex, phone_number, birthday, classname) -> None:

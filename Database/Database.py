@@ -24,29 +24,40 @@ def Execute(SQLQuery):
 
 def GetAllProperties(TableName):
     data = Execute(f"SELECT * FROM {TableName}")
-    return (c for c in data.description)
+    return list([c[0] for c in data.description])
+
+def GetAllTables():
+    cur = Execute("SELECT name FROM sqlite_master WHERE type='table';")
+    print(cur.fetchall())
+    return cur.fetchall()
 
 def InitTable(TableName):
     properties = settings.config[TableName]
     print(properties)
     # CREATE TABLE IF NOT EXIST
-    if(len(properties) == 0):
-        Execute(f"CREATE TABLE IF NOT EXISTS {TableName} (Empty CHAR);")
-    else:
-        Execute(f"CREATE TABLE IF NOT EXISTS {TableName} ({', '.join(map(lambda k: k + ' ' + properties[k], properties))});")
+    if TableName not in GetAllTables():
+        if(len(properties['properties']) == 0):
+            Execute(f"CREATE TABLE IF NOT EXISTS {TableName} (Empty CHAR);")
+        else:
+            Execute(f"CREATE TABLE IF NOT EXISTS {TableName} ({', '.join(map(lambda k: k + ' ' + properties['properties'][k], properties['properties']))});")
+            if 'PRIMARY KEY' in properties:
+                Execute(f"ALTER TABLE {TableName} ADD CONSTRAINT PK_{TableName} PRIMARY KEY ({', '.join(properties['PRIMARY KEY'])})")
     
     # MODIFY TABLE
     table_properties = GetAllProperties(TableName)
     print(table_properties)
-    # if(len(properties) == 0):
-    #     if 'Empty' not in table_properties:
-    #         Execute(f"ALTER TABLE {TableName} ADD COLUMN Empty CHAR")
-    #     for property in table_properties:
-    #         Execute(f"ALTER TABLE {TableName} DROP COLUMN {property}")
-    # else:
-        
-    #     if 'Empty' in table_properties:
-    #         Execute(f"ALTER TABLE {TableName} DROP IF EXISTS Empty")
-        
-    pass
+    if(len(properties['properties']) == 0):
+        if 'Empty' not in table_properties:
+            Execute(f"ALTER TABLE {TableName} ADD COLUMN Empty CHAR")
+        for property in table_properties:
+            if property != 'Empty':
+                Execute(f"ALTER TABLE {TableName} DROP COLUMN {property}")
+    else:
+        for property in properties:
+            if property not in table_properties:
+                Execute(f"ALTER TABLE {TableName} ADD {property} {properties[property]}")
+        for property in table_properties:
+            if property not in properties:
+                Execute(f"ALTER TABLE {TableName} DROP COLUMN {property}")
 
+    pass

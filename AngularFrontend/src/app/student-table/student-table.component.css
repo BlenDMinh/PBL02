@@ -10,9 +10,10 @@ table {
 }
 
 th {
-  border-right: 1px solid;
-  font-weight: normal;
   padding: 8px;
+  text-align: center;
+  font-weight: normal;
+  border-right: 1px solid;
 }
 
 th:last-child {

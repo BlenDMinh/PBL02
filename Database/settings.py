@@ -15,5 +15,14 @@ config = {
     },
     "Teacher": {
         
+    },
+    "Subject": {
+        
+    },
+    "ClassSection": {
+        
+    },
+    "Student_ClassSection": {
+        
     }
 }

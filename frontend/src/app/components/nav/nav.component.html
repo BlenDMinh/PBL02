@@ -1,0 +1,26 @@
+<div class="d-flex" style="width: 100%">
+  <ul
+    ngbNav
+    #nav="ngbNav"
+    [(activeId)]="active"
+    class="nav-pills"
+    orientation="vertical"
+  >
+    <li ngbNavItem="top">
+      <a ngbNavLink>Trang chủ</a>
+      <ng-template ngbNavContent>
+        <app-student-list></app-student-list>
+      </ng-template>
+    </li>
+    <li ngbNavItem="middle">
+      <a ngbNavLink>Đăng kí học phần</a>
+      <ng-template ngbNavContent> </ng-template>
+    </li>
+    <li ngbNavItem="bottom">
+      <a ngbNavLink>Thời khoá biểu</a>
+      <ng-template ngbNavContent> </ng-template>
+    </li>
+  </ul>
+
+  <div [ngbNavOutlet]="nav" class="ms-4"></div>
+</div>

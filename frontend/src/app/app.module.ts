@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { StudentTableComponent } from './components/student-table/student-table.component';
 import { StudentListComponent } from './components/student-list/student-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, StudentTableComponent, StudentListComponent],
+  declarations: [AppComponent, StudentTableComponent, StudentListComponent, NavbarComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],

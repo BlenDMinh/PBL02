@@ -8,9 +8,10 @@ import { StudentTableComponent } from './components/student-table/student-table.
 import { StudentListComponent } from './components/student-list/student-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
-  declarations: [AppComponent, StudentTableComponent, StudentListComponent, NavbarComponent],
+  declarations: [AppComponent, StudentTableComponent, StudentListComponent, NavbarComponent, SignUpComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,4 +1,3 @@
-from mimetypes import init
 from enum import IntEnum
 
 class Sex(IntEnum):
@@ -8,6 +7,12 @@ class Sex(IntEnum):
 
 class User:
     
+    __userid: str
+    __name: str
+    __sex: Sex
+    __phone_number: str
+    __birthday: str
+    
     def __init__(self):
         pass
     def __init__(self, userid, name, sex, phone_number, birthday):
@@ -16,7 +21,16 @@ class User:
         self.__sex = sex
         self.__phone_number = phone_number
         self.__birthday = birthday
-        
+    
+    def AsDict(self):
+        return {
+            'userId': self.GetUserID(),
+            'name': self.GetUserName(),
+            'sex': self.GetUserSex(),
+            'phoneNumber': self.GetUserPhoneNumber(),
+            'birthday': self.GetUserBirthday()
+        }
+    
     def GetUserID(self):
         return self.__userid
     
@@ -31,4 +45,6 @@ class User:
     
     def GetUserBirthday(self):
         return self.__birthday
+    
+    
     

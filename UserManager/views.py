@@ -22,7 +22,7 @@ def GetStudent(request, pk: str):
     student = Student.GetStudentFromDatabase(pk=pk, AsDict=True)
     return JsonResponse(student, safe=False)
 
+@api_view(['GET'])
 def GetStudentList(request):
     studentList = Student.GetAllStudentFromDatabase(AsDict=True)
     return JsonResponse(studentList, safe=False)
-    # return JsonResponse(json.dumps(studentList, ensure_ascii=False, default=vars), safe=False)

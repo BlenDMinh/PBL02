@@ -11,7 +11,13 @@ import { StudentListComponent } from './components/student-list/student-list.com
 import { LoginBoxComponent } from './components/login-box/login-box.component';
 
 @NgModule({
-  declarations: [AppComponent, StudentTableComponent, StudentListComponent, LoginBoxComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    StudentTableComponent,
+    StudentListComponent,
+    LoginBoxComponent,
+    NavbarComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

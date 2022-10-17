@@ -1,31 +1,51 @@
-<body>
-  <div class="container mt-5">
-    <form action="">
-      <div class="row mb-3">
-        <label for="inputUserID" class="col-sm-1 sol-form-label">User ID</label>
-        <div class="col-sm-3">
-          <input type="text" class="form-control" id="inputUserID" placeholder="User ID">
-        </div>
-      </div>
-      <div class="row mb-3">
-        <label for="inputPassword" class="col-sm-1 sol-form-label">Password</label>
-        <div class="col-sm-3">
-          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-        </div>
-      </div>
-      <div class="row mb-3">
-        <div class="col-sm-3 offset-sm-1">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="checkRemember">
-            <label class="form-check-label" for="checkRemember">Remember me</label>
-          </div>
-        </div>
-      </div>
-    <div class="row">
-      <div class="col-sm-3 offset-sm-1">
-        <button type="submit" class="btn btn-primary">Login</button>
+<section class="ftco-section bg-image">
+  <div class="container mod">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center mb-5">
+        <h2
+          class="heading-section"
+          style="text-transform: uppercase; color: white"
+        >
+          Đăng nhập
+        </h2>
       </div>
     </div>
-    </form>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="login-wrap p-0">
+          <form action="#" class="signin-form">
+            <div class="form-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Tài khoản"
+                required
+              />
+            </div>
+            <div class="form-group mb-5">
+              <input
+                id="password-field"
+                type="password"
+                class="form-control"
+                placeholder="Mật khẩu"
+                required
+              />
+              <span
+                toggle="#password-field"
+                class="fa fa-fw fa-eye field-icon toggle-password"
+              ></span>
+            </div>
+            <div class="form-group my-3">
+              <button
+                type="submit"
+                class="form-control btn btn-primary submit px-3"
+              >
+                Đăng nhập
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-</body>
+</section>

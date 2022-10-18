@@ -18,15 +18,48 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+          <a
+            *ngIf="active === 'main'; else elseBlock1"
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            >Trang chủ</a
+          >
+          <ng-template #elseBlock1>
+            <a class="nav-link" href="#">Trang chủ</a>
+          </ng-template>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Đăng ký học phần</a>
+          <a
+            *ngIf="active === 'classSign'; else elseBlock2"
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            >Đăng ký học phần</a
+          >
+          <ng-template #elseBlock2>
+            <a class="nav-link" href="#">Đăng ký học phần</a>
+          </ng-template>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Thời khoá biểu</a>
+          <a
+            *ngIf="active === 'timetable'; else elseBlock3"
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            >Thời khoá biểu</a
+          >
+          <ng-template #elseBlock3>
+            <a class="nav-link" href="#">Thời khoá biểu</a>
+          </ng-template>
         </li>
       </ul>
+      <input
+        class="d-flex"
+        type="submit"
+        value="Đăng nhập"
+        routerLink="/login"
+      />
     </div>
   </div>
 </nav>

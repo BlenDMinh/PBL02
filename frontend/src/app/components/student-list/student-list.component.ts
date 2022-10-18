@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { main } from '@popperjs/core';
 import { Student } from 'src/app/models/student';
 import { StudentService } from 'src/app/services/student.service';
 
@@ -9,6 +10,7 @@ import { StudentService } from 'src/app/services/student.service';
 })
 export class StudentListComponent implements OnInit {
   students: Student[] = [];
+  link = 'main';
 
   constructor(private studentService: StudentService) {}
 

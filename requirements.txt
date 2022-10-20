@@ -4,4 +4,3 @@ django-cors-headers
 djangorestframework
 pytz
 sqlparse
-virtualenv

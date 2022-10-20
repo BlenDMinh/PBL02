@@ -1,5 +1,7 @@
 from mimetypes import init
 from enum import IntEnum
+import hashlib
+from datetime import datetime
 
 class Sex(IntEnum):
     MALE = 0
@@ -7,7 +9,6 @@ class Sex(IntEnum):
     OTHER = 2
 
 class User:
-    
     def __init__(self):
         pass
     def __init__(self, userid, name, sex, phone_number, birthday):
@@ -32,3 +33,18 @@ class User:
     def GetUserBirthday(self):
         return self.__birthday
     
+    @staticmethod
+    def Authenticate(id, password):
+        if id != '102210040' or password != 'thisismypassword':
+            return ''
+        
+        # if anthentication pass
+        dummy = hashlib.md5((id + password + datetime.now().strftime('%m/%d/%Y-%H:%M:%S')).encode('utf-8')).hexdigest()
+        dummy1 = hashlib.sha256(dummy.encode('utf-8')).hexdigest()
+        token = hashlib.sha512(dummy1.encode('utf-8')).hexdigest()
+        return token
+    
+    # @staticmethod
+    # def Authenticate(token):
+    #     pass
+        

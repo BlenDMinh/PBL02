@@ -8,7 +8,7 @@ def Delete(pk):
 
 def Get(pk):
     cur = Database.Execute(f"SELECT StudentID, Name, Sex, Class, PhoneNumber, Birthday FROM Student WHERE StudentID = {pk}")
-    return cur.fetchall()
+    return cur.fetchall()[0]
 
 def GetAll():
     cur = Database.Execute("SELECT StudentID, Name, Sex, Class, PhoneNumber, Birthday FROM Student")

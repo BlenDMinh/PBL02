@@ -27,7 +27,7 @@ config = {
     },
     "Token": {
         "properties": {
-            "token": "CHAR"
+            "tokenHash": "VARCHAR(128)"
         }
     }
 }

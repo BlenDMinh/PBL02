@@ -18,6 +18,7 @@ def Execute(SQLQuery):
     cur = con.cursor()
     try:
         cur.execute(SQLQuery)
+        con.commit()
         return cur
     except sqlite3.IntegrityError as er:
         print('INTEGRITY ERROR\n')

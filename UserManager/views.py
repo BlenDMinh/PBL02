@@ -33,7 +33,7 @@ def UserLogin(request):
             password = request.GET.get('password')
             data = User.Authenticate(id=id, password=password)
             if not data:
-                return JsonResponse({'error': 'User ID is not valie or Password is wrong'})
+                return JsonResponse({'error': 'User ID is not valid or password is wrong'})
             
             return JsonResponse({'token': data})
         
@@ -42,7 +42,7 @@ def UserLogin(request):
             data = User.TokenAuthenticate(token)
             print(data)
             if not data:
-                return JsonResponse({'error': 'User ID is not valie or Password is wrong'})
+                return JsonResponse({'error': 'User ID is not valid or password is wrong'})
             
             return JsonResponse(data)
 

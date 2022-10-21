@@ -18,5 +18,6 @@ export class NavbarComponent implements OnInit {
 
   Logout() {
     this.loginService.Logout().subscribe();
+    location.reload();
   }
 }

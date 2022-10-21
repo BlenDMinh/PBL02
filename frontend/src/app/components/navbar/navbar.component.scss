@@ -1,11 +1,13 @@
 input[type="submit"] {
+  font-weight: bold;
+  margin-right: 50px;
   cursor: pointer;
   color: #e9f4fb;
   padding: 6px 24px;
   border-radius: 25px;
-  background: #2691d9;
+  background: #7978FF;
   text-transform: uppercase;
-  border: 1px solid #212529;
+  border: 1px solid #7978FF;
 }
 
 input[type="submit"]:hover {
@@ -13,7 +15,46 @@ input[type="submit"]:hover {
   border-color: #2691d9;
 }
 
+.bi {
+  margin-left: 50px;
+}
+
 .loginName {
   color: white;
   padding-right: 30px;
+}
+
+.logout {
+  font-weight: bold;
+  margin-right: 50px;
+  cursor: pointer;
+  color: #e9f4fb;
+  padding: 6px 24px;
+  border-radius: 25px;
+  background: #7978FF;
+  text-transform: uppercase;
+  border: 1px solid #7978FF;
+}
+
+.nav-item {
+  margin-left: 30px;
+  border-radius: 25px;
+  align-items: center;
+}
+
+.active {
+  font-weight: bold;
+  background-color: #7978FF;
+  border-radius: 25px;
+}
+
+.navbar {
+  background-color: rgba($color: #000000, $alpha: 0) !important;
+}
+
+.container {
+  padding: 0.75%;
+  padding-left: 10%px;
+  border-radius: 20px;
+  background-color: #4649FF;
 }

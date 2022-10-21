@@ -54,12 +54,24 @@
           </ng-template>
         </li>
       </ul>
-      <input
-        class="d-flex"
+      <input *ngIf="this.loginName === undefined; else showName"
+        class="d-flex login"
         type="submit"
         value="Đăng nhập"
         routerLink="/login"
       />
+      <ng-template #showName style="color: white;" class="d-flex" type="text">
+        <span class="navbar-text loginName">
+          {{this.loginName}}
+        </span>
+        <button
+          class="d-flex logout"
+          routerLink="/"
+          (click)="Logout()"
+        >
+        Đăng xuất
+        </button>
+      </ng-template>
     </div>
   </div>
 </nav>

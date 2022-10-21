@@ -14,7 +14,8 @@ def GetAll():
     cur = Database.Execute("SELECT StudentID, Name, Sex, Class, PhoneNumber, Birthday FROM Student")
     return cur.fetchall()
 
-def Login(username, password):
+def Login(id, password):
+    
     pass
 
 Database.InitTable("Student")

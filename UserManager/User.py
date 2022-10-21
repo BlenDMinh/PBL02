@@ -2,6 +2,7 @@ from mimetypes import init
 from enum import IntEnum
 import hashlib
 from datetime import datetime
+from Database import TokenDatabase
 
 class Sex(IntEnum):
     MALE = 0
@@ -35,6 +36,7 @@ class User:
     
     @staticmethod
     def Authenticate(id, password):
+        
         if id != '102210040' or password != 'thisismypassword':
             return ''
         
@@ -42,9 +44,25 @@ class User:
         dummy = hashlib.md5((id + password + datetime.now().strftime('%m/%d/%Y-%H:%M:%S')).encode('utf-8')).hexdigest()
         dummy1 = hashlib.sha256(dummy.encode('utf-8')).hexdigest()
         token = hashlib.sha512(dummy1.encode('utf-8')).hexdigest()
+        
+        TokenDatabase.AddToken(token)
+        
         return token
     
-    # @staticmethod
-    # def Authenticate(token):
-    #     pass
+    @staticmethod
+    def TokenAuthenticate(token):
+        if TokenDatabase.HasToken(token):
+            return {
+                'studentId': '102210040',
+                'name': 'Nguyễn Trương Anh Minh',
+                'sex': Sex.MALE,
+                'class': '21TCLC_Nhat1',
+                'phoneNumber': '0769639972',
+                'birthday': '01-12-2003'
+            }
+        return None
+
+    @staticmethod
+    def TokenLogout(token):
+        TokenDatabase.RemoveToken(token)
         

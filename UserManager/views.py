@@ -26,12 +26,27 @@ def GetStudentList(request):
 # return a token if valid
 @api_view(['GET'])
 def UserLogin(request):
-    print(request.GET)
-    id = request.GET.get('id')
-    password = request.GET.get('password')
-    data = User.Authenticate(id=id, password=password)
-    # check for error
-    if not data:
-        return JsonResponse({'error': 'User ID is not valie or Password is wrong'})
-    
-    return JsonResponse({'token': data})
+    if request.method == 'GET':
+        print(request.GET)
+        if 'id' in request.GET and 'password' in request.GET:
+            id = request.GET.get('id')
+            password = request.GET.get('password')
+            data = User.Authenticate(id=id, password=password)
+            if not data:
+                return JsonResponse({'error': 'User ID is not valie or Password is wrong'})
+            
+            return JsonResponse({'token': data})
+        
+        if 'token' in request.GET:
+            token = request.GET.get('token')
+            data = User.TokenAuthenticate(token)
+            print(data)
+            if not data:
+                return JsonResponse({'error': 'User ID is not valie or Password is wrong'})
+            
+            return JsonResponse(data)
+
+@api_view(['DELETE'])
+def UserLogout(request, token):
+    User.TokenLogout(token=token)
+    return JsonResponse({'status': f'Removed {token}'})

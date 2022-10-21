@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { StudentTableComponent } from './components/student-table/student-table.component';
 import { StudentListComponent } from './components/student-list/student-list.component';
 import { LoginBoxComponent } from './components/login-box/login-box.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { LoginBoxComponent } from './components/login-box/login-box.component';
     LoginBoxComponent,
     NavbarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

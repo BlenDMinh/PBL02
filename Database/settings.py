@@ -24,5 +24,10 @@ config = {
     },
     "Student_ClassSection": {
         
+    },
+    "Token": {
+        "properties": {
+            "token": "CHAR"
+        }
     }
 }

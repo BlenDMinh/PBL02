@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { main } from '@popperjs/core';
 import { Student } from 'src/app/models/student';
 import { StudentService } from 'src/app/services/student.service';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-student-list',
@@ -10,9 +11,10 @@ import { StudentService } from 'src/app/services/student.service';
 })
 export class StudentListComponent implements OnInit {
   students: Student[] = [];
+  loginUser:any;
   link = 'main';
 
-  constructor(private studentService: StudentService) {}
+  constructor(private studentService: StudentService, private loginService: LoginService) {}
 
   getStudents(): void {
     this.studentService
@@ -21,6 +23,11 @@ export class StudentListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loginService
+      .loginByToken()
+      .subscribe((student) => {
+        this.loginUser = student
+      })
     this.getStudents();
   }
 }

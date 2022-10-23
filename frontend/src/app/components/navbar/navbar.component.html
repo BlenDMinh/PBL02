@@ -20,7 +20,7 @@
         <li class="nav-item">
           <a
             *ngIf="active === 'main'; else elseBlock1"
-            class="nav-link active"
+            class="nav-link active px-4"
             aria-current="page"
             href="#"
             >Trang chủ</a
@@ -54,23 +54,24 @@
           </ng-template>
         </li>
       </ul>
-      <input *ngIf="this.loginName === undefined; else showName"
-        class="d-flex login"
-        type="submit"
-        value="Đăng nhập"
+      <button
+        *ngIf="this.loginName === undefined; else showName"
+        class="d-flex logout"
         routerLink="/login"
-      />
-      <ng-template #showName style="color: white;" class="d-flex" type="text">
-        <img class="img-responsive avatar" src="./assets/avatars/blankmale.jpg" alt="./assets/avatars/blankmale.jpg">
+      >
+        Đăng nhập
+      </button>
+      <ng-template #showName style="color: white" class="d-flex" type="text">
+        <img
+          class="img-responsive avatar"
+          src="./assets/avatars/blankmale.jpg"
+          alt="No avatar"
+        />
         <span class="navbar-text loginName">
-          {{this.loginName}}
+          {{ this.loginName }}
         </span>
-        <button
-          class="d-flex logout"
-          routerLink="/"
-          (click)="Logout()"
-        >
-        Đăng xuất
+        <button class="d-flex logout" routerLink="/" (click)="Logout()">
+          Đăng xuất
         </button>
       </ng-template>
     </div>

@@ -4,6 +4,7 @@ import hashlib
 from datetime import datetime
 from Database import TokenDatabase
 import UserManager
+from Database import StudentDatabase
 
 class Sex(IntEnum):
     MALE = 0
@@ -38,7 +39,7 @@ class User:
     @staticmethod
     def Authenticate(id, password):
         
-        if id != '102210040' or password != 'thisismypassword':
+        if not StudentDatabase.Login(id, password):
             return ''
         
         # if anthentication pass

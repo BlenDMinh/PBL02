@@ -35,7 +35,7 @@ config = {
     },
     "Token": {
         "properties": {
-            "token": "CHAR",
+            "token": "VARCHAR(128)",
             "UserID": "CHAR(9)"
         },
         "PRIMARY KEY": ["token"]

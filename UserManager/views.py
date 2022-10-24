@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from django.shortcuts import render
 from UserManager.Student import Student
+from UserManager.Teacher import Teacher
 from UserManager.User import User
 
 # Create your views here.
@@ -19,9 +20,20 @@ def GetStudent(request, pk: str):
     student = Student.GetStudentFromDatabase(pk=pk, AsDict=True)
     return JsonResponse(student, safe=False)
 
+@api_view(['GET'])
 def GetStudentList(request):
     studentList = Student.GetAllStudentFromDatabase(AsDict=True)
     return JsonResponse(studentList, safe=False)
+
+@api_view(['GET'])
+def GetTeacher(request, pk: str):
+    teacher = Teacher.GetTeacherFromDatabase(pk=pk, AsDict=True)
+    return JsonResponse(teacher, safe=False)
+
+@api_view(['GET'])
+def GetTeacherList(request):
+    teacherList = Teacher.GetAllTeacherFromDatabase(AsDict=True)
+    return JsonResponse(teacherList, safe=False)
 
 # return a token if valid
 @api_view(['GET'])

@@ -3,6 +3,7 @@ from enum import IntEnum
 import hashlib
 from datetime import datetime
 from Database import TokenDatabase
+import UserManager
 
 class Sex(IntEnum):
     MALE = 0
@@ -45,21 +46,15 @@ class User:
         dummy1 = hashlib.sha256(dummy.encode('utf-8')).hexdigest()
         token = hashlib.sha512(dummy1.encode('utf-8')).hexdigest()
         
-        TokenDatabase.AddToken(token)
+        TokenDatabase.AddToken(token, id)
         
         return token
     
     @staticmethod
     def TokenAuthenticate(token):
-        if TokenDatabase.HasToken(token):
-            return {
-                'studentId': '102210040',
-                'name': 'Nguyễn Trương Anh Minh',
-                'sex': Sex.MALE,
-                'class': '21TCLC_Nhat1',
-                'phoneNumber': '0769639972',
-                'birthday': '01-12-2003'
-            }
+        UserID = TokenDatabase.HasToken(token)
+        if UserID != None:
+            return UserManager.Student.Student.GetStudentFromDatabase(pk=UserID, AsDict=True)
         return None
 
     @staticmethod

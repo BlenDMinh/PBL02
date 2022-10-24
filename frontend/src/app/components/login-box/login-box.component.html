@@ -2,9 +2,9 @@
   <div class="center">
     <h1>Login</h1>
     <form [formGroup]="loginForm" (submit)="Login()">
-      <div class="error" style="padding:5%">
-        <p *ngIf="this.error.length>0" style="color:red">
-          {{this.error}}
+      <div class="error" style="padding: 5%">
+        <p *ngIf="this.error.length > 0" style="color: red">
+          {{ this.error }}
         </p>
       </div>
       <div class="txt_field">
@@ -13,7 +13,12 @@
         <label>User ID</label>
       </div>
       <div class="txt_field">
-        <input type="password" id="password" formControlName="password" required />
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          required
+        />
         <span></span>
         <label>Password</label>
       </div>

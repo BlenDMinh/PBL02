@@ -4,8 +4,8 @@ class ClassSection:
     __sectionID: str
     __subjectID: str
     __teacherID: str
-    __start_time: datetime
-    __end_time: datetime
+    __start_time: int
+    __end_time: int
     __capacity: int
     
     def __init__(self):

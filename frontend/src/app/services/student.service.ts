@@ -17,7 +17,7 @@ export class StudentService {
     };
   }
 
-  private baseURL = `http://127.0.0.1:8000/api/user/student`;
+  private baseURL = `http://127.0.0.1:8000/api/user/student/`;
 
   getStudents(): Observable<Student[]> {
     return this.http
@@ -26,7 +26,7 @@ export class StudentService {
   }
 
   getStudent(id: String): Observable<Student> {
-    const url = `${this.baseURL}/${id}`;
+    const url = `${this.baseURL}${id}/`;
     return this.http
       .get<Student>(url)
       .pipe(catchError(this.handleError<Student>()));

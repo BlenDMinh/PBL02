@@ -78,6 +78,7 @@
           },
           "defaultConfiguration": "development",
           "options": {
+            "disableHostCheck": true,
             "port": 8080
           }
         },

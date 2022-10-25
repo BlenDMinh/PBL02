@@ -17,10 +17,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <li class="nav-item mid">
           <a
             *ngIf="active === 'main'; else elseBlock1"
-            class="nav-link active px-4"
+            class="nav-link active px-3"
             aria-current="page"
             href="#"
             >Trang chủ</a
@@ -29,10 +29,10 @@
             <a class="nav-link" href="#">Trang chủ</a>
           </ng-template>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mid">
           <a
             *ngIf="active === 'classSign'; else elseBlock2"
-            class="nav-link active"
+            class="nav-link active px-3"
             aria-current="page"
             href="#"
             >Đăng ký học phần</a
@@ -41,10 +41,10 @@
             <a class="nav-link" href="#">Đăng ký học phần</a>
           </ng-template>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mid">
           <a
             *ngIf="active === 'timetable'; else elseBlock3"
-            class="nav-link active"
+            class="nav-link active px-3"
             aria-current="page"
             href="#"
             >Thời khoá biểu</a
@@ -67,9 +67,9 @@
           src="./assets/avatars/blankmale.jpg"
           alt="No avatar"
         />
-        <span class="navbar-text loginName">
+        <a class="navbar-text loginName" routerLink="/profile">
           {{ this.loginName }}
-        </span>
+        </a>
         <button class="d-flex logout" routerLink="/" (click)="Logout()">
           Đăng xuất
         </button>

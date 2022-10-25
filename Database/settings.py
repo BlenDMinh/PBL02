@@ -25,13 +25,26 @@ config = {
         "PRIMARY KEY": ["TeacherID"]
     },
     "Subject": {
-        
+        "properties": {
+            "SubjectID": "CHAR(9)",
+            "SubjectName": "NVARCHAR(255)"
+        },
+        "PRIMARY KEY": ["SubjectID"]
     },
     "ClassSection": {
-        
+        "properties": {
+            "SectionID": "CHAR(18)",
+            "SubjectID": "CHAR(9)",
+            "TeacherID": "CHAR(9)",
+            "Time": "VARCHAR",
+            "Capacity": "INT"
+        }
     },
     "Student_ClassSection": {
-        
+        "properties": {
+            "StudentID": "CHAR(9)",
+            "SectionID": "CHAR(9)"
+        }
     },
     "Token": {
         "properties": {

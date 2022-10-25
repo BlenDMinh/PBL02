@@ -1,3 +1,4 @@
+from ast import Sub
 from re import sub
 from Database import SubjectDatabase
 
@@ -20,3 +21,7 @@ class Subject:
     
     def GetSubjectName(self):
         return self.__subjectName
+    
+    @staticmethod
+    def GetSubjectByID(id):
+        return Subject("00", "OOP")

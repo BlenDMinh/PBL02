@@ -56,7 +56,7 @@ class User:
         UserID = TokenDatabase.HasToken(token)
         if UserID != None:
             return UserManager.Student.Student.GetStudentFromDatabase(pk=UserID, AsDict=True)
-        return None
+        return ''
 
     @staticmethod
     def TokenLogout(token):

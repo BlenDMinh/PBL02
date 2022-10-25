@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-pbk0quag9v$9^6nog@73aqx06zf4m5dwa)^vp1qnn55&904nx1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -56,10 +56,10 @@ MIDDLEWARE = [
 ]
 
 #CORS
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:8080',
-)
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = (
+#     'http://localhost:8080',
+# )
 
 ROOT_URLCONF = 'PBL02_web_project.urls'
 

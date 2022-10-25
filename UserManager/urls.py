@@ -4,6 +4,7 @@ from UserManager import views
 
 urlpatterns = [
     path('api/user/student/', views.GetStudentList),
+    path('api/user/student', views.GetStudentList),
     re_path(r'api/user/student/(?P<pk>[0-9]+)$', views.GetStudent),
     path('api/user/teacher/', views.GetTeacherList),
     re_path(r'api/user/teacher/(?P<pk>[0-9]+)$', views.GetTeacher),

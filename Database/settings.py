@@ -25,7 +25,11 @@ config = {
         "PRIMARY KEY": ["TeacherID"]
     },
     "Subject": {
-        
+        "properties": {
+            "SubjectID": "CHAR(9)",
+            "SubjectName": "NVARCHAR(255)"
+        },
+        "PRIMARY KEY": ["SubjectID"]
     },
     "ClassSection": {
         

@@ -1,0 +1,26 @@
+body {
+  padding-top: 12px;
+  padding-bottom: 32px;
+  background-color: whitesmoke;
+}
+
+.container {
+  padding: 3%;
+  margin-top: 15px;
+}
+
+.avatar-info {
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 20px;
+}
+
+.avatar {
+  margin: 48px 32px;
+  border-radius: 50%;
+  border: solid 4px #7978ff;
+}
+
+.avatar-name {
+  text-align: center;
+}

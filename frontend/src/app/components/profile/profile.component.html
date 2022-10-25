@@ -1,0 +1,20 @@
+<body>
+  <app-navbar
+    [active]="this.link"
+    [loginName]="this.loginUser.name"
+  ></app-navbar>
+  <div class="container container-fluid d-flex">
+    <div class="avatar-info">
+      <img
+        class="img-responsive avatar"
+        src="./assets/avatars/blankmale.jpg"
+        alt="No avatar"
+      />
+      <p class="avatar-name">{{ this.loginUser.name | uppercase }}</p>
+    </div>
+    <div class="detail d-flex justify-content-between">
+      <div class="individual-info"></div>
+      <div class="university-info"></div>
+    </div>
+  </div>
+</body>

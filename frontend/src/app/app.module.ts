@@ -10,6 +10,7 @@ import { StudentTableComponent } from './components/student-table/student-table.
 import { StudentListComponent } from './components/student-list/student-list.component';
 import { LoginBoxComponent } from './components/login-box/login-box.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     StudentListComponent,
     LoginBoxComponent,
     NavbarComponent,
+    ProfileComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, FormsModule, ReactiveFormsModule],
   providers: [],

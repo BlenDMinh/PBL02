@@ -15,13 +15,19 @@ input[type="submit"]:hover {
   border-color: #2691d9;
 }
 
+.mid {
+  text-align: center;
+}
+
 .bi {
   margin-left: 50px;
 }
 
 .loginName {
   color: white;
+  text-align: center;
   padding-right: 30px;
+  text-decoration: none;
 }
 
 .logout {

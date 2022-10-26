@@ -8,7 +8,6 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
-  students: Student[] = [];
   loginUser: any;
   link = 'profile';
   constructor(private loginService: LoginService) {}

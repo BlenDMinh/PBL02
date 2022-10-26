@@ -3,18 +3,37 @@
     [active]="this.link"
     [loginName]="this.loginUser.name"
   ></app-navbar>
-  <div class="container container-fluid d-flex">
+  <div class="container container-fluid d-flex justify-content-between">
     <div class="avatar-info">
       <img
         class="img-responsive avatar"
         src="./assets/avatars/blankmale.jpg"
         alt="No avatar"
+        style="width: 80%"
       />
       <p class="avatar-name">{{ this.loginUser.name | uppercase }}</p>
     </div>
-    <div class="detail d-flex justify-content-between">
-      <div class="individual-info"></div>
-      <div class="university-info"></div>
+    <div class="detail d-flex justify-content-between flex-column">
+      <div class="individual-info">
+        <p>
+          <span style="color: #4649ff; font-weight: bold">Số điện thoại:</span>
+          {{ this.loginUser.phoneNumber }}
+        </p>
+      </div>
+      <div class="university-info">
+        <div class="d-flex align-self-center flex-column" style="height: 100%">
+          <p>
+            <span style="color: #4649ff; font-weight: bold"
+              >Mã số sinh viên:</span
+            >
+            {{ this.loginUser.studentId }}
+          </p>
+          <p>
+            <span style="color: #4649ff; font-weight: bold">Lớp:</span>
+            {{ this.loginUser.class | uppercase }}
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </body>

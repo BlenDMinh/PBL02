@@ -62,13 +62,11 @@ input[type="submit"]:hover {
   padding-left: 10%px;
   border-radius: 40px;
   background-color: #4649ff !important;
-  // background-color: rgba($color: #000000, $alpha: 0) !important;
   box-shadow: rgba(0, 0, 0, 0.26) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .container {
-  // padding: 0.25%;
   padding-left: 10%px;
   border-radius: 20px;
   background-color: #4649ff;
@@ -78,6 +76,6 @@ input[type="submit"]:hover {
   border: solid 4px #7978ff;
   margin-right: 15px;
   border-radius: 50%;
-  width: 4.5%;
-  height: 4.5%;
+  width: 4%;
+  height: 4%;
 }

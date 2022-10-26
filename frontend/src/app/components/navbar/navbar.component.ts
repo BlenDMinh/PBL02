@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Location } from '@angular/common';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -16,6 +15,6 @@ export class NavbarComponent implements OnInit {
 
   Logout() {
     this.loginService.Logout().subscribe();
-    location.reload();
+    location.replace('/main');
   }
 }

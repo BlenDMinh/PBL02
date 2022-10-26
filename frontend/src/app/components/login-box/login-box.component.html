@@ -2,11 +2,6 @@
   <div class="center">
     <h1>Login</h1>
     <form [formGroup]="loginForm" (submit)="Login()">
-      <div class="error" style="padding: 5%">
-        <p *ngIf="this.error.length > 0" style="color: red">
-          {{ this.error }}
-        </p>
-      </div>
       <div class="txt_field">
         <input type="text" id="id" formControlName="id" required />
         <span></span>
@@ -22,8 +17,12 @@
         <span></span>
         <label>Password</label>
       </div>
-      <div class="pass">Forgot Password?</div>
-      <input type="submit" value="Login" />
+      <div class="error" style="padding-bottom: 20px">
+        <p *ngIf="this.error.length > 0" style="color: red; text-align: center">
+          {{ this.error }}
+        </p>
+      </div>
+      <input type="submit" style="margin-top: 12px" value="Login" />
     </form>
   </div>
 </body>

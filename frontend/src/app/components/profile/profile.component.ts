@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.loginService.loginByToken().subscribe((student) => {
       this.loginUser = student;
-      if (this.loginUser == null) {
+      if (this.loginUser.hasOwnProperty('error')) {
         location.replace('/main');
       }
     });

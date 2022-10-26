@@ -1,3 +1,6 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body>
   <app-navbar
     [active]="this.link"
@@ -11,7 +14,9 @@
         alt="No avatar"
         style="width: 80%"
       />
-      <p class="avatar-name">{{ this.loginUser.name | uppercase }}</p>
+      <p class="avatar-name">{{ this.loginUser.name}}</p>
+      <p class="avatar-bio">bio testing text bio testing text bio testing text bio testing text bio testing text bio testing text</p>
+      <!-- <i class="fa-regular fa-gear"></i> -->
     </div>
     <div class="detail d-flex justify-content-between flex-column">
       <div class="individual-info">
@@ -35,5 +40,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="schedule container container-fluid d-flex justify-content-between">
+    <p>Schedule</p>
   </div>
 </body>

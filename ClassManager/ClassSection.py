@@ -1,6 +1,7 @@
 from datetime import datetime
 from msilib.schema import Class
 from tracemalloc import start
+from typing_extensions import Self
 import ClassManager
 import UserManager
 
@@ -27,6 +28,16 @@ class ClassSection:
          
         pass
     
+    def AsDict(self):
+        return {
+            "sectionID": self.GetClassSectionID(),
+            "subjectName": self.GetSubjectName(),
+            "teacherName": self.GetTeacherName(),
+            "startTime": self.GetPeriodTime()[0],
+            "endTime": self.GetPeriodTime()[1],
+            "capacity": self.GetClassCapacity()
+        }
+    
     def GetClassSectionID(self):
         return self.__sectionID
     
@@ -45,3 +56,5 @@ class ClassSection:
     def GetClassCapacity(self):
         return self.__capacity
     
+    def GetPeriodTime(self):
+        return (self.__start_time, self.__end_time)

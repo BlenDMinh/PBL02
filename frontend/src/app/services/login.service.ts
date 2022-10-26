@@ -5,11 +5,10 @@ import { catchError } from 'rxjs/operators';
 import { Student } from '../models/student';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
@@ -19,11 +18,9 @@ export class LoginService {
 
   private baseURL = `http://127.0.0.1:8000/api/user`;
 
-  getToken(id:string, password:string): Observable<any> {
+  getToken(id: string, password: string): Observable<any> {
     const url = `${this.baseURL}/login?id=${id}&password=${password}`;
-    return this.http
-      .get<any>(url)
-      .pipe(catchError(this.handleError<any>()));
+    return this.http.get<any>(url).pipe(catchError(this.handleError<any>()));
   }
 
   loginByToken(): Observable<any> {
@@ -35,8 +32,6 @@ export class LoginService {
 
   Logout() {
     const url = `${this.baseURL}/logout/${localStorage.getItem('token')}`;
-    return this.http
-      .delete<any>(url)
-      .pipe(catchError(this.handleError<any>()));
+    return this.http.delete<any>(url).pipe(catchError(this.handleError<any>()));
   }
 }

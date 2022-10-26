@@ -9,10 +9,23 @@ body {
   margin-top: 15px;
 }
 
-.avatar-info {
+.avatar-info,
+.individual-info,
+.university-info {
   border-radius: 25px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 20px;
+}
+
+.detail {
+  width: 72.5%;
+  margin-left: 16px;
+}
+
+.university-info,
+.individual-info {
+  height: 47.5%;
+  padding: 32px;
 }
 
 .avatar {

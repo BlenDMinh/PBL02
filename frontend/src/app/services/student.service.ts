@@ -26,7 +26,7 @@ export class StudentService {
   }
 
   getStudent(id: String): Observable<Student> {
-    const url = `${this.baseURL}${id}/`;
+    const url = `${this.baseURL}/${id}`;
     return this.http
       .get<Student>(url)
       .pipe(catchError(this.handleError<Student>()));

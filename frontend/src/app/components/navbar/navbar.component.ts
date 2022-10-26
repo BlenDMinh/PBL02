@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Location } from '@angular/common';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({

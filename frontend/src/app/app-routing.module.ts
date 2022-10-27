@@ -8,7 +8,11 @@ import { LoginGuard } from './login.guard';
 const routes: Routes = [
   { path: 'main', component: StudentListComponent },
   { path: 'login', component: LoginBoxComponent },
-  { path: 'profile', component: ProfileComponent, canActivate: [LoginGuard] },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [LoginGuard],
+  },
   { path: '', redirectTo: '/main', pathMatch: 'full' },
 ];
 

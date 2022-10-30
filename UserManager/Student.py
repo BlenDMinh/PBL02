@@ -1,5 +1,8 @@
 from UserManager.User import User
 from Database import StudentDatabase
+from Database import ClassSectionDatabase
+from Database import SubjectDatabase
+from Database import Student_ClassSectionDatabase
 
 class Student(User):
     

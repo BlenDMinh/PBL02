@@ -58,3 +58,9 @@ class ClassSection:
         if AsDict:
             return ClassSection('000000000000000000', '000000000', '000000001', 1, 3, 30).AsDict()
         return ClassSection('000000000000000000', '000000000', '000000001', 1, 3, 30)
+    
+    @staticmethod
+    def GetAllClasses(AsDict = False):
+        if AsDict:
+            return [ClassSection('000000000000000000', '000000000', '000000001', 1, 3, 30).AsDict()]
+        return [ClassSection('000000000000000000', '000000000', '000000001', 1, 3, 30)]

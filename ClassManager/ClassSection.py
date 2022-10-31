@@ -25,6 +25,7 @@ class ClassSection:
             "teacherName": self.GetTeacherName(),
             "startTime": self.GetPeriodTime()[0],
             "endTime": self.GetPeriodTime()[1],
+            "current": self.GetCurrentNumberOfStudents(),
             "capacity": self.GetClassCapacity()
         }
     
@@ -42,6 +43,9 @@ class ClassSection:
     
     def GetTeacherName(self):
         return Teacher.GetTeacherFromDatabase(self.GetTeacherID()).GetUserName()
+    
+    def GetCurrentNumberOfStudents(self):
+        return 0
     
     def GetClassCapacity(self):
         return self.__capacity

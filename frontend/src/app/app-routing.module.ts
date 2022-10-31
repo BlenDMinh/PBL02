@@ -5,16 +5,11 @@ import { LoginBoxComponent } from './components/login-box/login-box.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { StudentListComponent } from './components/student-list/student-list.component';
 import { TimetableComponent } from './components/timetable/timetable.component';
-import { LoginGuard } from './login.guard';
 
 const routes: Routes = [
   { path: 'main', component: StudentListComponent },
   { path: 'login', component: LoginBoxComponent },
-  {
-    path: 'profile',
-    component: ProfileComponent,
-    canActivate: [LoginGuard],
-  },
+  { path: 'profile', component: ProfileComponent },
   { path: 'classSign', component: ClassSignComponent },
   { path: 'timetable', component: TimetableComponent },
   { path: '', redirectTo: '/main', pathMatch: 'full' },

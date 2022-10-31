@@ -1,3 +1,4 @@
+from dataclasses import asdict
 from UserManager.User import User
 from Database import StudentDatabase
 from Database import ClassSectionDatabase
@@ -8,20 +9,15 @@ class Student(User):
     
     __classname: str
     
-    def __init__(self, userid, name, sex, phone_number, birthday, classname) -> None:
+    def __init__(self, userid, name, sex, phone_number, birthday, classname) -> None:  # type: ignore
         super().__init__(userid, name, sex, phone_number, birthday)
         self.__classname = classname
-    
-    def __init__(self, record):
-        super().__init__(record[0], record[1], record[2], record[4], record[5])
-        self.__classname = record[3]
-        
     
     def __str__(self):
         str = f'{self.GetUserID()} {self.GetUserName()} {self.GetUserSex()} {self.GetClassName()}'
         return str
     
-    def AsDist(self):
+    def AsDict(self):
         return {
             'studentId': self.GetUserID(),
             'name': self.GetUserName(),
@@ -35,20 +31,22 @@ class Student(User):
         return self.__classname
 
     @staticmethod
+    def FromRecord(record, AsDict=False):
+        student = Student(record[0], record[1], record[2], record[4], record[5], record[3])
+        if AsDict:
+            return student.AsDict()
+        return student
+
+    @staticmethod
     def GetAllStudentFromDatabase(AsDict = False):
         students_database = StudentDatabase.GetAll()
         studentList = []
         for rec in students_database:
-            if AsDict:
-                studentList.append(Student(record=rec).AsDist())
-            else:
-                studentList.append(Student(record=rec))
+            studentList.append(Student.FromRecord(record=rec, AsDict=AsDict))
         return studentList
     
     @staticmethod
     def GetStudentFromDatabase(pk, AsDict = False):
         rec = StudentDatabase.Get(pk)
-        student = Student(record=rec)
-        if AsDict:
-            return student.AsDist()
+        student = Student.FromRecord(record=rec, AsDict=AsDict)
         return student

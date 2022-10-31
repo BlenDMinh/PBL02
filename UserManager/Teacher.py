@@ -3,11 +3,8 @@ from Database import TeacherDatabase
 
 class Teacher(User):
     
-    def __init__(self, userid, name, sex, phone_number, birthday):
+    def __init__(self, userid, name, sex, phone_number, birthday):  # type: ignore
         super().__init__(userid, name, sex, phone_number, birthday)
-    
-    def __init__(self, record):
-        super().__init__(record[0], record[1], record[2], record[3], record[4])
     
     def AsDict(self):
         return {
@@ -19,11 +16,16 @@ class Teacher(User):
         }
     
     @staticmethod
-    def GetTeacherFromDatabase(pk, AsDict = False):
-        rec = ["000000000","Nguyễn Trương Anh Minh",0,"000000000000","01/12/2003","000000000"]
-        teacher = Teacher(rec)
+    def FromRecord(record, AsDict=False):
+        teacher = Teacher(record[0], record[1], record[2], record[3], record[4])
         if AsDict:
             return teacher.AsDict()
+        return teacher
+
+    @staticmethod
+    def GetTeacherFromDatabase(pk, AsDict = False):
+        rec = ["000000000","Nguyễn Trương Anh Minh",0,"000000000000","01/12/2003","000000000"]
+        teacher = Teacher.FromRecord(record=rec, AsDict=AsDict)
         return teacher
         
     @staticmethod
@@ -38,7 +40,5 @@ class Teacher(User):
         teacherList = []
         for rec in teachers_database:
             if AsDict:
-                teacherList.append(Teacher(rec).AsDict())
-            else:
-                teacherList.append(Teacher(rec))
+                teacherList.append(Teacher.FromRecord(rec, AsDict=AsDict))
         return teacherList

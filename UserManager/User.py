@@ -12,9 +12,7 @@ class Sex(IntEnum):
     OTHER = 2
 
 class User:
-    def __init__(self):
-        pass
-    def __init__(self, userid, name, sex, phone_number, birthday):
+    def __init__(self, userid='', name='', sex=Sex.OTHER, phone_number='', birthday=''):
         self.__userid = userid
         self.__name = name
         self.__sex = sex
@@ -55,7 +53,7 @@ class User:
     def TokenAuthenticate(token):
         UserID = TokenDatabase.HasToken(token)
         if UserID != None:
-            return UserManager.Student.Student.GetStudentFromDatabase(pk=UserID, AsDict=True)
+            return UserManager.Student.Student.GetStudentFromDatabase(pk=UserID, AsDict=True)  # type: ignore
         return ''
 
     @staticmethod

@@ -1,9 +1,6 @@
 from datetime import datetime
-from msilib.schema import Class
-from tracemalloc import start
-from typing_extensions import Self
-import ClassManager
-import UserManager
+from ClassManager.Subject import Subject
+from UserManager.Teacher import Teacher
 
 class ClassSection:
     __sectionID: str
@@ -12,10 +9,7 @@ class ClassSection:
     __start_time: int
     __end_time: int
     __capacity: int
-    
-    def __init__(self):
-        pass
-    
+
     def __init__(self, sectionID, subjectID, teacherID, start_time, end_time, capacity):
         self.__sectionID = sectionID
         self.__subjectID = subjectID
@@ -23,10 +17,6 @@ class ClassSection:
         self.__start_time = start_time
         self.__end_time = end_time
         self.__capacity = capacity
-    
-    def __init__(self, record):
-         
-        pass
     
     def AsDict(self):
         return {
@@ -45,16 +35,26 @@ class ClassSection:
         return self.__subjectID
     
     def GetSubjectName(self):
-        return ClassManager.Subject.GetSubjectByID(self.GetSubjectID()).GetSubjectName()
+        return Subject.GetSubjectByID(self.GetSubjectID()).GetSubjectName()
     
     def GetTeacherID(self):
         return self.__teacherID
     
     def GetTeacherName(self):
-        return UserManager.Teacher.GetTeacherFromDatabase(self.GetTeacherID()).GetUserName()
+        return Teacher.GetTeacherFromDatabase(self.GetTeacherID()).GetUserName()
     
     def GetClassCapacity(self):
         return self.__capacity
     
     def GetPeriodTime(self):
         return (self.__start_time, self.__end_time)
+
+    @staticmethod
+    def FromRecord(record, AsDict=False):
+        pass
+
+    @staticmethod
+    def GetClassByID(id, AsDict = False):
+        if AsDict:
+            return ClassSection('000000000000000000', '000000000', '000000001', 1, 3, 30).AsDict()
+        return ClassSection('000000000000000000', '000000000', '000000001', 1, 3, 30)

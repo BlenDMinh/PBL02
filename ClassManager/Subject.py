@@ -1,20 +1,12 @@
-from ast import Sub
-from re import sub
 from Database import SubjectDatabase
 
 class Subject:
     __subjectID: str
     __subjectName: str
     
-    def __init__(self):
-        pass
     def __init__(self, subjectID, subjectName):
         self.__subjectID = subjectID
         self.__subjectName = subjectName
-        
-    def __init__(self, record):
-        
-        pass
     
     def GetSubjectID(self):
         return self.__subjectID
@@ -22,6 +14,10 @@ class Subject:
     def GetSubjectName(self):
         return self.__subjectName
     
+    @staticmethod
+    def FromRecord(record, AsDict=False):
+        pass
+
     @staticmethod
     def GetSubjectByID(id):
         return Subject("00", "OOP")

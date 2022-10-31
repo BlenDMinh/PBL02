@@ -1,8 +1,9 @@
 export interface Class {
-  sectionID: number;
+  sectionID: string;
   subjectName: string;
   teacherName: string;
   startTime: number;
   endTime: number;
+  current: number;
   capacity: number;
 }

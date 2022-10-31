@@ -22,11 +22,11 @@
             *ngIf="active === 'main'; else elseBlock1"
             class="nav-link active px-3"
             aria-current="page"
-            href="#"
+            routerLink="/main"
             >Trang chủ</a
           >
           <ng-template #elseBlock1>
-            <a class="nav-link" href="#">Trang chủ</a>
+            <a class="nav-link" routerLink="/main">Trang chủ</a>
           </ng-template>
         </li>
         <li class="nav-item mid">
@@ -34,11 +34,11 @@
             *ngIf="active === 'classSign'; else elseBlock2"
             class="nav-link active px-3"
             aria-current="page"
-            href="#"
+            routerLink="/classSign"
             >Đăng ký học phần</a
           >
           <ng-template #elseBlock2>
-            <a class="nav-link" href="#">Đăng ký học phần</a>
+            <a class="nav-link" routerLink="/classSign">Đăng ký học phần</a>
           </ng-template>
         </li>
         <li class="nav-item mid">
@@ -46,11 +46,11 @@
             *ngIf="active === 'timetable'; else elseBlock3"
             class="nav-link active px-3"
             aria-current="page"
-            href="#"
+            routerLink="/timetable"
             >Thời khoá biểu</a
           >
           <ng-template #elseBlock3>
-            <a class="nav-link" href="#">Thời khoá biểu</a>
+            <a class="nav-link" routerLink="/timetable">Thời khoá biểu</a>
           </ng-template>
         </li>
       </ul>

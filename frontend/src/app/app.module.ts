@@ -11,6 +11,8 @@ import { StudentTableComponent } from './components/student-table/student-table.
 import { StudentListComponent } from './components/student-list/student-list.component';
 import { LoginBoxComponent } from './components/login-box/login-box.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ClassSignComponent } from './components/class-sign/class-sign.component';
+import { TimetableComponent } from './components/timetable/timetable.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     LoginBoxComponent,
     NavbarComponent,
     ProfileComponent,
+    ClassSignComponent,
+    TimetableComponent,
   ],
   imports: [
     BrowserModule,

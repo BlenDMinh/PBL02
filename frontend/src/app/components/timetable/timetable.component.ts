@@ -7,7 +7,7 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./timetable.component.scss'],
 })
 export class TimetableComponent implements OnInit {
-  loginUser: any;
+  loginUser: any = null;
   link = 'timetable';
 
   constructor(private loginService: LoginService) {}

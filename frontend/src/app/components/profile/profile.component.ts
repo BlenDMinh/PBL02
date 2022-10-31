@@ -9,7 +9,7 @@ import { LoginService } from 'src/app/services/login.service';
 export class ProfileComponent implements OnInit {
   loginUser: any = null;
   link = 'profile';
-  t = false;
+
   constructor(private loginService: LoginService) {}
 
   ngOnInit(): void {

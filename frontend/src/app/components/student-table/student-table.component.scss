@@ -1,3 +1,9 @@
+table {
+  overflow: hidden;
+  border-radius: 1.5em;
+  border-collapse: collapse;
+}
+
 thead {
   text-align: center;
 }
@@ -7,7 +13,7 @@ thead {
 }
 
 .color {
-  background-color: #4649FF;
+  background-color: #4649ff;
   color: #fff;
 }
 

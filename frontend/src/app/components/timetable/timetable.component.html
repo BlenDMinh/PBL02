@@ -3,37 +3,52 @@
     [active]="this.link"
     [loginName]="this.loginUser.name"
   ></app-navbar>
-  <div class="today container container-fluid">
-
-  </div>
+  <div class="today container container-fluid"></div>
   <div class="week container container-fluid">
     <table class="table table-striped table-bordered table-hover">
       <thead>
         <tr class="color">
           <th scope="col" class="align-middle text-break">Thời gian</th>
           <th scope="col" class="align-middle text-break">Tiết</th>
-          <th scope="col" class="align-middle text-break" *ngFor="let i of [2, 3, 4, 5, 6, 7]">Thứ {{i}}</th>
-          <th scope="col" class="align-middle text-break">Chủ Nhật</th>
+          <th
+            scope="col"
+            class="align-middle text-break"
+            *ngFor="let i of [2, 3, 4, 5, 6, 7]"
+          >
+            Thứ {{ i }}
+          </th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let row of [0, 1, 2, 3, 4]">
-          <th scope="col" class="align-middle text-break center">{{row + 7}}:00 - {{row + 7}}:50</th>
-          <th scope="col" class="align-middle text-break center">{{row + 1}}</th>
+          <th scope="col" class="align-middle text-break center">
+            {{ row + 7 }}:00 - {{ row + 7 }}:50
+          </th>
+          <th scope="col" class="align-middle text-break center">
+            {{ row + 1 }}
+          </th>
         </tr>
         <tr class="tbreak">
-          <th scope="col" *ngFor="let i of [0, 0, 0, 0, 0, 0, 0, 0, 0]">&nbsp;</th>
+          <th colspan="8">&nbsp;</th>
         </tr>
         <tr *ngFor="let row of [5, 6, 7, 8, 9]">
-          <th scope="col" class="align-middle text-break center">{{row + 7}}:30 - {{row + 8}}:20</th>
-          <th scope="col" class="align-middle text-break center">{{row + 1}}</th>
+          <th scope="col" class="align-middle text-break center">
+            {{ row + 7 }}:30 - {{ row + 8 }}:20
+          </th>
+          <th scope="col" class="align-middle text-break center">
+            {{ row + 1 }}
+          </th>
         </tr>
         <tr class="tbreak">
-          <th scope="col" *ngFor="let i of [0, 0, 0, 0, 0, 0, 0, 0, 0]">&nbsp;</th>
+          <th colspan="8">&nbsp;</th>
         </tr>
         <tr *ngFor="let row of [10, 11, 12, 13, 14]">
-          <th scope="col" class="align-middle text-break center">{{row + 8}}:00 - {{row + 8}}:50</th>
-          <th scope="col" class="align-middle text-break center">{{row + 1}}</th>
+          <th scope="col" class="align-middle text-break center">
+            {{ row + 8 }}:00 - {{ row + 8 }}:50
+          </th>
+          <th scope="col" class="align-middle text-break center">
+            {{ row + 1 }}
+          </th>
         </tr>
       </tbody>
     </table>

@@ -19,5 +19,5 @@ class Subject:
         pass
 
     @staticmethod
-    def GetSubjectByID(id):
+    def GetSubjectByID(id, AsDict=False):
         return Subject("00", "OOP")

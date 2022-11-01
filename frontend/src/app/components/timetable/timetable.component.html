@@ -4,8 +4,15 @@
     [loginName]="this.loginUser.name"
   ></app-navbar>
   <div class="today container container-fluid">
-    <table>
-      <tr class="color"></tr>
+    <table class="table table-striped table-bordered table-hover">
+      <tr class="color">
+        <td scope="row" class="align-middle text-break">Tiết</td>
+        <td scope="row" class="align-middle text-break">Thời gian</td>
+      </tr>
+      <tr class="color">
+        <td scope="row" class="align-middle text-break">Tiết</td>
+        <td scope="row" class="align-middle text-break">Thời gian</td>
+      </tr>
     </table>
   </div>
   <div class="week container container-fluid">
@@ -37,6 +44,7 @@
               <ng-container *ngIf="this.table[row][col][1] == 0; else content"></ng-container>
               <ng-template #content>
                 <th scope="col" class="onSubject align-middle text-break center" [rowSpan]="this.table[row][col][1]">
+                  {{ row + 7 }}:00 - {{ this.table[row][col][1] + row + 6 }}:50<br>
                   {{this.table[row][col][0]}}
                 </th>
               </ng-template>
@@ -63,6 +71,7 @@
               <ng-container *ngIf="this.table[row][col][1] == 0; else content"></ng-container>
               <ng-template #content>
                 <th scope="col" class="onSubject align-middle text-break center" [rowSpan]="this.table[row][col][1]">
+                  {{ row + 7 }}:30 - {{this.table[row][col][1] + row + 7 }}:20<br>
                   {{this.table[row][col][0]}}
                 </th>
               </ng-template>
@@ -89,6 +98,7 @@
               <ng-container *ngIf="this.table[row][col][1] == 0; else content"></ng-container>
               <ng-template #content>
                 <th scope="col" class="onSubject align-middle text-break center" [rowSpan]="this.table[row][col][1]">
+                  {{ row + 8 }}:00 - {{this.table[row][col][1] + row + 7 }}:50<br>
                   {{this.table[row][col][0]}}
                 </th>
               </ng-template>

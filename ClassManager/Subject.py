@@ -8,6 +8,12 @@ class Subject:
         self.__subjectID = subjectID
         self.__subjectName = subjectName
     
+    def AsDict(self):
+        return {
+            "subjectID": self.GetSubjectID(),
+            "subjectName": self.GetSubjectName()
+        }
+
     def GetSubjectID(self):
         return self.__subjectID
     
@@ -20,4 +26,6 @@ class Subject:
 
     @staticmethod
     def GetSubjectByID(id, AsDict=False):
+        if AsDict:
+            return Subject("00", "OOP").AsDict()
         return Subject("00", "OOP")

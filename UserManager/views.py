@@ -39,7 +39,6 @@ def GetTeacherList(request):
 @api_view(['GET'])
 def UserLogin(request):
     if request.method == 'GET':
-        print(request.GET)
         if 'id' in request.GET and 'password' in request.GET:
             id = request.GET.get('id')
             password = request.GET.get('password')

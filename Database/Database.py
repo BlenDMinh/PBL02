@@ -35,7 +35,7 @@ def GetAllTables():
 def InitTable(TableName):
     print(f"Init table {TableName}")
     properties = settings.config[TableName]
-    print(properties)
+    # print(properties)
     # CREATE TABLE IF NOT EXIST
     tables = list(GetAllTables())
     print(tables)
@@ -49,10 +49,10 @@ def InitTable(TableName):
             else:
                 pass
     else:
-        print('=' * 20 + f"MODIFY TABLE {TableName}" + "=" * 20)
+        # print('=' * 20 + f"MODIFY TABLE {TableName}" + "=" * 20)
         # MODIFY TABLE
         table_properties = GetAllProperties(TableName)
-        print(table_properties)
+        # print(table_properties)
         if(len(properties['properties']) == 0):
             if 'Empty' not in table_properties:
                 Execute(f"ALTER TABLE {TableName} ADD COLUMN Empty CHAR")

@@ -11,4 +11,3 @@ def Get(pk):
 
 
 Database.InitTable("Teacher")
-print(GetAll())

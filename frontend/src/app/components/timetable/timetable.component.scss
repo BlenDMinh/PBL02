@@ -4,9 +4,11 @@ body {
 }
 
 .container {
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding: 3%;
   margin-top: 15px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 thead {
@@ -14,6 +16,15 @@ thead {
 }
 
 .center {
+  text-align: center !important; 
+}
+
+.tbreak {
+  background-color: #4649FF;
+}
+
+.tbreak > th {
+  color: #fff;
   text-align: center;
 }
 
@@ -24,10 +35,4 @@ thead {
 
 .table {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-}
-
-.tbreak {
-  background-color: #4649FF;
-  color: #fff;
-  text-align: center;
 }

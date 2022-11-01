@@ -1,9 +1,13 @@
+nav {
+  max-width: 1400px;
+}
+
 input[type="submit"] {
-  font-weight: bold;
-  margin-right: 50px;
   cursor: pointer;
   color: #e9f4fb;
+  font-weight: bold;
   padding: 6px 24px;
+  margin-right: 50px;
   border-radius: 50%;
   background: #7978ff;
   text-transform: uppercase;
@@ -30,12 +34,40 @@ input[type="submit"]:hover {
   text-decoration: none;
 }
 
+.login-hover {
+  position: relative;
+}
+
+.login-hover .login-list {
+  position: absolute;
+  display: none !important;
+}
+
+.login-hover:hover .login-list {
+  top: 40px;
+  width: 200px;
+  border-radius: 10px;
+  display: flex !important;
+  background-color: white;
+}
+
+.login-list ul {
+  width: 100%;
+  list-style-type: none;
+}
+
+.login-list a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
 .logout {
-  font-weight: bold;
-  margin-right: 50px;
   cursor: pointer;
   color: #e9f4fb;
   padding: 6px 24px;
+  font-weight: bold;
+  margin-right: 50px;
   border-radius: 25px;
   background: #7978ff;
   text-transform: uppercase;
@@ -50,8 +82,8 @@ input[type="submit"]:hover {
 
 .active {
   font-weight: bold;
-  background-color: #7978ff;
   border-radius: 25px;
+  background-color: #7978ff;
 }
 
 .navbar {
@@ -73,9 +105,9 @@ input[type="submit"]:hover {
 }
 
 .avatar {
-  border: solid 4px #7978ff;
+  width: 8%;
+  height: 8%;
   margin-right: 15px;
   border-radius: 50%;
-  width: 4%;
-  height: 4%;
+  border: solid 4px #7978ff;
 }

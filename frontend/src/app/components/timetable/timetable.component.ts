@@ -16,6 +16,9 @@ export class TimetableComponent implements OnInit {
   ngOnInit(): void {
     this.loginService.loginByToken().subscribe((student) => {
       this.loginUser = student;
+      if (this.loginUser.hasOwnProperty('error')) {
+        location.replace('/main');
+      }
     });
   }
 }

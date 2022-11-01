@@ -7,7 +7,7 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./timetable.component.scss'],
 })
 export class TimetableComponent implements OnInit {
-  table: [string, number][][] = [];
+  table: [string, number][][] = [[], [['OOP', 3]], [['#', 0]], [['#', 0]], []]
   loginUser: any;
   link = 'timetable';
 
@@ -20,5 +20,8 @@ export class TimetableComponent implements OnInit {
         location.replace('/main');
       }
     });
+    // this.table[0] = [];
+    // this.table[0][0] = ['a', 5];
+    console.log(this.table[0][0] != undefined);
   }
 }

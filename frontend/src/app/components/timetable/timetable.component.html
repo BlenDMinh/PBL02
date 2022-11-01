@@ -32,9 +32,21 @@
           <th scope="col" class="align-middle text-break center">
             {{ row + 1 }}
           </th>
-          <th *ngFor="let col of [0, 1, 2, 3, 4, 5, 6]">
-            Môn
-          </th>
+          <ng-container *ngFor="let col of [0, 1, 2, 3, 4, 5, 6]">
+            <ng-container *ngIf="this.table[row] != undefined && this.table[row][col] != undefined; else blank">
+              <ng-container *ngIf="this.table[row][col][1] == 0; else content"></ng-container>
+              <ng-template #content>
+                <th scope="col" class="onSubject align-middle text-break center" [rowSpan]="this.table[row][col][1]">
+                  {{this.table[row][col][0]}}
+                </th>
+              </ng-template>
+            </ng-container>
+            <ng-template #blank>
+              <th scope="col" class="align-middle text-break center">
+                &nbsp;
+              </th>
+            </ng-template>
+          </ng-container>
         </tr>
         <tr class="tbreak">
           <th colspan="9">Nghỉ giải lao</th>
@@ -46,9 +58,21 @@
           <th scope="col" class="align-middle text-break center">
             {{ row + 1 }}
           </th>
-          <th *ngFor="let col of [0, 1, 2, 3, 4, 5, 6]">
-            Môn
-          </th>
+          <ng-container *ngFor="let col of [0, 1, 2, 3, 4, 5, 6]">
+            <ng-container *ngIf="this.table[row] != undefined && this.table[row][col] != undefined; else blank">
+              <ng-container *ngIf="this.table[row][col][1] == 0; else content"></ng-container>
+              <ng-template #content>
+                <th scope="col" class="onSubject align-middle text-break center" [rowSpan]="this.table[row][col][1]">
+                  {{this.table[row][col][0]}}
+                </th>
+              </ng-template>
+            </ng-container>
+            <ng-template #blank>
+              <th scope="col" class="align-middle text-break center">
+                &nbsp;
+              </th>
+            </ng-template>
+          </ng-container>
         </tr>
         <tr class="tbreak">
           <th colspan="9">Nghỉ giải lao</th>
@@ -60,19 +84,21 @@
           <th scope="col" class="align-middle text-break center">
             {{ row + 1 }}
           </th>
-          <th *ngFor="let col of [0, 1, 2, 3, 4, 5, 6]">
-            <div *ngIf="true; else blank">
-              <th scope="col" class="align-middle text-break center">
-                mon
-                <!-- {{table[row][col][0]}} -->
-              </th>
-            </div>
+          <ng-container *ngFor="let col of [0, 1, 2, 3, 4, 5, 6]">
+            <ng-container *ngIf="this.table[row] != undefined && this.table[row][col] != undefined; else blank">
+              <ng-container *ngIf="this.table[row][col][1] == 0; else content"></ng-container>
+              <ng-template #content>
+                <th scope="col" class="onSubject align-middle text-break center" [rowSpan]="this.table[row][col][1]">
+                  {{this.table[row][col][0]}}
+                </th>
+              </ng-template>
+            </ng-container>
             <ng-template #blank>
               <th scope="col" class="align-middle text-break center">
-                asd
+                &nbsp;
               </th>
             </ng-template>
-          </th>
+          </ng-container>
         </tr>
       </tbody>
     </table>

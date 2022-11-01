@@ -7,6 +7,7 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./timetable.component.scss'],
 })
 export class TimetableComponent implements OnInit {
+  table: [string, number][][] = [];
   loginUser: any;
   link = 'timetable';
 

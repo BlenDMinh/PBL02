@@ -33,11 +33,17 @@ thead {
   color: #fff;
 }
 
-.table {
+.week > .table {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   overflow: hidden;
   border-radius: 1.25em;
   border-collapse: collapse;
+}
+
+.today > .table {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  overflow: hidden;
+  // border-radius: 1.25em;
 }
 
 .onSubject {
@@ -46,6 +52,6 @@ thead {
   background-color: #6265f7;
   color: #fff !important;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  box-shadow: inset 7.5px 0 0px #4649FF;
+  // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  // box-shadow: inset 7.5px -7.5px 0px #4649FF;
 }

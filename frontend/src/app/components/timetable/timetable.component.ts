@@ -7,9 +7,14 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./timetable.component.scss'],
 })
 export class TimetableComponent implements OnInit {
-  table: [string, number][][] = [[], [['OOP', 3]], [['#', 0]], [['#', 0]], []]
+  table: [string, number][][] = [[], 
+  [['OOP', 3], ['OOP', 3], ['OOP', 3], ['OOP', 3], ['OOP', 3], ['OOP', 3]], 
+  [['#', 0], ['#', 0], ['#', 0], ['#', 0], ['#', 0], ['#', 0]], 
+  [['#', 0], ['#', 0], ['#', 0], ['#', 0], ['#', 0], ['#', 0]], 
+  []]
   loginUser: any;
   link = 'timetable';
+  today = new Date()
 
   constructor(private loginService: LoginService) {}
 
@@ -20,6 +25,8 @@ export class TimetableComponent implements OnInit {
         location.replace('/main');
       }
     });
+    console.log(this.today.getDay());
+    
     // this.table[0] = [];
     // this.table[0][0] = ['a', 5];
     console.log(this.table[0][0] != undefined);

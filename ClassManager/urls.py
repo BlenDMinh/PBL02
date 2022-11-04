@@ -8,5 +8,5 @@ urlpatterns = [
     re_path(r'api/subject/(?P<pk>[0-9]+)$', views.GetSubject),
     path("api/class", views.Debug),
     path("api/classsection", views.GetAllClass),
-    re_path(r'api/classsection/(?P<pk>[0-9]+)$', views.GetClass),
+    re_path(r'api/classsection/(?P<pk>[0-9]+)$', views.Class),
 ]

@@ -50,3 +50,6 @@ class Student(User):
         rec = StudentDatabase.Get(pk)
         student = Student.FromRecord(record=rec, AsDict=AsDict)
         return student
+    
+    def GetAttendedClasses(self, AsDict = False):
+        pass

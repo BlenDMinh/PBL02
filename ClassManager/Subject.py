@@ -22,10 +22,14 @@ class Subject:
     
     @staticmethod
     def FromRecord(record, AsDict=False):
-        pass
+        subjectID = record[0]
+        subjectName = record[1]
+        subject = Subject(subjectID, subjectName)
+        if AsDict:
+            return subject.AsDict()
+        return subject
 
     @staticmethod
     def GetSubjectByID(id, AsDict=False):
-        if AsDict:
-            return Subject("00", "OOP").AsDict()
-        return Subject("00", "OOP")
+        rec = SubjectDatabase.GetByID(id)
+        return Subject.FromRecord(rec, AsDict=AsDict)

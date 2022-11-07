@@ -1,18 +1,25 @@
-from xml.sax.handler import DTDHandler
 from Database import Database
+from Database.IDatabase import IDatabase
 
-def AddToken(token, userid):
-    Database.Execute(f"INSERT INTO Token (token, UserID) VALUES ('{token}', '{userid}')")
+class TokenDatabase(IDatabase):    
+    @staticmethod
+    def Insert(object):
+        Database.Execute(f"INSERT INTO Token (token, UserID) VALUES ('{object['token']}', '{object['userid']}')")
 
-def HasToken(token):
-    cur = Database.Execute(f"SELECT * FROM Token WHERE token='{token}'")
-    data = cur.fetchone()
-    if data != None:
-        print(data)
-        return data[1]
-    return None
+    @staticmethod
+    def Get(pk):
+        cur = Database.Execute(f"SELECT UserID FROM Token WHERE token='{pk}'")
+        data = cur.fetchone()
+        if data != None:
+            return data[0]
+        return None
 
-def RemoveToken(token):
-    Database.Execute(f"DELETE FROM Token WHERE token='{token}'")
+    @staticmethod
+    def GetAll():
+        return None
+
+    @staticmethod
+    def Delete(pk):
+        Database.Execute(f"DELETE FROM Token WHERE token='{pk}'")
 
 Database.InitTable("Token")

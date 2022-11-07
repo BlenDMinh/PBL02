@@ -12,7 +12,7 @@ def create_connection(db_file):
         print(e)
     return conn
 
-def Execute(SQLQuery, Debug=True):
+def Execute(SQLQuery, Debug=True) -> sqlite3.Cursor:
     if Debug:
         print(f"SQL Executing:\n{SQLQuery}")
     con = create_connection(settings.DEFAULT_DATABASE_PATH)

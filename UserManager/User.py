@@ -2,7 +2,7 @@ from mimetypes import init
 from enum import IntEnum
 import hashlib
 from datetime import datetime
-from Database import TokenDatabase
+from Database.TokenDatabase import TokenDatabase
 import UserManager
 from Database.StudentDatabase import StudentDatabase
 
@@ -45,18 +45,18 @@ class User:
         dummy1 = hashlib.sha256(dummy.encode('utf-8')).hexdigest()
         token = hashlib.sha512(dummy1.encode('utf-8')).hexdigest()
         
-        TokenDatabase.AddToken(token, id)
+        TokenDatabase.Insert({'token': token, 'userid': id})
         
         return token
     
     @staticmethod
     def TokenAuthenticate(token):
-        UserID = TokenDatabase.HasToken(token)
+        UserID = TokenDatabase.Get(token)
         if UserID != None:
             return UserManager.Student.Student.GetStudentFromDatabase(pk=UserID, AsDict=True)  # type: ignore
         return ''
 
     @staticmethod
     def TokenLogout(token):
-        TokenDatabase.RemoveToken(token)
+        TokenDatabase.Delete(token)
         

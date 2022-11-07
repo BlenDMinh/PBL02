@@ -7,12 +7,11 @@ def create_connection(db_file):
     conn = None
     try:
         conn = sqlite3.connect(db_file)
-        # print("Connected to Database")
     except Error as e:
         print(e)
     return conn
 
-def Execute(SQLQuery, Debug=True) -> sqlite3.Cursor:
+def Execute(SQLQuery, Debug=True) -> sqlite3.Cursor:  # type: ignore
     if Debug:
         print(f"SQL Executing:\n{SQLQuery}")
     con = create_connection(settings.DEFAULT_DATABASE_PATH)

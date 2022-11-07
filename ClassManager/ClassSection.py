@@ -1,10 +1,10 @@
-from datetime import datetime
+from IObject import IObject
 from ClassManager.Subject import Subject
 from UserManager.Teacher import Teacher
 from Database.ClassSectionDatabase import ClassSectionDatabase
 from Database.Student_ClassSectionDatabase import Student_ClassSectionDatabase
 
-class ClassSection:
+class ClassSection(IObject):
     __sectionID: str
     __subjectID: str
     __teacherID: str
@@ -38,13 +38,13 @@ class ClassSection:
         return self.__subjectID
     
     def GetSubjectName(self):
-        return Subject.GetSubjectByID(self.GetSubjectID()).GetSubjectName()
+        return Subject.GetSubjectByID(self.GetSubjectID()).GetSubjectName()  # type: ignore
     
     def GetTeacherID(self):
         return self.__teacherID
     
     def GetTeacherName(self):
-        return Teacher.GetByIDFromDatabase(self.GetTeacherID()).GetUserName()
+        return Teacher.GetByIDFromDatabase(self.GetTeacherID()).GetUserName()  # type: ignore
     
     def GetCurrentNumberOfStudents(self):
         return 0
@@ -75,13 +75,13 @@ class ClassSection:
         return classSection
 
     @staticmethod
-    def GetClassByID(id, AsDict = False):
+    def GetByIDFromDatabase(id, AsDict = False):
         rec = ClassSectionDatabase.Get(id)
         classSection = ClassSection.FromRecord(rec, AsDict=AsDict)
         return classSection
     
     @staticmethod
-    def GetAllClasses(AsDict = False):
+    def GetAllFromDatabase(AsDict = False):
         data = ClassSectionDatabase.GetAll()
         classSections = []
 

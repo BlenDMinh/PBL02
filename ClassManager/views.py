@@ -7,9 +7,6 @@ from ClassManager.ClassSection import ClassSection
 from ClassManager.Subject import Subject
 from UserManager.Student import Student
 
-def Debug(request):
-    return JsonResponse(ClassSection.GetAllClasses(AsDict=True), safe=False)
-
 @api_view(['GET'])
 def GetSubject(request, pk):
     return JsonResponse(Subject.GetSubjectByID(pk, AsDict=True), safe=False)
@@ -21,7 +18,7 @@ def GetAllSubject(request):
 @api_view(['GET', 'POST', 'DELETE'])
 def Class(request, pk):
     if request.method == 'GET':
-        return JsonResponse(ClassSection.GetClassByID(pk, AsDict=True), safe=False)
+        return JsonResponse(ClassSection.GetByIDFromDatabase(pk, AsDict=True), safe=False)
     
     elif request.method == 'POST':
         if not request.POST.get("sid"):
@@ -38,4 +35,4 @@ def Class(request, pk):
 def GetAllClass(request):
     if 'sid' in request.GET:
         return JsonResponse(ClassSection.GetClassesAttendedByID(request.GET.get('sid'), AsDict=True), safe=False)
-    return JsonResponse(ClassSection.GetAllClasses(AsDict=True), safe=False)
+    return JsonResponse(ClassSection.GetAllFromDatabase(AsDict=True), safe=False)

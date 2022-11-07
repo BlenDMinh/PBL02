@@ -4,12 +4,12 @@ from Database.IDatabase import IDatabase
 class TeacherDatabase(IDatabase):
     @staticmethod
     def GetAll():
-        cur = Database.Execute("SELECT TeacherID, Name FROM Teacher")
+        cur = Database.Execute("SELECT TeacherID, Name FROM Teacher", Debug = False)
         return cur.fetchall()
 
     @staticmethod
     def Get(pk):
-        cur = Database.Execute(f"SELECT TeacherID, Name FROM Teacher WHERE TeacherID='{pk}'")
+        cur = Database.Execute(f"SELECT TeacherID, Name FROM Teacher WHERE TeacherID='{pk}'", Debug = False)
         return cur.fetchone()
     
     @staticmethod

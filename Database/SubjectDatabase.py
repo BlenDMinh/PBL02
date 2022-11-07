@@ -4,12 +4,12 @@ from Database.IDatabase import IDatabase
 class SubjectDatabase(IDatabase):
     @staticmethod
     def Get(pk):
-        cur = Database.Execute(f"SELECT * FROM Subject WHERE SubjectID='{pk}'")
+        cur = Database.Execute(f"SELECT * FROM Subject WHERE SubjectID='{pk}'", Debug = False)
         return cur.fetchone()
 
     @staticmethod
     def GetAll():
-        cur = Database.Execute(f"SELECT * FROM Subject")
+        cur = Database.Execute(f"SELECT * FROM Subject", Debug = False)
         return cur.fetchall()
     
     @staticmethod

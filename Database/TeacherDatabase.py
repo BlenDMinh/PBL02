@@ -9,7 +9,7 @@ class TeacherDatabase(IDatabase):
 
     @staticmethod
     def Get(pk):
-        cur = Database.Execute(f"SELECT TeacherID, Name FROM Teacher WHERE TeacherID={pk}")
+        cur = Database.Execute(f"SELECT TeacherID, Name FROM Teacher WHERE TeacherID='{pk}'")
         return cur.fetchone()
     
     @staticmethod

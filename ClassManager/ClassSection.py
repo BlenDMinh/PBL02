@@ -1,8 +1,8 @@
 from datetime import datetime
 from ClassManager.Subject import Subject
 from UserManager.Teacher import Teacher
-from Database import ClassSectionDatabase
-from Database import Student_ClassSectionDatabase
+from Database.ClassSectionDatabase import ClassSectionDatabase
+from Database.Student_ClassSectionDatabase import Student_ClassSectionDatabase
 
 class ClassSection:
     __sectionID: str
@@ -44,7 +44,7 @@ class ClassSection:
         return self.__teacherID
     
     def GetTeacherName(self):
-        return Teacher.GetTeacherFromDatabase(self.GetTeacherID()).GetUserName()
+        return Teacher.GetByIDFromDatabase(self.GetTeacherID()).GetUserName()
     
     def GetCurrentNumberOfStudents(self):
         return 0

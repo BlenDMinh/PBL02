@@ -13,7 +13,7 @@ class StudentDatabase(IDatabase):
 
     @staticmethod
     def Get(pk):
-        cur = Database.Execute(f"SELECT StudentID, Name, Sex, Class, PhoneNumber, Birthday FROM Student WHERE StudentID = {pk}")
+        cur = Database.Execute(f"SELECT StudentID, Name, Sex, Class, PhoneNumber, Birthday FROM Student WHERE StudentID = '{pk}'")
         return cur.fetchone()
 
     @staticmethod

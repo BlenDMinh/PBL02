@@ -38,4 +38,3 @@ class Student_ClassSectionDatabase(IDatabase):
         pass
 
 Database.InitTable('Student_ClassSection')
-print(Student_ClassSectionDatabase.CountByStudentID('102210034'))

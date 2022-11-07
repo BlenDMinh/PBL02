@@ -47,7 +47,7 @@ class ClassSection(IObject):
         return Teacher.GetByIDFromDatabase(self.GetTeacherID()).GetUserName()  # type: ignore
     
     def GetCurrentNumberOfStudents(self):
-        return 0
+        return Student_ClassSectionDatabase.CountBySectionID(self.GetClassSectionID())
     
     def GetClassCapacity(self):
         return self.__capacity

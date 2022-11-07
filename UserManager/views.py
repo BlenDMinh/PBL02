@@ -17,22 +17,22 @@ from UserManager.User import User
 
 @api_view(['GET'])
 def GetStudent(request, pk: str):
-    student = Student.GetStudentFromDatabase(pk=pk, AsDict=True)
+    student = Student.GetByIDFromDatabase(id=pk, AsDict=True)
     return JsonResponse(student, safe=False)
 
 @api_view(['GET'])
 def GetStudentList(request):
-    studentList = Student.GetAllStudentFromDatabase(AsDict=True)
+    studentList = Student.GetAllFromDatabase(AsDict=True)
     return JsonResponse(studentList, safe=False)
 
 @api_view(['GET'])
 def GetTeacher(request, pk: str):
-    teacher = Teacher.GetTeacherFromDatabase(pk=pk, AsDict=True)
+    teacher = Teacher.GetByIDFromDatabase(id=pk, AsDict=True)
     return JsonResponse(teacher, safe=False)
 
 @api_view(['GET'])
 def GetTeacherList(request):
-    teacherList = Teacher.GetAllTeacherFromDatabase(AsDict=True)
+    teacherList = Teacher.GetAllFromDatabase(AsDict=True)
     return JsonResponse(teacherList, safe=False)
 
 # return a token if valid

@@ -4,7 +4,7 @@ import hashlib
 from datetime import datetime
 from Database import TokenDatabase
 import UserManager
-from Database import StudentDatabase
+from Database.StudentDatabase import StudentDatabase
 
 class Sex(IntEnum):
     MALE = 0

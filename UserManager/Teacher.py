@@ -1,7 +1,8 @@
 from UserManager.User import User
+from IObject import IObject
 from Database import TeacherDatabase
 
-class Teacher(User):
+class Teacher(User, IObject):
     
     def __init__(self, userid, name, sex, phone_number, birthday):  # type: ignore
         super().__init__(userid, name, sex, phone_number, birthday)
@@ -23,13 +24,13 @@ class Teacher(User):
         return teacher
 
     @staticmethod
-    def GetTeacherFromDatabase(pk, AsDict = False):
+    def GetByIDFromDatabase(id, AsDict = False):
         rec = ["000000000","Nguyễn Trương Anh Minh",0,"000000000000","01/12/2003","000000000"]
         teacher = Teacher.FromRecord(record=rec, AsDict=AsDict)
         return teacher
         
     @staticmethod
-    def GetAllTeacherFromDatabase(AsDict = False):
+    def GetAllFromDatabase(AsDict = False):
         teachers_database = [["000000000","Nguyễn Trương Anh Minh",0,"000000000000","01/12/2003","000000000"],
                             ["000000001","Phạm Trung Hiếu",0,"000000000001","08/10/2003","000000001"],
                             ["000000002","Châu Diễm Hoàng",1,"000000000002","28/10/2003","000000002"],

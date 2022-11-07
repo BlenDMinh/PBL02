@@ -1,11 +1,12 @@
 from dataclasses import asdict
 from UserManager.User import User
-from Database import StudentDatabase
+from IObject import IObject
+from Database.StudentDatabase import StudentDatabase
 from Database import ClassSectionDatabase
 from Database import SubjectDatabase
 from Database import Student_ClassSectionDatabase
 
-class Student(User):
+class Student(User, IObject):
     
     __classname: str
     
@@ -38,7 +39,7 @@ class Student(User):
         return student
 
     @staticmethod
-    def GetAllStudentFromDatabase(AsDict = False):
+    def GetAllFromDatabase(AsDict = False):
         students_database = StudentDatabase.GetAll()
         studentList = []
         for rec in students_database:
@@ -46,7 +47,7 @@ class Student(User):
         return studentList
     
     @staticmethod
-    def GetStudentFromDatabase(pk, AsDict = False):
-        rec = StudentDatabase.Get(pk)
+    def GetByIDFromDatabase(id, AsDict = False):
+        rec = StudentDatabase.Get(id)
         student = Student.FromRecord(record=rec, AsDict=AsDict)
         return student

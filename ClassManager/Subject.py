@@ -1,4 +1,4 @@
-from Database import SubjectDatabase
+from Database.SubjectDatabase import SubjectDatabase
 
 class Subject:
     __subjectID: str
@@ -31,5 +31,5 @@ class Subject:
 
     @staticmethod
     def GetSubjectByID(id, AsDict=False):
-        rec = SubjectDatabase.GetByID(id)
+        rec = SubjectDatabase.Get(id)
         return Subject.FromRecord(rec, AsDict=AsDict)

@@ -51,3 +51,6 @@ class Student(User, IObject):
         rec = StudentDatabase.Get(id)
         student = Student.FromRecord(record=rec, AsDict=AsDict)
         return student
+    
+    def GetAttendedClasses(self, AsDict = False):
+        pass

@@ -47,11 +47,11 @@ thead {
 }
 
 .onSubject {
-  margin: 10px;
   overflow: auto;
   background-color: #6265f7;
   color: #fff !important;
-  border-radius: 20px;
-  // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  // box-shadow: inset 7.5px -7.5px 0px #4649FF;
+  border-radius: 10px;
+  font-size: 11;
+  font-weight: 400;
+  border: #4649FF double;
 }

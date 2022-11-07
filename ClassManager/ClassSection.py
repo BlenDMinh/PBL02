@@ -1,6 +1,8 @@
 from datetime import datetime
 from ClassManager.Subject import Subject
 from UserManager.Teacher import Teacher
+from Database import ClassSectionDatabase
+from Database import Student_ClassSectionDatabase
 
 class ClassSection:
     __sectionID: str
@@ -55,7 +57,18 @@ class ClassSection:
 
     @staticmethod
     def FromRecord(record, AsDict=False):
-        pass
+        sectionID = record[0]
+        subjectID = record[1]
+        teacherID = record[2]
+        timeData = record[3].split('-')
+        startTime = int(timeData[0])
+        endTime = int(timeData[1])
+        capacity = record[4]
+        
+        classSection = ClassSection(sectionID, subjectID, teacherID, startTime, endTime, capacity)
+        if AsDict:
+            return classSection.AsDict()
+        return classSection
 
     @staticmethod
     def GetClassByID(id, AsDict = False):
@@ -68,3 +81,12 @@ class ClassSection:
         if AsDict:
             return [ClassSection('000000000000000000', '000000000', '000000001', 1, 3, 30).AsDict()]
         return [ClassSection('000000000000000000', '000000000', '000000001', 1, 3, 30)]
+    
+    @staticmethod
+    def GetClassesAttendedByID(studentID, AsDict = False):
+        classes = []
+        data = Student_ClassSectionDatabase.GetByStudentID(studentID=studentID)
+        for rec in data:
+            classSection = ClassSection.FromRecord(record=rec, AsDict=AsDict)
+            classes.append(classSection)
+        return classes

@@ -53,7 +53,7 @@ class User:
     def TokenAuthenticate(token):
         UserID = TokenDatabase.Get(token)
         if UserID != None:
-            return UserManager.Student.Student.GetStudentFromDatabase(pk=UserID, AsDict=True)  # type: ignore
+            return UserManager.Student.Student.GetByIDFromDatabase(UserID, AsDict=True)  # type: ignore
         return ''
 
     @staticmethod

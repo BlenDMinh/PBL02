@@ -60,9 +60,13 @@ class ClassSection:
         sectionID = record[0]
         subjectID = record[1]
         teacherID = record[2]
-        timeData = record[3].split('-')
-        startTime = int(timeData[0])
-        endTime = int(timeData[1])
+        if record[3] == None:
+            startTime = 0
+            endTime = 0
+        else:
+            timeData = record[3].split('-')
+            startTime = int(timeData[0])
+            endTime = int(timeData[1])
         capacity = record[4]
         
         classSection = ClassSection(sectionID, subjectID, teacherID, startTime, endTime, capacity)
@@ -72,15 +76,19 @@ class ClassSection:
 
     @staticmethod
     def GetClassByID(id, AsDict = False):
-        if AsDict:
-            return ClassSection('000000000000000000', '000000000', '000000001', 1, 3, 30).AsDict()
-        return ClassSection('000000000000000000', '000000000', '000000001', 1, 3, 30)
+        rec = ClassSectionDatabase.Get(id)
+        classSection = ClassSection.FromRecord(rec, AsDict=AsDict)
+        return classSection
     
     @staticmethod
     def GetAllClasses(AsDict = False):
-        if AsDict:
-            return [ClassSection('000000000000000000', '000000000', '000000001', 1, 3, 30).AsDict()]
-        return [ClassSection('000000000000000000', '000000000', '000000001', 1, 3, 30)]
+        data = ClassSectionDatabase.GetAll()
+        classSections = []
+
+        for rec in data:
+            classSections.append(ClassSection.FromRecord(rec, AsDict=AsDict))
+        
+        return classSections
     
     @staticmethod
     def GetClassesAttendedByID(studentID, AsDict = False):

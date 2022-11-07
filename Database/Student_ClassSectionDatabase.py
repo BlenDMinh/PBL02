@@ -44,9 +44,4 @@ class Student_ClassSectionDatabase(IDatabase):
     @staticmethod
     def Delete(pk):
         pass
-
-<<<<<<< HEAD
 Database.InitTable('Student_ClassSection')
-=======
-Database.InitTable('Student_ClassSection')
->>>>>>> 5e4298e73768cfad5076f5958401043450bb49ac

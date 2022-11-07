@@ -98,3 +98,11 @@ class ClassSection(IObject):
             classSection = ClassSection.FromRecord(record=rec, AsDict=AsDict)
             classes.append(classSection)
         return classes
+    
+    @staticmethod
+    def AddStudentIntoClass(sectionID, studentID):
+        Student_ClassSectionDatabase.InsertStudent_Section(studentID, sectionID)
+        
+    @staticmethod
+    def RemoveStudentFromClass(sectionID, studentID):
+        Student_ClassSectionDatabase.DeleteStudent_Section(studentID, sectionID)

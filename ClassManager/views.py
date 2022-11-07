@@ -5,7 +5,6 @@ from rest_framework.decorators import api_view
 
 from ClassManager.ClassSection import ClassSection
 from ClassManager.Subject import Subject
-from UserManager.Student import Student
 
 @api_view(['GET'])
 def GetSubject(request, pk):
@@ -23,11 +22,13 @@ def Class(request, pk):
     elif request.method == 'POST':
         if not request.POST.get("sid"):
             return JsonResponse({'error': 'argument "sid" not found!'})
+        ClassSection.AddStudentIntoClass(pk, request.POST.get("sid"))
         return JsonResponse({'status': 'OK', 'work': f'Added {request.POST.get("sid")} into {pk}'})
     
     elif request.method == 'DELETE':
         if not request.POST.get("sid"):
             return JsonResponse({'error': 'argument "sid" not found!'})
+        ClassSection.RemoveStudentFromClass(pk, request.POST.get("sid"))
         return JsonResponse({'status': 'OK', 'work': f'Removed {request.POST.get("sid")} from {pk}'})
     
 

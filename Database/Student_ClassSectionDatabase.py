@@ -22,14 +22,6 @@ class Student_ClassSectionDatabase(IDatabase):
         return cur.fetchone()[0]
     
     @staticmethod
-    def InsertStudent_Section(studentID, sectionID):
-        Database.Execute(f"INSERT INTO Student_ClassSection VALUES (\'{studentID}\',\'{sectionID}\')", Debug = False)
-
-    @staticmethod
-    def DeleteStudent_Section(studentID, sectionID):
-        Database.Execute(f"DELETE FROM Student_ClassSection WHERE StudentID  = \'{studentID}\' and SectionID = \'{sectionID}\'")
-
-    @staticmethod
     def Get(pk):
         pass
 

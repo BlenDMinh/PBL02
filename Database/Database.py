@@ -15,10 +15,10 @@ def Execute(SQLQuery, Debug=True) -> sqlite3.Cursor:  # type: ignore
     if Debug:
         print(f"SQL Executing:\n{SQLQuery}")
     con = create_connection(settings.DEFAULT_DATABASE_PATH)
-    cur = con.cursor()
+    cur = con.cursor() # type: ignore
     try:
         cur.execute(SQLQuery)
-        con.commit()
+        con.commit() # type: ignore
         return cur
     except sqlite3.IntegrityError as er:
         print('INTEGRITY ERROR\n')

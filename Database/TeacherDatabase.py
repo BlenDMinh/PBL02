@@ -1,5 +1,5 @@
 from Database import Database
-from Database.IDatabase import IDatabase
+from Interface import IDatabase
 
 class TeacherDatabase(IDatabase):
     @staticmethod

@@ -1,6 +1,7 @@
+from Interface import IObject
 from Database.SubjectDatabase import SubjectDatabase
 
-class Subject:
+class Subject(IObject):
     __subjectID: str
     __subjectName: str
     
@@ -30,6 +31,14 @@ class Subject:
         return subject
 
     @staticmethod
-    def GetSubjectByID(id, AsDict=False):
+    def GetByIDFromDatabase(id, AsDict=False):
         rec = SubjectDatabase.Get(id)
         return Subject.FromRecord(rec, AsDict=AsDict)
+    
+    @staticmethod
+    def GetAllFromDatabase(AsDict=False):
+        data = SubjectDatabase.GetAll()
+        subjects = []
+        for rec in data:
+            subjects.append(Subject.FromRecord(rec, AsDict=AsDict))
+        return subjects

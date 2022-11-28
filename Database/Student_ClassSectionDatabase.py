@@ -1,5 +1,5 @@
 from Database import Database
-from Database.IDatabase import IDatabase
+from Interface import IDatabase
 
 class Student_ClassSectionDatabase(IDatabase):
     @staticmethod
@@ -22,12 +22,12 @@ class Student_ClassSectionDatabase(IDatabase):
         return cur.fetchone()[0]
     
     @staticmethod
-    def InsertStudent_Section(studentID, sectionID):
-        Database.Execute(f"INSERT INTO Student_ClassSection VALUES (\'{studentID}\',\'{sectionID}\')", Debug = False)
+    def Insert(object):
+        Database.Execute(f"INSERT INTO Student_ClassSection VALUES (\'{object[0]}\',\'{object[1]}\')", Debug = False)
 
     @staticmethod
-    def DeleteStudent_Section(studentID, sectionID):
-        Database.Execute(f"DELETE FROM Student_ClassSection WHERE StudentID  = \'{studentID}\' and SectionID = \'{sectionID}\'")
+    def Delete(pk):
+        Database.Execute(f"DELETE FROM Student_ClassSection WHERE StudentID  = \'{pk[0]}\' and SectionID = \'{pk[1]}\'")
 
     @staticmethod
     def Get(pk):
@@ -36,12 +36,5 @@ class Student_ClassSectionDatabase(IDatabase):
     @staticmethod
     def GetAll():
         pass
-
-    @staticmethod
-    def Insert(object):
-        pass
-
-    @staticmethod
-    def Delete(pk):
-        pass
+    
 Database.InitTable('Student_ClassSection')

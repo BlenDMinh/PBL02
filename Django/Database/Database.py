@@ -1,6 +1,6 @@
 import sqlite3
 from sqlite3 import Error
-from Database import settings
+from Database import settings  # type: ignore
 import traceback
 
 def create_connection(db_file):

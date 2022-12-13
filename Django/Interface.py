@@ -6,6 +6,10 @@ class IObject(ABC):
     def AsDict(self) -> dict:
         pass
     
+    @abstractmethod
+    def GetPrimaryKey(self) -> str:
+        pass
+    
     @abstractstaticmethod
     def FromRecord(record, AsDict=False):
         pass

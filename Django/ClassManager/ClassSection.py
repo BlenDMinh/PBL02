@@ -1,8 +1,6 @@
 from Interface import IObject
 from ClassManager.Subject import Subject
 from UserManager.User import Teacher
-from Database.ClassSectionDatabase import ClassSectionDatabase
-from Database.Student_ClassSectionDatabase import Student_ClassSectionDatabase
 
 class ClassSection(IObject):
     __sectionID: str
@@ -33,6 +31,9 @@ class ClassSection(IObject):
             "capacity": self.GetClassCapacity()
         }
     
+    def GetPrimaryKey(self) -> str:
+        return self.__sectionID
+    
     def GetClassSectionID(self):
         return self.__sectionID
     
@@ -43,6 +44,8 @@ class ClassSection(IObject):
         return self.__teacher
     
     def GetCurrentNumberOfStudents(self):
+        from Database.Student_ClassSectionDatabase import Student_ClassSectionDatabase
+        
         return Student_ClassSectionDatabase.CountBySectionID(self.GetClassSectionID())
     
     def GetClassCapacity(self):
@@ -74,35 +77,49 @@ class ClassSection(IObject):
             endTime = int(timeData[1])
         capacity = record[4]
         
-        classSection = ClassSection(sectionID, subject, teacher, startTime, endTime, capacity)
+        from Database.StudentDatabase import StudentDatabase
+        
+        studentList = []
+        for pk in record[5]:
+            studentList.append(StudentDatabase.Get(pk[0]))
+        
+        classSection = ClassSection(sectionID, subject, teacher, startTime, endTime, capacity, studentList)
         if AsDict:
             return classSection.AsDict()
         return classSection
 
     def AddStudent(self, studentID):
+        from Database.Student_ClassSectionDatabase import Student_ClassSectionDatabase
+        
         Student_ClassSectionDatabase.Insert((studentID, self.GetClassSectionID()))
         
     def RemoveStudent(self, studentID):
+        from Database.Student_ClassSectionDatabase import Student_ClassSectionDatabase
+        
         Student_ClassSectionDatabase.Delete((studentID, self.GetClassSectionID()))
     
     @staticmethod
     def GetByID(id, AsDict = False):
-        rec = ClassSectionDatabase().Get(id)
-        classSection = ClassSection.FromRecord(rec, AsDict=AsDict)
+        from Database.ClassSectionDatabase import ClassSectionDatabase
+        
+        classSection = ClassSectionDatabase.Get(id)
+        if AsDict:
+            return classSection.AsDict()
         return classSection
     
     @staticmethod
     def GetAll(AsDict = False):
-        data = ClassSectionDatabase().GetAll()
-        classSections = []
-
-        for rec in data:
-            classSections.append(ClassSection.FromRecord(rec, AsDict=AsDict))
-        
+        from Database.ClassSectionDatabase import ClassSectionDatabase
+    
+        classSections = ClassSectionDatabase.GetAll()
+        if AsDict:
+            return list([classSection.AsDict() for classSection in classSections])
         return classSections
     
     @staticmethod
     def GetClassesAttendedByID(studentID, AsDict = False):
+        from Database.Student_ClassSectionDatabase import Student_ClassSectionDatabase
+        
         classes = []
         data = Student_ClassSectionDatabase.GetByStudentID(studentID=studentID)
         for rec in data:

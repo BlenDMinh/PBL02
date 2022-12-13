@@ -93,6 +93,9 @@ class Student(User, IObject):
             'phoneNumber': self.GetUserPhoneNumber(),
             'birthday': self.GetUserBirthday()
         }
+        
+    def GetPrimaryKey(self) -> str:
+        return self.__userid
     
     def GetClassName(self) -> str:
         return self.__classname
@@ -110,7 +113,12 @@ class Student(User, IObject):
 
     @staticmethod
     def FromRecord(record, AsDict=False):
-        student = Student(record[0], record[1], record[2], record[4], record[5], record[3])
+        from Database.ClassSectionDatabase import ClassSectionDatabase
+        classList = []
+        for pk in record[6]:
+            classList.append(ClassSectionDatabase.Get(pk[0]))
+        student = Student(record[0], record[1], record[2], record[4], record[5], record[3], classList)
+        
         if AsDict:
             return student.AsDict()
         return student
@@ -118,19 +126,18 @@ class Student(User, IObject):
     @staticmethod
     def GetAll(AsDict = False):
         from Database.StudentDatabase import StudentDatabase
-        
-        students_database = StudentDatabase().GetAll()
-        studentList = []
-        for rec in students_database:
-            studentList.append(Student.FromRecord(record=rec, AsDict=AsDict))
-        return studentList
+        students = StudentDatabase.GetAll()
+        if AsDict:
+            return list([student.AsDict() for student in students])
+        return students
+
     
     @staticmethod
     def GetByID(id, AsDict = False):
         from Database.StudentDatabase import StudentDatabase
-        
-        rec = StudentDatabase().Get(id)
-        student = Student.FromRecord(record=rec, AsDict=AsDict)
+        student = StudentDatabase.Get(id)
+        if AsDict:
+            return student.AsDict()
         return student
     
     
@@ -151,6 +158,9 @@ class Teacher(User, IObject):
             'birthday': self.GetUserBirthday()
         }
         
+    def GetPrimaryKey(self) -> str:
+        return self.__userid
+        
     def GetTeachingClassSections(self, AsDict = False):
         if not AsDict:
             return self.__teachingClassSections
@@ -170,17 +180,16 @@ class Teacher(User, IObject):
     def GetByID(id, AsDict = False):
         from Database.TeacherDatabase import TeacherDatabase
         
-        rec = TeacherDatabase().Get(id)
-        teacher = Teacher.FromRecord(record=rec, AsDict=AsDict)
+        teacher = TeacherDatabase.Get(id)
+        if AsDict:
+            return teacher.AsDict()
         return teacher
         
     @staticmethod
     def GetAll(AsDict = False):
         from Database.TeacherDatabase import TeacherDatabase
-        
-        teachers_database = TeacherDatabase().GetAll()
-        teacherList = []
-        for rec in teachers_database:
-            if AsDict:
-                teacherList.append(Teacher.FromRecord(rec, AsDict=AsDict))
-        return teacherList
+
+        teachers = TeacherDatabase.GetAll()
+        if AsDict:
+            return list([teacher.AsDict() for teacher in teachers])
+        return teachers

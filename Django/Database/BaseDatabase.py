@@ -1,40 +1,39 @@
-from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod, abstractclassmethod
+from Interface import IObject
 
 class BaseDatabase(ABC):
     
-    __loaded = dict()
-    __changes = []
+    _loaded = dict()
+    _changes = []
     
-    def GetAll(self):
-        keys = self._FetchAllPKeys()
+    @classmethod
+    def GetAll(cls) -> list[IObject]:
+        keys = cls._FetchAllPKeys()
         for key in keys: 
-            if key not in self.__loaded:
-                self.__loaded[key] = self._FetchFromDatabase(key)
-        return list(self.__loaded.values())
+            if key not in cls._loaded:
+                cls._loaded[key] = cls._FetchFromDatabase(key)
+        return list(cls._loaded.values())
     
-    def Get(self, pk):
+    @classmethod
+    def Get(cls, pk) -> IObject:
         try:
-            return self.__loaded[pk]
+            return cls._loaded[pk]
         except KeyError:
-            self.__loaded[pk] = self._FetchFromDatabase(pk)
-            return self.__loaded[pk]
+            cls._loaded[pk] = cls._FetchFromDatabase(pk)
+            return cls._loaded[pk]
     
-    @abstractmethod
-    def _FetchFromDatabase(self, pk):
+    @classmethod
+    def Insert(cls, object : IObject):
+        cls._loaded[object.GetPrimaryKey()]
+    
+    @classmethod
+    def Delete(cls, pk):
+        del cls._loaded[pk]
+    
+    @abstractclassmethod
+    def _FetchFromDatabase(cls, pk):
         pass
     
-    @abstractmethod
-    def _FetchAllPKeys(self) -> list:
-        pass
-    
-    @staticmethod
-    def Insert(object):
-        pass
-    
-    @staticmethod
-    def Update(object):
-        pass
-    
-    @staticmethod
-    def Delete(pk):
-        pass
+    @abstractclassmethod
+    def _FetchAllPKeys(cls) -> list:
+        return []

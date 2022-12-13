@@ -7,7 +7,6 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  @Input() active?: string;
   @Input() loginName?: String;
   constructor(private loginService: LoginService) {}
 

@@ -1,10 +1,33 @@
 <body>
-  <app-navbar
-    [active]="this.link"
-    [loginName]="this.loginUser.name"
-  ></app-navbar>
+  <app-navbar [loginName]="this.loginUser.name"></app-navbar>
 
-  <div class="container container-fluid">
+  <div class="custom-container">
     <h3>Lớp đã đăng ký</h3>
+
+    <table class="table styled-table">
+      <thead>
+        <tr class="text-center">
+          <th scope="col">STT</th>
+          <th scope="col">Mã lớp học phần</th>
+          <th scope="col">Tên lớp học phần</th>
+          <th scope="col">Giảng viên</th>
+          <th scope="col">Đăng ký</th>
+          <th scope="col">&nbsp;</th>
+        </tr>
+      </thead>
+
+      <tbody class="table-group-divider align-middle">
+        <tr *ngFor="let c of classes; index as i">
+          <td class="text-center">{{ i + 1 }}</td>
+          <td class="text-center">{{ c.sectionID }}</td>
+          <td>{{ c.subjectName }}</td>
+          <td>{{ c.teacherName }}</td>
+          <td class="text-center">{{ c.current }}/{{ c.capacity }}</td>
+          <td class="text-center">
+            <button class="button-33" role="button">Huỷ</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>

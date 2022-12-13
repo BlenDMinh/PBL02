@@ -1,113 +1,158 @@
-nav {
-  max-width: 1400px;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,500&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-input[type="submit"] {
-  cursor: pointer;
-  color: #e9f4fb;
-  font-weight: bold;
-  padding: 6px 24px;
-  margin-right: 50px;
-  border-radius: 50%;
-  background: #7978ff;
-  text-transform: uppercase;
-  border: 1px solid #7978ff;
+body {
+  font-size: 62%;
 }
 
-input[type="submit"]:hover {
-  transition: 0.35s;
-  border-color: #2691d9;
+.custom-header {
+  width: 100%;
+  background-color: #fff;
 }
 
-.mid {
-  text-align: center;
+.custom-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.bi {
-  margin-left: 50px;
+.custom-logo img {
+  width: 5rem;
 }
 
-.loginName {
-  color: white;
-  text-align: center;
-  padding-right: 30px;
+.custom-nav {
+  list-style: none;
+  display: flex;
+  padding: 2.5rem;
+  gap: 3rem;
+}
+
+.custom-nav li a {
   text-decoration: none;
-}
-
-.login-hover {
+  font-size: 1.5rem;
+  color: #0000cc;
+  font-weight: 600;
+  display: inline-block;
+  width: 100%;
   position: relative;
 }
 
-.login-hover .login-list {
+.custom-nav li a:hover {
+  color: #cb0101;
+}
+
+.custom-nav li a::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: #cb0101;
   position: absolute;
-  display: none !important;
+  left: 0;
+  bottom: -3px;
+  transition: all 0.4s ease;
 }
 
-.login-hover:hover .login-list {
-  top: 40px;
-  width: 200px;
-  border-radius: 10px;
-  display: flex !important;
-  background-color: white;
-}
-
-.login-list ul {
+.custom-nav li a:hover::after {
   width: 100%;
-  list-style-type: none;
 }
 
-.login-list a {
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-}
-
-.logout {
+.button-34 {
+  background: #0000cc;
+  border-radius: 999px;
+  box-shadow: #0000cc 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #ffffff;
   cursor: pointer;
-  color: #e9f4fb;
-  padding: 6px 24px;
-  font-weight: bold;
-  margin-right: 50px;
-  border-radius: 25px;
-  background: #7978ff;
-  text-transform: uppercase;
-  border: 1px solid #7978ff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
 }
 
-.nav-item {
-  margin-left: 30px;
-  border-radius: 50%;
+.custom-avatar {
+  display: flex;
   align-items: center;
 }
 
-.active {
-  font-weight: bold;
-  border-radius: 25px;
-  background-color: #7978ff;
-}
-
-.navbar {
-  top: 1.5%;
-  margin-bottom: 3%;
-  margin-left: 1.25%;
-  width: 97.5%;
-  padding-left: 10%px;
-  border-radius: 40px;
-  background-color: #4649ff !important;
-  box-shadow: rgba(0, 0, 0, 0.26) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-
-.container {
-  padding-left: 10%px;
-  border-radius: 20px;
-  background-color: #4649ff;
-}
-
-.avatar {
-  width: 8%;
-  height: 8%;
-  margin-right: 15px;
+.custom-avatar img {
+  width: 3rem;
   border-radius: 50%;
-  border: solid 4px #7978ff;
+  border: 1px solid #0000cc;
+  margin: 8px;
+}
+
+.custom-avatar h4 {
+  margin-left: 12px;
+  color: #0000cc;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.avatar-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar-sub {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 110%;
+  list-style: none;
+  left: -5%;
+  font-size: 1rem;
+  color: #0000cc;
+  border: 1px solid #0000cc;
+  border-radius: 16px;
+  padding: 4px 16px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.avatar-sub li a:hover {
+  color: #cb0101;
+}
+
+.avatar-sub li a {
+  text-decoration: none;
+  color: #0000cc;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.avatar-sub li:hover a::after {
+  width: 100%;
+}
+
+.avatar-sub li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #cb0101;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  transition: all 0.4s ease;
+}
+
+.avatar-menu:hover .avatar-sub {
+  display: block;
+}
+
+.avatar-sub li {
+  line-height: 2rem;
 }

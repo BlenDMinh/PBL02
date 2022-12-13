@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-center" style="padding-top: 12px">
+<!-- <div class="d-flex justify-content-center" style="padding-top: 12px">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container container-fluid">
       <a class="navbar-brand" href="#">
@@ -91,4 +91,46 @@
       </div>
     </div>
   </nav>
-</div>
+</div> -->
+<body>
+  <header class="custom-header">
+    <div class="custom-container">
+      <div class="custom-logo">
+        <img src="./assets/logo.png" alt="" />
+      </div>
+
+      <nav class="custom-nav">
+        <li><a routerLink="/main">Trang chủ</a></li>
+        <li><a routerLink="/classSign">Đăng ký học</a></li>
+        <li><a routerLink="/timetable">Thời khoá biểu</a></li>
+      </nav>
+
+      <button
+        class="button-34"
+        role="button"
+        *ngIf="this.loginName === undefined; else showName"
+        routerLink="/login"
+      >
+        Đăng nhập
+      </button>
+
+      <ng-template #showName>
+        <div class="avatar-menu">
+          <div class="custom-avatar">
+            <img src="./assets/avatar.jpg" alt="" />
+            <h4>{{ this.loginName }}</h4>
+          </div>
+
+          <ul class="avatar-sub">
+            <li>
+              <a routerLink="/profile">Trang cá nhân</a>
+            </li>
+            <li>
+              <a routerLink="/" (click)="Logout()">Đăng xuất</a>
+            </li>
+          </ul>
+        </div>
+      </ng-template>
+    </div>
+  </header>
+</body>

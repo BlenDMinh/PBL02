@@ -11,16 +11,22 @@ body {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.height {
+  line-height: 36px;
+  min-height: 36px;
+  height: 36px;
+}
+
 thead {
   text-align: center;
 }
 
 .center {
-  text-align: center !important; 
+  text-align: center !important;
 }
 
 .tbreak {
-  background-color: #4649FF;
+  background-color: #4649ff;
 }
 
 .tbreak > th {
@@ -29,7 +35,7 @@ thead {
 }
 
 .color {
-  background-color: #4649FF;
+  background-color: #4649ff;
   color: #fff;
 }
 
@@ -43,7 +49,6 @@ thead {
 .today > .table {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   overflow: hidden;
-  // border-radius: 1.25em;
 }
 
 .onSubject {
@@ -53,5 +58,5 @@ thead {
   border-radius: 10px;
   font-size: 11;
   font-weight: 400;
-  border: #4649FF double;
+  border: #4649ff double;
 }

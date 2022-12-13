@@ -1,8 +1,5 @@
 <body>
-  <app-navbar
-    [active]="this.link"
-    [loginName]="this.loginUser.name"
-  ></app-navbar>
+  <app-navbar [loginName]="this.loginUser.name"></app-navbar>
   <div class="container container-fluid">
     <app-student-table [students]="this.students"></app-student-table>
   </div>

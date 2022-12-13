@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
+import { Class } from 'src/app/models/class';
+import { ClasssectionService } from 'src/app/services/classsection.service';
 
 @Component({
   selector: 'app-class-sign',
@@ -8,9 +10,13 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class ClassSignComponent implements OnInit {
   loginUser: any;
-  link = 'classSign';
 
-  constructor(private loginService: LoginService) {}
+  constructor(
+    private loginService: LoginService,
+    private classSectionService: ClasssectionService
+  ) {}
+
+  classes: Class[] = [];
 
   ngOnInit(): void {
     this.loginService.loginByToken().subscribe((student) => {
@@ -18,6 +24,12 @@ export class ClassSignComponent implements OnInit {
       if (this.loginUser.hasOwnProperty('error')) {
         location.replace('/main');
       }
+
+      this.classSectionService
+        .getClassesAttendedByStudent(this.loginUser['studentId'])
+        .subscribe((data) => {
+          this.classes = data;
+        });
     });
   }
 }

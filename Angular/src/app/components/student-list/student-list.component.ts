@@ -11,7 +11,6 @@ import { LoginService } from 'src/app/services/login.service';
 export class StudentListComponent implements OnInit {
   students: Student[] = [];
   loginUser: any;
-  link = 'main';
 
   constructor(
     private studentService: StudentService,

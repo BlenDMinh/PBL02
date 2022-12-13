@@ -11,7 +11,7 @@ class Student_ClassSectionDatabase(IDatabase):
     def GetBySectionID(sectionID):
         cur = Database.Execute(f'SELECT Student.StudentID FROM (SELECT * FROM Student_ClassSection WHERE SectionID = \'{sectionID}\') as a INNER JOIN Student ON a.StudentID = Student.StudentID', Debug = False)
 
-    @staticmethod 
+    @staticmethod
     def CountBySectionID(sectionID):
         cur = Database.Execute(f"SELECT count(*) FROM Student_ClassSection WHERE SectionID = \'{sectionID}\'", Debug = False)
         return cur.fetchone()[0]

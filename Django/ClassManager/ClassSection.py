@@ -80,8 +80,8 @@ class ClassSection(IObject):
         from Database.StudentDatabase import StudentDatabase
         
         studentList = []
-        for pk in record[5]:
-            studentList.append(StudentDatabase.Get(pk[0]))
+        # for pk in record[5]:
+        #     studentList.append(StudentDatabase.Get(pk[0]))
         
         classSection = ClassSection(sectionID, subject, teacher, startTime, endTime, capacity, studentList)
         if AsDict:

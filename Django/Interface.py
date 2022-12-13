@@ -11,14 +11,18 @@ class IObject(ABC):
         pass
     
     @abstractstaticmethod
-    def GetAllFromDatabase(AsDict=False):
+    def GetAll(AsDict=False):
         pass
     
     @abstractstaticmethod
-    def GetByIDFromDatabase(id, AsDict=False):
+    def GetByID(id, AsDict=False):
         pass
 
 class IDatabase():
+    
+    __loaded = dict()
+    __changes = []
+    
     @abstractstaticmethod
     def GetAll():
         pass
@@ -31,7 +35,14 @@ class IDatabase():
     def Insert(object):
         pass
     
-    @staticmethod
+    @abstractstaticmethod
+    def Update(object):
+        pass
+    
+    @abstractstaticmethod
     def Delete(pk):
         pass
     
+    @abstractstaticmethod
+    def CommitChanges():
+        pass

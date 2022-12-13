@@ -1,11 +1,7 @@
-from mimetypes import init
 from enum import IntEnum
 import hashlib
 from datetime import datetime
 from Interface import IObject
-from Database.TokenDatabase import TokenDatabase
-from Database.StudentDatabase import StudentDatabase
-from Database.TeacherDatabase import TeacherDatabase
 
 class Sex(IntEnum):
     MALE = 0
@@ -20,23 +16,38 @@ class User:
         self.__phone_number = phone_number
         self.__birthday = birthday
         
-    def GetUserID(self):
+    def GetUserID(self) -> str:
         return self.__userid
     
-    def GetUserName(self):
+    def GetUserName(self) -> str:
         return self.__name
     
-    def GetUserSex(self):
+    def GetUserSex(self) -> Sex:
         return self.__sex
     
-    def GetUserPhoneNumber(self):
+    def GetUserPhoneNumber(self) -> str:
         return self.__phone_number
     
-    def GetUserBirthday(self):
+    def GetUserBirthday(self) -> str:
         return self.__birthday
     
+    def SetUserName(self, name: str) -> None:
+        self.__name = name
+        
+    def SetUserSex(self, sex: Sex) -> None:
+        self.__sex = sex
+    
+    def SetUserPhoneNumber(self, phone_number : str) -> None:
+        self.__phone_number = phone_number
+    
+    def SetUserBirthday(self, birthday : str) -> None:
+        self.__birthday = birthday
+    
     @staticmethod
-    def Authenticate(id, password):
+    def Authenticate(id, password) -> str:
+        from Database.TokenDatabase import TokenDatabase
+        from Database.StudentDatabase import StudentDatabase
+        
         if not StudentDatabase.Login(id, password):
             return ''
         
@@ -49,22 +60,25 @@ class User:
     
     @staticmethod
     def TokenAuthenticate(token):
+        from Database.TokenDatabase import TokenDatabase
+        
         UserID = TokenDatabase.Get(token)
         if UserID != None:
-            return Student.GetByIDFromDatabase(UserID, AsDict=True)  # type: ignore
-        return ''
+            return Student.GetByID(UserID, AsDict=True)  # type: ignore
+        return None
 
     @staticmethod
     def TokenLogout(token):
+        from Database.TokenDatabase import TokenDatabase
+        
         TokenDatabase.Delete(token)
 
 class Student(User, IObject):
     
-    __classname: str
-    
-    def __init__(self, userid, name, sex, phone_number, birthday, classname) -> None:  # type: ignore
+    def __init__(self, userid : str, name : str, sex : Sex, phone_number : str, birthday : str, classname : str, attendedClassSections = []) -> None:  # type: ignore
         super().__init__(userid, name, sex, phone_number, birthday)
         self.__classname = classname
+        self.__attendedClassSections = attendedClassSections
     
     def __str__(self):
         str = f'{self.GetUserID()} {self.GetUserName()} {self.GetUserSex()} {self.GetClassName()}'
@@ -80,8 +94,19 @@ class Student(User, IObject):
             'birthday': self.GetUserBirthday()
         }
     
-    def GetClassName(self):
+    def GetClassName(self) -> str:
         return self.__classname
+    
+    def SetClassName(self, classname : str) -> None:
+        self.__classname = classname
+
+    def GetAttendedClasses(self, AsDict = False):
+        if not AsDict:
+            return self.__attendedClassSections
+        retList = []
+        for classSection in self.__attendedClassSections:
+            retList.append(classSection.AsDict())
+        return retList
 
     @staticmethod
     def FromRecord(record, AsDict=False):
@@ -91,26 +116,31 @@ class Student(User, IObject):
         return student
 
     @staticmethod
-    def GetAllFromDatabase(AsDict = False):
-        students_database = StudentDatabase.GetAll()
+    def GetAll(AsDict = False):
+        from Database.StudentDatabase import StudentDatabase
+        
+        students_database = StudentDatabase().GetAll()
         studentList = []
         for rec in students_database:
             studentList.append(Student.FromRecord(record=rec, AsDict=AsDict))
         return studentList
     
     @staticmethod
-    def GetByIDFromDatabase(id, AsDict = False):
-        rec = StudentDatabase.Get(id)
+    def GetByID(id, AsDict = False):
+        from Database.StudentDatabase import StudentDatabase
+        
+        rec = StudentDatabase().Get(id)
         student = Student.FromRecord(record=rec, AsDict=AsDict)
         return student
     
-    def GetAttendedClasses(self, AsDict = False):
-        pass
     
 class Teacher(User, IObject):
     
-    def __init__(self, userid, name, sex, phone_number, birthday):  # type: ignore
+    __teachingClassSections = []
+    
+    def __init__(self, userid : str, name : str, sex : Sex, phone_number : str, birthday : str, teachingClassSections = []):  # type: ignore
         super().__init__(userid, name, sex, phone_number, birthday)
+        self.__teachingClassSections = teachingClassSections
     
     def AsDict(self):
         return {
@@ -120,6 +150,14 @@ class Teacher(User, IObject):
             'phoneNumber': self.GetUserPhoneNumber(),
             'birthday': self.GetUserBirthday()
         }
+        
+    def GetTeachingClassSections(self, AsDict = False):
+        if not AsDict:
+            return self.__teachingClassSections
+        retList = []
+        for classSection in self.__teachingClassSections:
+            retList.append(classSection.AsDict())
+        return retList
     
     @staticmethod
     def FromRecord(record, AsDict=False):
@@ -129,14 +167,18 @@ class Teacher(User, IObject):
         return teacher
 
     @staticmethod
-    def GetByIDFromDatabase(id, AsDict = False):
-        rec = TeacherDatabase.Get(id)
+    def GetByID(id, AsDict = False):
+        from Database.TeacherDatabase import TeacherDatabase
+        
+        rec = TeacherDatabase().Get(id)
         teacher = Teacher.FromRecord(record=rec, AsDict=AsDict)
         return teacher
         
     @staticmethod
-    def GetAllFromDatabase(AsDict = False):
-        teachers_database = TeacherDatabase.GetAll()
+    def GetAll(AsDict = False):
+        from Database.TeacherDatabase import TeacherDatabase
+        
+        teachers_database = TeacherDatabase().GetAll()
         teacherList = []
         for rec in teachers_database:
             if AsDict:

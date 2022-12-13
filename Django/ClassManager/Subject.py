@@ -21,6 +21,9 @@ class Subject(IObject):
     def GetSubjectName(self):
         return self.__subjectName
     
+    def SetSubjectName(self, subjectName : str):
+        self.__subjectName = subjectName
+    
     @staticmethod
     def FromRecord(record, AsDict=False):
         subjectID = record[0]
@@ -31,12 +34,12 @@ class Subject(IObject):
         return subject
 
     @staticmethod
-    def GetByIDFromDatabase(id, AsDict=False):
+    def GetByID(id, AsDict=False):
         rec = SubjectDatabase.Get(id)
         return Subject.FromRecord(rec, AsDict=AsDict)
     
     @staticmethod
-    def GetAllFromDatabase(AsDict=False):
+    def GetAll(AsDict=False):
         data = SubjectDatabase.GetAll()
         subjects = []
         for rec in data:

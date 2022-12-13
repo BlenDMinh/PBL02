@@ -1,7 +1,6 @@
 from rest_framework.decorators import api_view
-# from django.http import HttpResponse
 from django.http import JsonResponse
-from django.shortcuts import render
+
 from UserManager.User import Student
 from UserManager.User import Teacher
 from UserManager.User import User
@@ -9,22 +8,27 @@ from UserManager.User import User
 # Create your views here.
 @api_view(['GET'])
 def GetStudent(request, pk: str):
-    student = Student.GetByIDFromDatabase(id=pk, AsDict=True)
+    student = Student.GetByID(id=pk, AsDict=True)
     return JsonResponse(student, safe=False)
 
 @api_view(['GET'])
 def GetStudentList(request):
-    studentList = Student.GetAllFromDatabase(AsDict=True)
+    studentList = Student.GetAll(AsDict=True)
     return JsonResponse(studentList, safe=False)
 
 @api_view(['GET'])
+def GetAttendedClassOfStudent(request, pk: str):
+    student = Student.GetByID(id=pk)
+    return JsonResponse(student.GetAttendedClasses(AsDict=True), safe=False) # type: ignore
+
+@api_view(['GET'])
 def GetTeacher(request, pk: str):
-    teacher = Teacher.GetByIDFromDatabase(id=pk, AsDict=True)
+    teacher = Teacher.GetByID(id=pk, AsDict=True)
     return JsonResponse(teacher, safe=False)
 
 @api_view(['GET'])
 def GetTeacherList(request):
-    teacherList = Teacher.GetAllFromDatabase(AsDict=True)
+    teacherList = Teacher.GetAll(AsDict=True)
     return JsonResponse(teacherList, safe=False)
 
 # return a token if valid

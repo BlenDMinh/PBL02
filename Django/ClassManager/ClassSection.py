@@ -11,14 +11,16 @@ class ClassSection(IObject):
     __start_time: int
     __end_time: int
     __capacity: int
+    __attendingStudents = []
 
-    def __init__(self, sectionID, subject, teacher, start_time, end_time, capacity):
+    def __init__(self, sectionID, subject, teacher, start_time, end_time, capacity, attendingStudents = []):
         self.__sectionID = sectionID
         self.__subject = subject
         self.__teacher = teacher
         self.__start_time = start_time
         self.__end_time = end_time
         self.__capacity = capacity
+        self.__attendingStudents = attendingStudents
     
     def AsDict(self):
         return {
@@ -48,12 +50,21 @@ class ClassSection(IObject):
     
     def GetPeriodTime(self):
         return (self.__start_time, self.__end_time)
+    
+    def GetAttendingStudents(self, AsDict = False):
+        if not AsDict:
+            return self.__attendingStudents
+        
+        retList = []
+        for student in self.__attendingStudents:
+            retList.append(student.AsDict())
+        return retList
 
     @staticmethod
     def FromRecord(record, AsDict=False):
         sectionID = record[0]
-        subject = Subject.GetByIDFromDatabase(record[1])
-        teacher = Teacher.GetByIDFromDatabase(record[2])
+        subject = Subject.GetByID(record[1])
+        teacher = Teacher.GetByID(record[2])
         if record[3] == None:
             startTime = 0
             endTime = 0
@@ -75,14 +86,14 @@ class ClassSection(IObject):
         Student_ClassSectionDatabase.Delete((studentID, self.GetClassSectionID()))
     
     @staticmethod
-    def GetByIDFromDatabase(id, AsDict = False):
-        rec = ClassSectionDatabase.Get(id)
+    def GetByID(id, AsDict = False):
+        rec = ClassSectionDatabase().Get(id)
         classSection = ClassSection.FromRecord(rec, AsDict=AsDict)
         return classSection
     
     @staticmethod
-    def GetAllFromDatabase(AsDict = False):
-        data = ClassSectionDatabase.GetAll()
+    def GetAll(AsDict = False):
+        data = ClassSectionDatabase().GetAll()
         classSections = []
 
         for rec in data:

@@ -5,13 +5,30 @@ from UserManager.User import Teacher
 class TeacherDatabase(BaseDatabase):
     
     _loaded = dict()
+    __classes_loaded = []
     _changes = []
     
     @classmethod
-    def _FetchFromDatabase(cls, pk):
-        cur = Database.Execute(f"SELECT * FROM Teacher WHERE TeacherID='{pk}'", Debug = False)
+    def FetchFromDatabase(cls, pk, onlyObject = False):
+        if pk in cls._loaded:
+            teacher = cls._loaded[pk]
+        else:
+            cur = Database.Execute(f"SELECT * FROM Teacher WHERE TeacherID='{pk}'", Debug = False)
+            teacher = Teacher.FromRecord(cur.fetchone())
         
-        teacher = Teacher.FromRecord(cur.fetchone())
+        if not onlyObject:
+            cur = Database.Execute(f"SELECT SectionID FROM ClassSection WHERE TeacherID='{pk}'", Debug = False)
+            classIDs = [k[0] for k in cur.fetchall()]
+            classList = []
+            
+            from Database.ClassSectionDatabase import ClassSectionDatabase
+            
+            for classID in classIDs:
+                ClassSectionDatabase.FetchFromDatabase(classID, True)
+                classList.append(ClassSectionDatabase.Get(classID))
+            teacher._SetTeachingClassSections(classList)
+            cls.__classes_loaded.append(pk)
+        cls._loaded[pk] = teacher
         return teacher
     
     @classmethod

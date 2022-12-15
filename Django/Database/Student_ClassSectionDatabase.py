@@ -5,11 +5,12 @@ class Student_ClassSectionDatabase(IDatabase):
     @staticmethod
     def GetByStudentID(studentID):
         cur = Database.Execute(f'SELECT ClassSection.SectionID FROM (SELECT * FROM Student_ClassSection WHERE StudentID = \'{studentID}\') as a INNER JOIN ClassSection ON a.SectionID = ClassSection.SectionID', Debug=False)
-        return cur.fetchall()
+        return [k[0] for k in cur.fetchall()]
 
     @staticmethod
     def GetBySectionID(sectionID):
         cur = Database.Execute(f'SELECT Student.StudentID FROM (SELECT * FROM Student_ClassSection WHERE SectionID = \'{sectionID}\') as a INNER JOIN Student ON a.StudentID = Student.StudentID', Debug = False)
+        return [k[0] for k in cur.fetchall()]
 
     @staticmethod
     def CountBySectionID(sectionID):

@@ -8,9 +8,15 @@ class SubjectDatabase(BaseDatabase):
     _changes = []
     
     @classmethod
-    def _FetchFromDatabase(cls, pk):
-        cur = Database.Execute(f"SELECT * FROM Subject WHERE SubjectID = '{pk}'", Debug = False)
-        return Subject.FromRecord(cur.fetchone())
+    def FetchFromDatabase(cls, pk, onlyObject = False):
+        if pk in cls._loaded:
+            subject = cls._loaded[pk]
+        else:
+            cur = Database.Execute(f"SELECT * FROM Subject WHERE SubjectID = '{pk}'", Debug = False)
+            subject = Subject.FromRecord(cur.fetchone())
+            
+        cls._loaded[pk] = subject
+        return cls._loaded[pk]
     
     @classmethod
     def _FetchAllPKeys(cls):

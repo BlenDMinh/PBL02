@@ -11,7 +11,7 @@ class IObject(ABC):
         pass
     
     @abstractstaticmethod
-    def FromRecord(record, AsDict=False):
+    def FromRecord(record):
         pass
     
     @abstractstaticmethod

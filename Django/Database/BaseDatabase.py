@@ -11,7 +11,7 @@ class BaseDatabase(ABC):
         keys = cls._FetchAllPKeys()
         for key in keys: 
             if key not in cls._loaded:
-                cls._loaded[key] = cls._FetchFromDatabase(key)
+                cls.FetchFromDatabase(key, True)
         return list(cls._loaded.values())
     
     @classmethod
@@ -19,19 +19,19 @@ class BaseDatabase(ABC):
         try:
             return cls._loaded[pk]
         except KeyError:
-            cls._loaded[pk] = cls._FetchFromDatabase(pk)
+            cls.FetchFromDatabase(pk, True)
             return cls._loaded[pk]
     
     @classmethod
     def Insert(cls, object : IObject):
-        cls._loaded[object.GetPrimaryKey()]
+        cls._loaded[object.GetPrimaryKey()] = object
     
     @classmethod
     def Delete(cls, pk):
         del cls._loaded[pk]
     
     @abstractclassmethod
-    def _FetchFromDatabase(cls, pk):
+    def FetchFromDatabase(cls, pk, onlyObject = False):
         pass
     
     @abstractclassmethod

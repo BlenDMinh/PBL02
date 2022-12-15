@@ -6,21 +6,40 @@ from ClassManager.ClassSection import ClassSection
 class ClassSectionDatabase(BaseDatabase):
     
     _loaded = dict()
+    __students_loaded = []
     _changes = []
     
     @classmethod
-    def _FetchFromDatabase(cls, pk):
-        cur = Database.Execute(f"SELECT * FROM ClassSection WHERE SectionID  = '{pk}'", Debug = False)
+    def FetchFromDatabase(cls, pk, onlyObject = False):
+        if pk in cls._loaded:
+            classSection = cls._loaded[pk]
+        else:
+            cur = Database.Execute(f"SELECT * FROM ClassSection WHERE SectionID  = '{pk}'", Debug = False)
+            rec = cur.fetchone()
+            classSection = ClassSection.FromRecord(rec)
         
-        rec = cur.fetchone()
-        studentList = Student_ClassSectionDatabase.GetBySectionID(rec[0])
+        if not onlyObject:
+            studentIDs = Student_ClassSectionDatabase.GetBySectionID(pk)
+            
+            studentList = []
+            for studentID in studentIDs:
+                from Database.StudentDatabase import StudentDatabase
+                StudentDatabase.FetchFromDatabase(studentID, True)
+                studentList.append(StudentDatabase.Get(studentID))
+            classSection._SetAttendingStudents(studentList)
+            cls.__students_loaded.append(pk)
+            
+        cls._loaded[pk] = classSection
         
-        classSection = ClassSection.FromRecord((*rec, studentList))
         return classSection
     
     @classmethod
     def _FetchAllPKeys(cls):
         cur = Database.Execute(f"SELECT SectionID FROM ClassSection", Debug=False)
         return list(r[0] for r in cur.fetchall())
+    
+    @classmethod
+    def IsStudentsLoaded(cls, pk):
+        return pk in cls.__students_loaded
 
 Database.InitTable('ClassSection')

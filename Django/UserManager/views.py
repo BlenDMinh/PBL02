@@ -1,9 +1,13 @@
 from rest_framework.decorators import api_view
 from django.http import JsonResponse
+from django.views import View
 
 from UserManager.User import Student
 from UserManager.User import Teacher
 from UserManager.User import User
+
+class StudentView(View):
+    pass
 
 # Create your views here.
 @api_view(['GET'])

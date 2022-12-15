@@ -104,23 +104,32 @@ class Student(User, IObject):
         self.__classname = classname
 
     def GetAttendedClasses(self, AsDict = False):
+        from Database.StudentDatabase import StudentDatabase
+        
+        if not StudentDatabase.IsClassesLoaded(self.GetUserID()):
+            StudentDatabase.FetchFromDatabase(self.GetUserID())
         if not AsDict:
             return self.__attendedClassSections
         retList = []
         for classSection in self.__attendedClassSections:
             retList.append(classSection.AsDict())
         return retList
+    
+    def _SetAttenedClasses(self, classes: list):
+        self.__attendedClassSections = classes
 
     @staticmethod
-    def FromRecord(record, AsDict=False):
+    def FromRecord(record):
         from Database.ClassSectionDatabase import ClassSectionDatabase
         classList = []
-        for pk in record[6]:
-            classList.append(ClassSectionDatabase.Get(pk[0]))
+        try:
+            for pk in record[6]:
+                ClassSectionDatabase.FetchFromDatabase(pk[0], True)
+                classList.append(ClassSectionDatabase.Get(pk[0]))
+        except IndexError:
+            pass
         student = Student(record[0], record[1], record[2], record[4], record[5], record[3], classList)
         
-        if AsDict:
-            return student.AsDict()
         return student
 
     @staticmethod
@@ -169,11 +178,13 @@ class Teacher(User, IObject):
             retList.append(classSection.AsDict())
         return retList
     
+    def _SetTeachingClassSections(self, classes: list):
+        self.__teachingClassSections = classes
+    
     @staticmethod
-    def FromRecord(record, AsDict=False):
+    def FromRecord(record):
         teacher = Teacher(record[0], record[1], record[2], record[3], record[4])
-        if AsDict:
-            return teacher.AsDict()
+
         return teacher
 
     @staticmethod

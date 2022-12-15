@@ -28,12 +28,10 @@ class Subject(IObject):
         self.__subjectName = subjectName
     
     @staticmethod
-    def FromRecord(record, AsDict=False):
+    def FromRecord(record):
         subjectID = record[0]
         subjectName = record[1]
         subject = Subject(subjectID, subjectName)
-        if AsDict:
-            return subject.AsDict()
         return subject
 
     @staticmethod

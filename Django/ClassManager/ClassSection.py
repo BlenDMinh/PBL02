@@ -55,6 +55,10 @@ class ClassSection(IObject):
         return (self.__start_time, self.__end_time)
     
     def GetAttendingStudents(self, AsDict = False):
+        from Database.ClassSectionDatabase import ClassSectionDatabase
+        if not ClassSectionDatabase.IsStudentsLoaded(self.GetClassSectionID()):
+            ClassSectionDatabase.FetchFromDatabase(self.GetClassSectionID())
+            
         if not AsDict:
             return self.__attendingStudents
         
@@ -62,12 +66,19 @@ class ClassSection(IObject):
         for student in self.__attendingStudents:
             retList.append(student.AsDict())
         return retList
+    
+    def _SetAttendingStudents(self, students : list):
+        self.__attendingStudents = students
 
     @staticmethod
-    def FromRecord(record, AsDict=False):
+    def FromRecord(record):
         sectionID = record[0]
-        subject = Subject.GetByID(record[1])
-        teacher = Teacher.GetByID(record[2])
+        from Database.TeacherDatabase import TeacherDatabase
+        from Database.SubjectDatabase import SubjectDatabase
+        SubjectDatabase.FetchFromDatabase(record[1], True)
+        TeacherDatabase.FetchFromDatabase(record[2], True)
+        subject = SubjectDatabase.Get(record[1])
+        teacher = TeacherDatabase.Get(record[2])
         if record[3] == None:
             startTime = 0
             endTime = 0
@@ -80,12 +91,13 @@ class ClassSection(IObject):
         from Database.StudentDatabase import StudentDatabase
         
         studentList = []
-        # for pk in record[5]:
-        #     studentList.append(StudentDatabase.Get(pk[0]))
+        try:
+            for pk in record[5]:
+                studentList.append(StudentDatabase.Get(pk[0]))
+        except IndexError:
+            pass
         
         classSection = ClassSection(sectionID, subject, teacher, startTime, endTime, capacity, studentList)
-        if AsDict:
-            return classSection.AsDict()
         return classSection
 
     def AddStudent(self, studentID):
@@ -115,22 +127,3 @@ class ClassSection(IObject):
         if AsDict:
             return list([classSection.AsDict() for classSection in classSections])
         return classSections
-    
-    @staticmethod
-    def GetClassesAttendedByID(studentID, AsDict = False):
-        from Database.Student_ClassSectionDatabase import Student_ClassSectionDatabase
-        
-        classes = []
-        data = Student_ClassSectionDatabase.GetByStudentID(studentID=studentID)
-        for rec in data:
-            classSection = ClassSection.FromRecord(record=rec, AsDict=AsDict)
-            classes.append(classSection)
-        return classes
-    
-    # @staticmethod
-    # def AddStudentIntoClass(sectionID, studentID):
-    #     Student_ClassSectionDatabase.InsertStudent_Section(studentID, sectionID)
-        
-    # @staticmethod
-    # def RemoveStudentFromClass(sectionID, studentID):
-    #     Student_ClassSectionDatabase.DeleteStudent_Section(studentID, sectionID)

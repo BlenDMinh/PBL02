@@ -1,42 +1,36 @@
-<div class="table-responsive">
-  <table
-    class="table table-striped table-bordered table-hover"
-    *ngIf="students"
-  >
+<body>
+  <table class="table table-bordered styled-table">
     <thead>
-      <tr class="color">
-        <th scope="col" class="align-middle text-break">TT</th>
-        <th scope="col" class="align-middle text-break">Mã số sinh viên</th>
-        <th scope="col" class="align-middle text-break">Họ và tên</th>
-        <th scope="col" class="align-middle">Nữ</th>
-        <th scope="col" class="align-middle">Lớp</th>
-        <th scope="col" class="align-middle text-break">Số điện thoại</th>
+      <tr class="text-center">
+        <th scope="col">STT</th>
+        <th scope="col">Mã số sinh viên</th>
+        <th scope="col">Họ và tên</th>
+        <th scope="col">Nữ</th>
+        <th scope="col">Lớp</th>
+        <th scope="col">Số điện thoại</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let student of students; index as i">
-        <td scope="row" class="center align-middle">{{ i + 1 }}</td>
-        <td scope="row" class="center align-middle text-break">
+
+    <tbody class="table-group-divider align-middle">
+      <tr *ngFor="let student of students; index as i" class="text-center">
+        <td scope="row">{{ i + 1 }}</td>
+        <td scope="row">
           {{ student.studentId }}
         </td>
-        <td scope="row" class="text-break align-middle">{{ student.name }}</td>
-        <td
-          scope="row"
-          class="center align-middle"
-          *ngIf="student.sex == true; else elseBlock"
-        >
-          x
+        <td scope="row" class="text-start">
+          {{ student.name }}
         </td>
+        <td scope="row" *ngIf="student.sex == true; else elseBlock">x</td>
         <ng-template #elseBlock>
-          <td scope="row" class="align-middle">&nbsp;</td>
+          <td scope="row">&nbsp;</td>
         </ng-template>
-        <td scope="row" class="center align-middle text-break">
+        <td scope="row">
           {{ student.class }}
         </td>
-        <td scope="row" class="center align-middle text-break">
+        <td scope="row">
           {{ student.phoneNumber }}
         </td>
       </tr>
     </tbody>
   </table>
-</div>
+</body>

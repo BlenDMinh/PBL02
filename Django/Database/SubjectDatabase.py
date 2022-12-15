@@ -1,23 +1,21 @@
-from Database import Database
-from Interface import IDatabase
+from Database import Database #type: ignore
+from Database.BaseDatabase import BaseDatabase
+from ClassManager.Subject import Subject
 
-class SubjectDatabase(IDatabase):
-    @staticmethod
-    def Get(pk):
-        cur = Database.Execute(f"SELECT * FROM Subject WHERE SubjectID='{pk}'", Debug = False)
-        return cur.fetchone()
+class SubjectDatabase(BaseDatabase):
+    
+    _loaded = dict()
+    _changes = []
+    
+    @classmethod
+    def _FetchFromDatabase(cls, pk):
+        cur = Database.Execute(f"SELECT * FROM Subject WHERE SubjectID = '{pk}'", Debug = False)
+        return Subject.FromRecord(cur.fetchone())
+    
+    @classmethod
+    def _FetchAllPKeys(cls):
+        cur = Database.Execute(f"SELECT SubjectID FROM Subject", Debug=False)
+        return list(r[0] for r in cur.fetchall())
 
-    @staticmethod
-    def GetAll():
-        cur = Database.Execute(f"SELECT * FROM Subject", Debug = False)
-        return cur.fetchall()
-    
-    @staticmethod
-    def Insert(object):
-        pass
-    
-    @staticmethod
-    def Delete(pk):
-        pass
 
 Database.InitTable("Subject")

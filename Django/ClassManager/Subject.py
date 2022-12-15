@@ -1,5 +1,5 @@
 from Interface import IObject
-from Database.SubjectDatabase import SubjectDatabase
+
 
 class Subject(IObject):
     __subjectID: str
@@ -14,12 +14,18 @@ class Subject(IObject):
             "subjectID": self.GetSubjectID(),
             "subjectName": self.GetSubjectName()
         }
+    
+    def GetPrimaryKey(self) -> str:
+        return self.__subjectID
 
     def GetSubjectID(self):
         return self.__subjectID
     
     def GetSubjectName(self):
         return self.__subjectName
+    
+    def SetSubjectName(self, subjectName : str):
+        self.__subjectName = subjectName
     
     @staticmethod
     def FromRecord(record, AsDict=False):
@@ -31,14 +37,19 @@ class Subject(IObject):
         return subject
 
     @staticmethod
-    def GetByIDFromDatabase(id, AsDict=False):
-        rec = SubjectDatabase.Get(id)
-        return Subject.FromRecord(rec, AsDict=AsDict)
+    def GetByID(id, AsDict=False):
+        from Database.SubjectDatabase import SubjectDatabase
+        
+        subject = SubjectDatabase.Get(id)
+        if AsDict:
+            return subject.AsDict()
+        return subject
     
     @staticmethod
-    def GetAllFromDatabase(AsDict=False):
-        data = SubjectDatabase.GetAll()
-        subjects = []
-        for rec in data:
-            subjects.append(Subject.FromRecord(rec, AsDict=AsDict))
+    def GetAll(AsDict=False):
+        from Database.SubjectDatabase import SubjectDatabase
+        
+        subjects = SubjectDatabase.GetAll()
+        if AsDict:
+            return list([subject.AsDict() for subject in subjects])
         return subjects

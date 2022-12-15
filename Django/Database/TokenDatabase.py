@@ -1,4 +1,4 @@
-from Database import Database
+from Database import Database # type: ignore
 from Interface import IDatabase
 
 class TokenDatabase(IDatabase):    

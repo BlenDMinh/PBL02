@@ -8,6 +8,7 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class NavbarComponent implements OnInit {
   @Input() loginName?: String;
+
   constructor(private loginService: LoginService) {}
 
   ngOnInit(): void {}

@@ -1,24 +1,26 @@
 from Database import Database  # type: ignore
-from Interface import IDatabase
+from Database.BaseDatabase import BaseDatabase
+from Database.Student_ClassSectionDatabase import Student_ClassSectionDatabase
+from ClassManager.ClassSection import ClassSection
 
-class ClassSectionDatabase(IDatabase):
-
-    @staticmethod
-    def Get(pk):
-        cur = Database.Execute(f"SELECT * FROM ClassSection WHERE SectionID  = '{pk}'")
-        return cur.fetchone()
-
-    @staticmethod
-    def GetAll():
-        cur = Database.Execute(f"SELECT * FROM ClassSection")
-        return cur.fetchall()
-
-    @staticmethod 
-    def Insert(object):
-        pass
-
-    @staticmethod
-    def Delete(pk):
-        pass
+class ClassSectionDatabase(BaseDatabase):
+    
+    _loaded = dict()
+    _changes = []
+    
+    @classmethod
+    def _FetchFromDatabase(cls, pk):
+        cur = Database.Execute(f"SELECT * FROM ClassSection WHERE SectionID  = '{pk}'", Debug = False)
+        
+        rec = cur.fetchone()
+        studentList = Student_ClassSectionDatabase.GetBySectionID(rec[0])
+        
+        classSection = ClassSection.FromRecord((*rec, studentList))
+        return classSection
+    
+    @classmethod
+    def _FetchAllPKeys(cls):
+        cur = Database.Execute(f"SELECT SectionID FROM ClassSection", Debug=False)
+        return list(r[0] for r in cur.fetchall())
 
 Database.InitTable('ClassSection')

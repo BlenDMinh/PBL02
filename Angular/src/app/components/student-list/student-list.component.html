@@ -1,6 +1,8 @@
 <body>
   <app-navbar [loginName]="this.loginUser.name"></app-navbar>
+
   <div class="custom-container">
+    <h3>Danh sách sinh viên:</h3>
     <app-student-table [students]="this.students"></app-student-table>
   </div>
 </body>

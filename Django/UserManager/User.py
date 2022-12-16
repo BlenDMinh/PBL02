@@ -129,6 +129,7 @@ class Student(User, IObject):
         from Database.StudentDatabase import StudentDatabase
         if StudentDatabase.IsClassesLoaded(self.GetUserID()):
             StudentDatabase.FetchFromDatabase(self.GetUserID())
+            
         if classSection in self.__attendedClassSections:
             self.__attendedClassSections.remove(classSection)
 

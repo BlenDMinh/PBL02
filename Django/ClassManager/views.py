@@ -21,6 +21,7 @@ def Class(request, pk):
     elif request.method == 'POST':
         if not request.POST.get("sid"):
             return JsonResponse({'error': 'argument "sid" not found!'})
+        print('Inserting')
         classSection = ClassSection.GetByID(pk)
         classSection.AddStudent(request.POST.get("sid"))  # type: ignore
         return JsonResponse({'status': 'OK', 'work': f'Added {request.POST.get("sid")} into {pk}'})
@@ -28,6 +29,7 @@ def Class(request, pk):
     elif request.method == 'DELETE':
         if not request.POST.get("sid"):
             return JsonResponse({'error': 'argument "sid" not found!'})
+        print('Deleting')
         classSection = ClassSection.GetByID(pk)
         classSection.RemoveStudent(request.POST.get("sid"))  # type: ignore
         return JsonResponse({'status': 'OK', 'work': f'Removed {request.POST.get("sid")} from {pk}'}) 

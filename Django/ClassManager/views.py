@@ -45,6 +45,6 @@ def GetAllClass(request):
                     if classSection not in attended_classes:
                         classList.append(classSection.AsDict()) # type: ignore
                 return JsonResponse(classList, safe=False)
-            else:
-                return JsonResponse(student.GetAttendedClasses(AsDict=True), safe=False) #type: ignore
+        else:
+            return JsonResponse(student.GetAttendedClasses(AsDict=True), safe=False) #type: ignore
     return JsonResponse(ClassSection.GetAll(AsDict=True), safe=False)

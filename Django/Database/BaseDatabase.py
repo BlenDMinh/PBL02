@@ -5,7 +5,7 @@ from Exception import RecordException
 class BaseDatabase(ABC):
     
     _loaded = dict()
-    _changes = []
+    # _changes = []
     
     @classmethod
     def GetAll(cls) -> list[IObject]:

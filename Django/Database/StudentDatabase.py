@@ -8,14 +8,14 @@ class StudentDatabase(BaseDatabase):
     
     _loaded = dict()
     __classes_loaded = []
-    _changes = []
+    # _changes = []
     
     @classmethod
     def FetchFromDatabase(cls, pk, onlyObject = False):
         if pk in cls._loaded:
             student = cls._loaded[pk]
         else:
-            cur = Database.Execute(f"SELECT StudentID, Name, Sex, Class, PhoneNumber, Birthday FROM Student WHERE StudentID = '{pk}'", Debug = False)
+            cur = Database.Execute(f"SELECT StudentID, Name, Sex, Class, PhoneNumber, Birthday FROM Student WHERE StudentID = \'{pk}\'", Debug = False)
             rec = cur.fetchone()
             student = Student.FromRecord(rec)
         
@@ -24,7 +24,8 @@ class StudentDatabase(BaseDatabase):
             classList = []
             for classID in classIDs:
                 ClassSectionDatabase.FetchFromDatabase(classID, True)
-                classList.append(ClassSectionDatabase.Get(classID))
+                classSection = ClassSectionDatabase.Get(classID)
+                classList.append(classSection)
             student._SetAttenedClasses(classList)
             cls.__classes_loaded.append(pk)
         

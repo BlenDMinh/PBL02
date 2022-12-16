@@ -5,7 +5,7 @@ from ClassManager.Subject import Subject
 class SubjectDatabase(BaseDatabase):
     
     _loaded = dict()
-    _changes = []
+    # _changes = []
     
     @classmethod
     def FetchFromDatabase(cls, pk, onlyObject = False):

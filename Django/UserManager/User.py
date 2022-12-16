@@ -118,6 +118,19 @@ class Student(User, IObject):
     
     def _SetAttenedClasses(self, classes: list):
         self.__attendedClassSections = classes
+        
+    def _AddClassSection(self, classSection):
+        from Database.StudentDatabase import StudentDatabase
+        if StudentDatabase.IsClassesLoaded(self.GetUserID()):
+            StudentDatabase.FetchFromDatabase(self.GetUserID())
+        self.__attendedClassSections.append(classSection)
+        
+    def _RemoveClassSection(self, classSection):
+        from Database.StudentDatabase import StudentDatabase
+        if StudentDatabase.IsClassesLoaded(self.GetUserID()):
+            StudentDatabase.FetchFromDatabase(self.GetUserID())
+        if classSection in self.__attendedClassSections:
+            self.__attendedClassSections.remove(classSection)
 
     @staticmethod
     def FromRecord(record) -> 'Student':

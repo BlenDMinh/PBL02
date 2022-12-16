@@ -6,7 +6,7 @@ class TeacherDatabase(BaseDatabase):
     
     _loaded = dict()
     __classes_loaded = []
-    _changes = []
+    # _changes = []
     
     @classmethod
     def FetchFromDatabase(cls, pk, onlyObject = False):

@@ -107,12 +107,33 @@ class ClassSection(IObject):
 
     def AddStudent(self, studentID):
         from Database.Student_ClassSectionDatabase import Student_ClassSectionDatabase
+        from Database.StudentDatabase import StudentDatabase
+        from Database.ClassSectionDatabase import ClassSectionDatabase
+        from UserManager.User import Student
         
+        if not ClassSectionDatabase.IsStudentsLoaded(self.GetClassSectionID()):
+            ClassSectionDatabase.FetchFromDatabase(self.GetClassSectionID())
+        
+        student: Student = StudentDatabase.Get(studentID) #type: ignore
+        self.__attendingStudents.append(student)
+        student._AddClassSection(self)
         Student_ClassSectionDatabase.Insert((studentID, self.GetClassSectionID()))
         
     def RemoveStudent(self, studentID):
         from Database.Student_ClassSectionDatabase import Student_ClassSectionDatabase
+        from Database.StudentDatabase import StudentDatabase
+        from UserManager.User import Student
         
+        from Database.ClassSectionDatabase import ClassSectionDatabase
+        if not ClassSectionDatabase.IsStudentsLoaded(self.GetClassSectionID()):
+            ClassSectionDatabase.FetchFromDatabase(self.GetClassSectionID())
+            
+        student: Student = StudentDatabase.Get(studentID) # type: ignore
+        try:
+            self.__attendingStudents.remove(student)
+            student._RemoveClassSection(self)
+        except:
+            print('Delete Error')
         Student_ClassSectionDatabase.Delete((studentID, self.GetClassSectionID()))
     
     @staticmethod

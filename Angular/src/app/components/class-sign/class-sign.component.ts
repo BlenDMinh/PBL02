@@ -35,9 +35,7 @@ export class ClassSignComponent implements OnInit {
   }
 
   deleteClassSection(section: Class, student: Student): void {
-    this.classSectionService
-      .deleteClass(section.sectionID, student.studentId)
-      .subscribe();
+    this.classSectionService.deleteClass(section.sectionID, student.studentId);
     location.replace('/classSign');
   }
 }

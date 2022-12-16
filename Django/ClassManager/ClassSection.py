@@ -1,6 +1,7 @@
 from Interface import IObject
 from ClassManager.Subject import Subject
 from UserManager.User import Teacher
+from Exception import RecordException
 
 class ClassSection(IObject):
     __sectionID: str
@@ -72,6 +73,10 @@ class ClassSection(IObject):
 
     @staticmethod
     def FromRecord(record):
+        for i in range(len(record)):
+            ele = record[i]
+            if ele == None:
+                raise RecordException(f"Element {i} of Student record is None or Empty")
         sectionID = record[0]
         from Database.TeacherDatabase import TeacherDatabase
         from Database.SubjectDatabase import SubjectDatabase

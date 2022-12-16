@@ -2,6 +2,7 @@ from enum import IntEnum
 import hashlib
 from datetime import datetime
 from Interface import IObject
+from Exception import RecordException
 
 class Sex(IntEnum):
     MALE = 0
@@ -119,7 +120,12 @@ class Student(User, IObject):
         self.__attendedClassSections = classes
 
     @staticmethod
-    def FromRecord(record):
+    def FromRecord(record) -> 'Student':
+        for i in range(len(record)):
+            ele = record[i]
+            if ele == None:
+                raise RecordException(f"Element {i} of Student record is None or Empty")
+        
         from Database.ClassSectionDatabase import ClassSectionDatabase
         classList = []
         try:
@@ -182,9 +188,12 @@ class Teacher(User, IObject):
         self.__teachingClassSections = classes
     
     @staticmethod
-    def FromRecord(record):
+    def FromRecord(record) -> 'Teacher':
+        for i in range(len(record)):
+            ele = record[i]
+            if ele == None:
+                raise RecordException(f"Element {i} of Student record is None or Empty")
         teacher = Teacher(record[0], record[1], record[2], record[3], record[4])
-
         return teacher
 
     @staticmethod

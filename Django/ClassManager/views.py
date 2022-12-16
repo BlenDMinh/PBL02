@@ -35,7 +35,16 @@ def Class(request, pk):
 @api_view(['GET'])
 def GetAllClass(request):
     if 'sid' in request.GET:
-        student = Student.GetByID(request.GET.get('sid'))
-        return JsonResponse(student.GetAttendedClasses(AsDict=True), safe=False) #type: ignore
-    
+        student : Student = Student.GetByID(request.GET.get('sid')) # type: ignore
+        if 'mode' in request.GET:
+            if request.GET.get('mode') == 'register':
+                classes = ClassSection.GetAll()
+                attended_classes = student.GetAttendedClasses()
+                classList = []
+                for classSection in classes:
+                    if classSection not in attended_classes:
+                        classList.append(classSection.AsDict()) # type: ignore
+                return JsonResponse(classList, safe=False)
+            else:
+                return JsonResponse(student.GetAttendedClasses(AsDict=True), safe=False) #type: ignore
     return JsonResponse(ClassSection.GetAll(AsDict=True), safe=False)

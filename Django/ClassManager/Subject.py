@@ -1,5 +1,5 @@
 from Interface import IObject
-
+from Exception import RecordException
 
 class Subject(IObject):
     __subjectID: str
@@ -29,6 +29,10 @@ class Subject(IObject):
     
     @staticmethod
     def FromRecord(record):
+        for i in range(len(record)):
+            ele = record[i]
+            if ele == None:
+                raise RecordException(f"Element {i} of Student record is None or Empty")
         subjectID = record[0]
         subjectName = record[1]
         subject = Subject(subjectID, subjectName)

@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod, abstractclassmethod
 from Interface import IObject
+from Exception import RecordException
 
 class BaseDatabase(ABC):
     
@@ -11,7 +12,10 @@ class BaseDatabase(ABC):
         keys = cls._FetchAllPKeys()
         for key in keys: 
             if key not in cls._loaded:
-                cls.FetchFromDatabase(key, True)
+                try:
+                    cls.FetchFromDatabase(key, True)
+                except RecordException:
+                    pass
         return list(cls._loaded.values())
     
     @classmethod

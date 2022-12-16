@@ -28,9 +28,7 @@
               class="button-33"
               role="button"
               routerLink="/classSign"
-              (click)="
-                deleteClassSection(c.sectionID, this.loginUser.studentId)
-              "
+              (click)="deleteClassSection(c, this.loginUser)"
             >
               Huỷ
             </button>

@@ -39,10 +39,13 @@ export class ClasssectionService {
       );
   }
 
-  deleteClass(classID: string, studentID: string) {
+  deleteClass(classID: string, studentID: Number): Observable<any> {
     const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      }),
       body: {
-        sid: studentID,
+        sid: JSON.stringify(studentID),
       },
     };
 

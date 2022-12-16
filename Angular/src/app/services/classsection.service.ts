@@ -5,10 +5,9 @@ import { catchError } from 'rxjs/operators';
 import { Class } from '../models/class';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ClasssectionService {
-
   constructor(private http: HttpClient) {}
 
   private handleError<T>(operation = 'operation', result?: T) {
@@ -35,6 +34,18 @@ export class ClasssectionService {
   getClassesAttendedByStudent(studentID: string): Observable<Class[]> {
     return this.http
       .get<Class[]>(this.baseURL + `?sid=${studentID}`)
-      .pipe(catchError(this.handleError<Class[]>('getClassesAttendedByStudent', [])));
+      .pipe(
+        catchError(this.handleError<Class[]>('getClassesAttendedByStudent', []))
+      );
+  }
+
+  deleteClass(classID: string, studentID: string) {
+    const options = {
+      body: {
+        sid: studentID,
+      },
+    };
+
+    return this.http.delete(this.baseURL + `/${classID}`, options).pipe();
   }
 }

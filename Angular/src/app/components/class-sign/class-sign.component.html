@@ -24,7 +24,16 @@
           <td>{{ c.teacherName }}</td>
           <td class="text-center">{{ c.current }}/{{ c.capacity }}</td>
           <td class="text-center">
-            <button class="button-33" role="button">Huỷ</button>
+            <button
+              class="button-33"
+              role="button"
+              routerLink="/classSign"
+              (click)="
+                deleteClassSection(c.sectionID, this.loginUser.studentId)
+              "
+            >
+              Huỷ
+            </button>
           </td>
         </tr>
       </tbody>

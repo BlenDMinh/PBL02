@@ -32,4 +32,9 @@ export class ClassSignComponent implements OnInit {
         });
     });
   }
+
+  deleteClassSection(classID: string, studentID: string): void {
+    this.classSectionService.deleteClass(classID, studentID).subscribe();
+    location.replace('/classSign');
+  }
 }

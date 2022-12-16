@@ -1,42 +1,19 @@
 <body>
   <app-navbar [loginName]="this.loginUser.name"></app-navbar>
-  <div class="custom-container d-flex justify-content-between">
-    <div class="avatar-info">
-      <img
-        class="img-responsive avatar"
-        src="./assets/avatars/blankmale.jpg"
-        alt="No avatar"
-        style="width: 80%"
-      />
-      <p class="avatar-name">{{ this.loginUser.name }}</p>
+
+  <aside class="custom-container profile-card">
+    <header>
+      <a class="circular--portrait">
+        <img src="./assets/avatar-1.jpg" alt="" />
+      </a>
+      <h1 class="text-center">{{ loginUser.name }}</h1>
+    </header>
+
+    <div class="profile-bio">
+      <p><strong>Mã số sinh viên: </strong>{{ loginUser.studentId }}</p>
+      <p><strong>Lớp: </strong>{{ loginUser.class }}</p>
+      <p><strong>Số điện thoại: </strong>{{ loginUser.phoneNumber }}</p>
+      <p><strong>Ngày sinh: </strong>{{ loginUser.birthday }}</p>
     </div>
-    <div class="detail d-flex justify-content-between flex-column">
-      <div class="individual-info d-flex justify-content-center flex-column">
-        <p>
-          <span style="color: #4649ff; font-weight: bold">Số điện thoại:</span>
-          {{ this.loginUser.phoneNumber }}
-        </p>
-        <p>
-          <span style="color: #4649ff; font-weight: bold"
-            >Ngày, tháng, năm sinh:</span
-          >
-          {{ this.loginUser.birthday }}
-        </p>
-      </div>
-      <div class="university-info d-flex justify-content-center flex-column">
-        <div class="d-flex justify-content-center flex-column">
-          <p>
-            <span style="color: #4649ff; font-weight: bold"
-              >Mã số sinh viên:</span
-            >
-            {{ this.loginUser.studentId }}
-          </p>
-          <p>
-            <span style="color: #4649ff; font-weight: bold">Lớp:</span>
-            {{ this.loginUser.class | uppercase }}
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  </aside>
 </body>

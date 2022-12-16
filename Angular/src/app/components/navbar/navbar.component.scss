@@ -14,6 +14,7 @@ body {
 .custom-header {
   width: 100%;
   background-color: #fff;
+  margin-bottom: 12px;
 }
 
 .custom-container {
@@ -89,6 +90,8 @@ body {
 
 .custom-avatar img {
   width: 3rem;
+  height: 3rem;
+  object-fit: cover;
   border-radius: 50%;
   border: 1px solid #0000cc;
   margin: 8px;
@@ -130,6 +133,7 @@ body {
   text-decoration: none;
   color: #0000cc;
   display: inline-block;
+  font-weight: 500;
   width: 100%;
   position: relative;
 }

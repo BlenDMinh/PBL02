@@ -18,9 +18,17 @@ export class StudentListComponent implements OnInit {
   ) {}
 
   getStudents(): void {
-    this.studentService
-      .getStudents()
-      .subscribe((students) => (this.students = students));
+    this.studentService.getStudents().subscribe((students) =>
+      (this.students = students).sort((n1, n2) => {
+        if (n1.studentId > n2.studentId) {
+          return 1;
+        }
+        if (n1.studentId < n2.studentId) {
+          return -1;
+        }
+        return 0;
+      })
+    );
   }
 
   ngOnInit(): void {

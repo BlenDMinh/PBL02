@@ -51,7 +51,6 @@ def UserLogin(request):
         if 'token' in request.GET:
             token = request.GET.get('token')
             data = User.TokenAuthenticate(token)
-            print(data)
             if not data:
                 return JsonResponse({'error': 'User ID is not valid or password is wrong'})
             

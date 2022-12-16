@@ -5,6 +5,8 @@ from UserManager.User import Student
 from ClassManager.ClassSection import ClassSection
 from ClassManager.Subject import Subject
 
+import json
+
 @api_view(['GET'])
 def GetSubject(request, pk):
     return JsonResponse(Subject.GetByID(pk, AsDict=True), safe=False)
@@ -19,19 +21,19 @@ def Class(request, pk):
         return JsonResponse(ClassSection.GetByID(pk, AsDict=True), safe=False)
     
     elif request.method == 'POST':
-        if not request.POST.get("sid"):
+        data = json.loads(request.body)
+        if 'sid' not in data:
             return JsonResponse({'error': 'argument "sid" not found!'})
-        print('Inserting')
         classSection = ClassSection.GetByID(pk)
-        classSection.AddStudent(request.POST.get("sid"))  # type: ignore
+        classSection.AddStudent(data['sid'])  # type: ignore
         return JsonResponse({'status': 'OK', 'work': f'Added {request.POST.get("sid")} into {pk}'})
     
     elif request.method == 'DELETE':
-        if not request.POST.get("sid"):
+        data = json.loads(request.body)
+        if 'sid' not in data:
             return JsonResponse({'error': 'argument "sid" not found!'})
-        print('Deleting')
         classSection = ClassSection.GetByID(pk)
-        classSection.RemoveStudent(request.POST.get("sid"))  # type: ignore
+        classSection.RemoveStudent(data['sid'])  # type: ignore
         return JsonResponse({'status': 'OK', 'work': f'Removed {request.POST.get("sid")} from {pk}'}) 
 
 @api_view(['GET'])

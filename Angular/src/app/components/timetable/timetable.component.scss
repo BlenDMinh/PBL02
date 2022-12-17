@@ -1,62 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  padding-bottom: 40px;
-  background-color: whitesmoke;
+  font-size: 62%;
 }
 
-.container {
-  padding: 3%;
-  margin-top: 15px;
-  border-radius: 25px;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+.custom-container {
+  width: 80%;
+  margin: auto;
+  font-size: 1rem;
 }
 
-.height {
-  line-height: 36px;
-  min-height: 36px;
-  height: 36px;
-}
-
-thead {
-  text-align: center;
-}
-
-.center {
-  text-align: center !important;
-}
-
-.tbreak {
-  background-color: #4649ff;
-}
-
-.tbreak > th {
-  color: #fff;
-  text-align: center;
-}
-
-.color {
-  background-color: #4649ff;
-  color: #fff;
-}
-
-.week > .table {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-  overflow: hidden;
-  border-radius: 1.25em;
+.styled-table {
   border-collapse: collapse;
-}
-
-.today > .table {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  margin: 25px 0;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  border-radius: 16px;
 }
 
-.onSubject {
-  overflow: auto;
-  background-color: #6265f7;
-  color: #fff !important;
-  border-radius: 10px;
-  font-size: 11;
-  font-weight: 400;
-  border: #4649ff double;
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table .setw {
+  width: calc(100% / 5);
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
 }

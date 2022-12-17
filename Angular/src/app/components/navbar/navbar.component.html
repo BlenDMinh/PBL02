@@ -2,13 +2,21 @@
   <header class="custom-header">
     <div class="custom-container">
       <div class="custom-logo">
-        <img src="./assets/logo.png" alt="" />
+        <a routerLink="/main">
+          <img src="./assets/logo.png" alt="" />
+        </a>
       </div>
 
       <nav class="custom-nav">
-        <li><a routerLink="/main">Trang chủ</a></li>
-        <li><a routerLink="/classSign">Đăng ký học</a></li>
-        <li><a routerLink="/timetable">Thời khoá biểu</a></li>
+        <li *ngIf="this.loginName !== undefined">
+          <a routerLink="/classSign">Đăng ký học</a>
+        </li>
+        <li *ngIf="this.loginName !== undefined">
+          <a routerLink="/timetable">Thời khoá biểu</a>
+        </li>
+        <li *ngIf="this.loginName === undefined">
+          <h3>Hệ thống đăng ký tín chỉ</h3>
+        </li>
       </nav>
 
       <button

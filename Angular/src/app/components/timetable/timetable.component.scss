@@ -19,7 +19,7 @@ body {
 
 .styled-table {
   border-collapse: collapse;
-  margin: 25px 0;
+  margin: 12px 0 52px 0;
   min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -58,6 +58,10 @@ body {
 
 .active {
   background-color: #ffc0cb;
+}
+
+.add {
+  background-color: rgb(238, 238, 238, 0.9);
 }
 
 th p {

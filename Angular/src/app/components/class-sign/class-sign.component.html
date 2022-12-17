@@ -18,7 +18,7 @@
 
       <tbody class="table-group-divider align-middle">
         <tr *ngIf="classes.length == 0; else show_1">
-          <td>Chưa đăng ký lớp học phần nào</td>
+          <td colspan="6" class="text-center">Chưa đăng ký lớp học phần nào</td>
         </tr>
         <ng-template #show_1>
           <tr *ngFor="let c of classes; index as i">
@@ -58,7 +58,9 @@
 
       <tbody class="table-group-divider align-middle">
         <tr *ngIf="newClasses.length == 0; else show_2">
-          <td>Không có lớp học phần có thể đăng ký</td>
+          <td colspan="6" class="text-center">
+            Không có lớp học phần có thể đăng ký
+          </td>
         </tr>
         <ng-template #show_2>
           <tr *ngFor="let c of newClasses; index as i">

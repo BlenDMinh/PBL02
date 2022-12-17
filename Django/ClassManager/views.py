@@ -22,10 +22,10 @@ def Class(request, pk):
     
     elif request.method == 'POST':
         data = json.loads(request.body)
-        if 'sid' not in data:
+        if 'body' not in data and 'sid' not in data['body']:
             return JsonResponse({'error': 'argument "sid" not found!'})
         classSection = ClassSection.GetByID(pk)
-        classSection.AddStudent(data['sid'])  # type: ignore
+        classSection.AddStudent(data['body']['sid'])  # type: ignore
         return JsonResponse({'status': 'OK', 'work': f'Added {request.POST.get("sid")} into {pk}'})
     
     elif request.method == 'DELETE':

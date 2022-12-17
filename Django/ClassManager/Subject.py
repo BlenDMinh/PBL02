@@ -29,6 +29,8 @@ class Subject(IObject):
     
     @staticmethod
     def FromRecord(record):
+        if record == None:
+            raise RecordException(f"Record is empty")
         for i in range(len(record)):
             ele = record[i]
             if ele == None:

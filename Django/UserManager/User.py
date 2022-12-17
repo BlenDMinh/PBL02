@@ -135,6 +135,8 @@ class Student(User, IObject):
 
     @staticmethod
     def FromRecord(record) -> 'Student':
+        if record == None:
+            raise RecordException(f"Record is empty")
         for i in range(len(record)):
             ele = record[i]
             if ele == None:
@@ -203,6 +205,8 @@ class Teacher(User, IObject):
     
     @staticmethod
     def FromRecord(record) -> 'Teacher':
+        if record == None:
+            raise RecordException(f"Record is empty")
         for i in range(len(record)):
             ele = record[i]
             if ele == None:

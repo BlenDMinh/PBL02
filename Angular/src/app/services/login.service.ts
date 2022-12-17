@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Student } from '../models/student';
+import { BASE_URL } from './settings';
 
 @Injectable({
   providedIn: 'root',
@@ -17,7 +18,7 @@ export class LoginService {
     };
   }
 
-  private baseURL = `http://127.0.0.1:8000/api/user`;
+  private baseURL = BASE_URL + `/api/user`;
 
   getToken(id: string, password: string): Observable<any> {
     const url = `${this.baseURL}/login?id=${id}&password=${password}`;

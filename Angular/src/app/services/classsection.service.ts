@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Class } from '../models/class';
 import { Student } from '../models/student';
+import { BASE_URL } from './settings';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,7 @@ export class ClasssectionService {
     };
   }
 
-  private baseURL = `http://127.0.0.1:8000/api/classsection`;
+  private baseURL = BASE_URL + `/api/classsection`;
 
   getClasses(): Observable<Class[]> {
     return this.http

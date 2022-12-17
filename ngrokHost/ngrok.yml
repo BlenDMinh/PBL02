@@ -1,0 +1,9 @@
+authtoken: 1ldnOGEMm7doemwMqRKikgPANvN_7wJjqog9Ywogxjf4nTgLh
+region: ap
+tunnels:
+    frontend:
+        proto: http
+        addr: 8080
+    backend:
+        proto: http
+        addr: 8000

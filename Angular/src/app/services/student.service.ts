@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Student } from '../models/student';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { BASE_URL } from './settings';
 
 @Injectable({
   providedIn: 'root',
@@ -17,7 +18,7 @@ export class StudentService {
     };
   }
 
-  private baseURL = `http://127.0.0.1:8000/api/user/student/`;
+  private baseURL = BASE_URL + `/api/user/student/`;
 
   getStudents(): Observable<Student[]> {
     return this.http

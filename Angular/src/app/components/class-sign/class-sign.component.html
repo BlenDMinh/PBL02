@@ -17,23 +17,28 @@
       </thead>
 
       <tbody class="table-group-divider align-middle">
-        <tr *ngFor="let c of classes; index as i">
-          <td class="text-center">{{ i + 1 }}</td>
-          <td class="text-center">{{ c.sectionID }}</td>
-          <td>{{ c.subjectName }}</td>
-          <td>{{ c.teacherName }}</td>
-          <td class="text-center">{{ c.current }}/{{ c.capacity }}</td>
-          <td class="text-center">
-            <button
-              class="button-33"
-              role="button"
-              routerLink="/classSign"
-              (click)="deleteClassSection(c, this.loginUser)"
-            >
-              Huỷ
-            </button>
-          </td>
+        <tr *ngIf="classes.length == 0; else show_1">
+          <td>Chưa đăng ký lớp học phần nào</td>
         </tr>
+        <ng-template #show_1>
+          <tr *ngFor="let c of classes; index as i">
+            <td class="text-center">{{ i + 1 }}</td>
+            <td class="text-center">{{ c.sectionID }}</td>
+            <td>{{ c.subjectName }}</td>
+            <td>{{ c.teacherName }}</td>
+            <td class="text-center">{{ c.current }}/{{ c.capacity }}</td>
+            <td class="text-center">
+              <button
+                class="button-33"
+                role="button"
+                routerLink="/classSign"
+                (click)="deleteClassSection(c, this.loginUser)"
+              >
+                Huỷ
+              </button>
+            </td>
+          </tr>
+        </ng-template>
       </tbody>
     </table>
 
@@ -52,23 +57,28 @@
       </thead>
 
       <tbody class="table-group-divider align-middle">
-        <tr *ngFor="let c of newClasses; index as i">
-          <td class="text-center">{{ i + 1 }}</td>
-          <td class="text-center">{{ c.sectionID }}</td>
-          <td>{{ c.subjectName }}</td>
-          <td>{{ c.teacherName }}</td>
-          <td class="text-center">{{ c.current }}/{{ c.capacity }}</td>
-          <td class="text-center">
-            <button
-              class="button-33"
-              role="button"
-              routerLink="/classSign"
-              (click)="addClassSection(c, this.loginUser)"
-            >
-              Đăng ký
-            </button>
-          </td>
+        <tr *ngIf="newClasses.length == 0; else show_2">
+          <td>Không có lớp học phần có thể đăng ký</td>
         </tr>
+        <ng-template #show_2>
+          <tr *ngFor="let c of newClasses; index as i">
+            <td class="text-center">{{ i + 1 }}</td>
+            <td class="text-center">{{ c.sectionID }}</td>
+            <td>{{ c.subjectName }}</td>
+            <td>{{ c.teacherName }}</td>
+            <td class="text-center">{{ c.current }}/{{ c.capacity }}</td>
+            <td class="text-center">
+              <button
+                class="button-33"
+                role="button"
+                routerLink="/classSign"
+                (click)="addClassSection(c, this.loginUser)"
+              >
+                Đăng ký
+              </button>
+            </td>
+          </tr>
+        </ng-template>
       </tbody>
     </table>
   </div>

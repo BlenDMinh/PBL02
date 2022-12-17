@@ -18,6 +18,7 @@ export class ClassSignComponent implements OnInit {
   ) {}
 
   classes: Class[] = [];
+  newClasses: Class[] = [];
 
   ngOnInit(): void {
     this.loginService.loginByToken().subscribe((student) => {
@@ -31,7 +32,18 @@ export class ClassSignComponent implements OnInit {
         .subscribe((data) => {
           this.classes = data;
         });
+
+      this.classSectionService
+        .getNewClasses(this.loginUser['studentId'])
+        .subscribe((data) => {
+          this.newClasses = data;
+        });
     });
+  }
+
+  addClassSection(section: Class, student: Student): void {
+    this.classSectionService.addClass(section, student);
+    location.replace('/classSign');
   }
 
   deleteClassSection(section: Class, student: Student): void {

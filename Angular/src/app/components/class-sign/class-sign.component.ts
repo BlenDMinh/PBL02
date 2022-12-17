@@ -29,9 +29,17 @@ export class ClassSignComponent implements OnInit {
 
       this.classSectionService
         .getClassesAttendedByStudent(this.loginUser['studentId'])
-        .subscribe((data) => {
-          this.classes = data;
-        });
+        .subscribe((data) =>
+          (this.classes = data).sort((n1, n2) => {
+            if (n1.sectionID > n2.sectionID) {
+              return 1;
+            }
+            if (n1.sectionID < n2.sectionID) {
+              return -1;
+            }
+            return 0;
+          })
+        );
 
       this.classSectionService
         .getNewClasses(this.loginUser['studentId'])

@@ -57,7 +57,6 @@ export class TimetableComponent implements OnInit {
             for (let j = 1; j < duration; j++)
               this.table[start + j][dayOfWeek] = ['#', 0];
           }
-          // console.log(this.table);
         });
     });
   }

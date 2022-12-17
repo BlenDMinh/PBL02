@@ -41,13 +41,25 @@ body {
 }
 
 .styled-table .setw {
-  width: calc(100% / 5);
+  width: calc((100% - 5%) / 7);
 }
 
-.styled-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
-}
-
-.styled-table tbody tr:last-of-type {
+.styled-table tbody:last-of-type tr:last-of-type {
   border-bottom: 2px solid #009879;
+}
+
+.styled-table .setw-5 {
+  width: 5%;
+}
+
+.styled-table .tbreak {
+  background-color: #cfeed6;
+}
+
+.active {
+  background-color: #ffc0cb;
+}
+
+th p {
+  font-weight: 500;
 }

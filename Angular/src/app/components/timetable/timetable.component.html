@@ -2,82 +2,21 @@
   <app-navbar [loginName]="this.loginUser.name"></app-navbar>
 
   <div class="custom-container">
-    <h4>Lịch học hôm nay</h4>
+    <h3>Thời khoá biểu theo học phần đã đăng ký</h3>
 
-    <table
-      class="table table-bordered styled-table"
-      *ngFor="let j of [0, 5, 10]"
-    >
+    <table class="table table-bordered styled-table text-center align-middle">
       <thead>
-        <tr class="text-center">
-          <td
-            scope="row"
-            *ngFor="let i of [j + 1, j + 2, j + 3, j + 4, j + 5]"
-            class="setw"
-          >
-            {{ i }}
-          </td>
-        </tr>
-      </thead>
-
-      <tbody>
         <tr>
-          <ng-container *ngFor="let col of [j, j + 1, j + 2, j + 3, j + 4]">
-            <ng-container
-              *ngIf="
-                this.table[col] != undefined &&
-                  this.table[col][this.today.getDay() - 1] != undefined;
-                else blank
-              "
-            >
-              <ng-container
-                *ngIf="
-                  this.table[col][this.today.getDay() - 1][1] == 0;
-                  else content
-                "
-              ></ng-container>
-              <ng-template #content>
-                <th
-                  scope="col"
-                  class="align-middle text-center"
-                  [colSpan]="this.table[col][this.today.getDay() - 1][1]"
-                >
-                  {{ this.table[col][this.today.getDay() - 1][0] }}
-                </th>
-              </ng-template>
-            </ng-container>
-            <ng-template #blank>
-              <td>&nbsp;</td>
-            </ng-template>
-          </ng-container>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="week custom-container">
-    <table class="table table-striped table-bordered table-sm">
-      <thead>
-        <tr class="color">
-          <th scope="col" class="col align-middle text-break">Thời gian</th>
-          <th scope="col" class="col align-middle">Tiết</th>
-          <th
-            scope="col"
-            class="col align-middle"
-            *ngFor="let i of [2, 3, 4, 5, 6, 7, 8]"
-          >
+          <th scope="col" class="setw-5">Tiết</th>
+          <th scope="col" class="setw" *ngFor="let i of [2, 3, 4, 5, 6, 7, 8]">
             {{ i }}
           </th>
         </tr>
       </thead>
-      <tbody>
-        <tr *ngFor="let row of [0, 1, 2, 3, 4]">
-          <th scope="col" class="col align-middle text-break center">
-            {{ row + 7 }}:00 - {{ row + 7 }}:50
-          </th>
-          <th scope="col" class="align-middle text-break center">
-            {{ row + 1 }}
-          </th>
+
+      <tbody *ngFor="let j of [0, 5, 10]">
+        <tr *ngFor="let row of [j, j + 1, j + 2, j + 3, j + 4]">
+          <th scope="col">{{ row + 1 }}</th>
           <ng-container *ngFor="let col of [0, 1, 2, 3, 4, 5, 6]">
             <ng-container
               *ngIf="
@@ -91,96 +30,34 @@
               ></ng-container>
               <ng-template #content>
                 <th
+                  *ngIf="col == (this.today.getDay() - 1 + 7) % 7; else other"
                   scope="col"
-                  class="onSubject align-middle text-break center"
                   [rowSpan]="this.table[row][col][1]"
+                  class="active"
                 >
                   {{ row + 7 }}:00 -
                   {{ this.table[row][col][1] + row + 6 }}:50<br />
-                  {{ this.table[row][col][0] }}
+                  <p>{{ this.table[row][col][0] }}</p>
                 </th>
+
+                <ng-template #other>
+                  <th scope="col" [rowSpan]="this.table[row][col][1]">
+                    {{ row + 7 }}:00 -
+                    {{ this.table[row][col][1] + row + 6 }}:50<br />
+                    <p>{{ this.table[row][col][0] }}</p>
+                  </th>
+                </ng-template>
               </ng-template>
             </ng-container>
+
             <ng-template #blank>
-              <th scope="col" class="align-middle text-break center">&nbsp;</th>
+              <th scope="col">&nbsp;</th>
             </ng-template>
           </ng-container>
         </tr>
-        <tr class="tbreak">
-          <th colspan="9">Nghỉ giải lao</th>
-        </tr>
-        <tr *ngFor="let row of [5, 6, 7, 8, 9]">
-          <th scope="col" class="align-middle text-break center">
-            {{ row + 7 }}:30 - {{ row + 8 }}:20
-          </th>
-          <th scope="col" class="align-middle text-break center">
-            {{ row + 1 }}
-          </th>
-          <ng-container *ngFor="let col of [0, 1, 2, 3, 4, 5, 6]">
-            <ng-container
-              *ngIf="
-                this.table[row] != undefined &&
-                  this.table[row][col] != undefined;
-                else blank
-              "
-            >
-              <ng-container
-                *ngIf="this.table[row][col][1] == 0; else content"
-              ></ng-container>
-              <ng-template #content>
-                <th
-                  scope="col"
-                  class="onSubject align-middle text-break center"
-                  [rowSpan]="this.table[row][col][1]"
-                >
-                  {{ row + 7 }}:30 -
-                  {{ this.table[row][col][1] + row + 7 }}:20<br />
-                  {{ this.table[row][col][0] }}
-                </th>
-              </ng-template>
-            </ng-container>
-            <ng-template #blank>
-              <th scope="col" class="align-middle text-break center">&nbsp;</th>
-            </ng-template>
-          </ng-container>
-        </tr>
-        <tr class="tbreak">
-          <th colspan="9">Nghỉ giải lao</th>
-        </tr>
-        <tr *ngFor="let row of [10, 11, 12, 13, 14]">
-          <th scope="col" class="align-middle text-break center">
-            {{ row + 8 }}:00 - {{ row + 8 }}:50
-          </th>
-          <th scope="col" class="align-middle text-break center">
-            {{ row + 1 }}
-          </th>
-          <ng-container *ngFor="let col of [0, 1, 2, 3, 4, 5, 6]">
-            <ng-container
-              *ngIf="
-                this.table[row] != undefined &&
-                  this.table[row][col] != undefined;
-                else blank
-              "
-            >
-              <ng-container
-                *ngIf="this.table[row][col][1] == 0; else content"
-              ></ng-container>
-              <ng-template #content>
-                <th
-                  scope="col"
-                  class="onSubject align-middle text-break center"
-                  [rowSpan]="this.table[row][col][1]"
-                >
-                  {{ row + 8 }}:00 -
-                  {{ this.table[row][col][1] + row + 7 }}:50<br />
-                  {{ this.table[row][col][0] }}
-                </th>
-              </ng-template>
-            </ng-container>
-            <ng-template #blank>
-              <th scope="col" class="align-middle text-break center">&nbsp;</th>
-            </ng-template>
-          </ng-container>
+
+        <tr *ngIf="j != 10" class="tbreak">
+          <th colspan="9">&nbsp;</th>
         </tr>
       </tbody>
     </table>

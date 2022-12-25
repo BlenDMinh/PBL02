@@ -17,8 +17,11 @@ export class ClassSignComponent implements OnInit {
     private classSectionService: ClasssectionService
   ) {}
 
+  timetable = new Array<boolean>(7 * 15);
+
   classes: Class[] = [];
   newClasses: Class[] = [];
+  timetableConflict: boolean[] = [];
 
   ngOnInit(): void {
     this.loginService.loginByToken().subscribe((student) => {
@@ -45,6 +48,21 @@ export class ClassSignComponent implements OnInit {
         .getNewClasses(this.loginUser['studentId'])
         .subscribe((data) => {
           this.newClasses = data;
+
+          this.classes.forEach(element => {
+            for(let i = element.startTime; i <= element.endTime; i++)
+              this.timetable[i] = true;
+          });
+          this.timetableConflict = new Array<boolean>(this.newClasses.length);
+          for(let i = 0; i < this.newClasses.length; i++) {
+            let flag = false;
+            for(let j = this.newClasses[i].startTime; j <= this.newClasses[i].endTime; j++)
+              if(this.timetable[j]) {
+                flag = true;
+                break;
+              }
+            this.timetableConflict[i] = flag;
+          }
         });
     });
   }

@@ -87,7 +87,7 @@
               {{ (c.endTime % 15) + 1 | number : "1.0-0" }}
             </td>
             <td class="text-center">{{ c.current }}/{{ c.capacity }}</td>
-            <td class="text-center">
+            <td class="text-center" *ngIf="!this.timetableConflict[i]; else timeConflict">
               <button
                 class="button-33"
                 role="button"
@@ -97,6 +97,11 @@
                 Đăng ký
               </button>
             </td>
+            <ng-template #timeConflict>
+              <td>
+                Trùng TKB
+              </td>
+            </ng-template>
           </tr>
         </ng-template>
       </tbody>

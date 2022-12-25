@@ -11,6 +11,7 @@
           <th scope="col">Mã lớp học phần</th>
           <th scope="col">Tên lớp học phần</th>
           <th scope="col">Giảng viên</th>
+          <th scope="col">Lịch học</th>
           <th scope="col">Đã đăng ký</th>
           <th scope="col">&nbsp;</th>
         </tr>
@@ -26,6 +27,14 @@
             <td class="text-center">{{ c.sectionID }}</td>
             <td>{{ c.subjectName }}</td>
             <td>{{ c.teacherName }}</td>
+            <td class="text-center">
+              Thứ
+              {{
+                c.startTime / 15 - ((c.startTime / 15) % 1) + 2
+                  | number : "1.0-0"
+              }}; Tiết {{ (c.startTime % 15) + 1 | number : "1.0-0" }} -
+              {{ (c.endTime % 15) + 1 | number : "1.0-0" }}
+            </td>
             <td class="text-center">{{ c.current }}/{{ c.capacity }}</td>
             <td class="text-center">
               <button
@@ -51,6 +60,7 @@
           <th scope="col">Mã lớp học phần</th>
           <th scope="col">Tên lớp học phần</th>
           <th scope="col">Giảng viên</th>
+          <th scope="col">Lịch học</th>
           <th scope="col">Đã đăng ký</th>
           <th scope="col">&nbsp;</th>
         </tr>
@@ -68,6 +78,14 @@
             <td class="text-center">{{ c.sectionID }}</td>
             <td>{{ c.subjectName }}</td>
             <td>{{ c.teacherName }}</td>
+            <td class="text-center">
+              Thứ
+              {{
+                c.startTime / 15 - ((c.startTime / 15) % 1) + 2
+                  | number : "1.0-0"
+              }}; Tiết {{ (c.startTime % 15) + 1 | number : "1.0-0" }} -
+              {{ (c.endTime % 15) + 1 | number : "1.0-0" }}
+            </td>
             <td class="text-center">{{ c.current }}/{{ c.capacity }}</td>
             <td class="text-center">
               <button

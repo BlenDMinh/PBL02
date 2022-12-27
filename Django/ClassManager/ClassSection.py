@@ -74,11 +74,11 @@ class ClassSection(IObject):
     @staticmethod
     def FromRecord(record):
         if record == None:
-            raise RecordException(f"Record is empty")
+            raise RecordException(f"Record for ClassSection is empty")
         for i in range(len(record)):
             ele = record[i]
             if ele == None:
-                raise RecordException(f"Element {i} of Student record is None or Empty")
+                raise RecordException(f"Element {i} of ClassSection record is None or Empty\n" + "Record for ClassSection: " + str(record))
         sectionID = record[0]
         from Database.TeacherDatabase import TeacherDatabase
         from Database.SubjectDatabase import SubjectDatabase

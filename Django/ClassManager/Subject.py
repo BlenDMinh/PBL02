@@ -30,11 +30,11 @@ class Subject(IObject):
     @staticmethod
     def FromRecord(record):
         if record == None:
-            raise RecordException(f"Record is empty")
+            raise RecordException(f"Record for Subject is empty")
         for i in range(len(record)):
             ele = record[i]
             if ele == None:
-                raise RecordException(f"Element {i} of Student record is None or Empty")
+                raise RecordException(f"Element {i} of Subject record is None or Empty")
         subjectID = record[0]
         subjectName = record[1]
         subject = Subject(subjectID, subjectName)

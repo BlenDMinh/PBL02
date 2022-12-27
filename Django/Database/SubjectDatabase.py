@@ -2,9 +2,11 @@ from Database import Database #type: ignore
 from Database.BaseDatabase import BaseDatabase
 from ClassManager.Subject import Subject
 
+from collections import OrderedDict
+
 class SubjectDatabase(BaseDatabase):
     
-    _loaded = dict()
+    _loaded = OrderedDict()
     # _changes = []
     
     @classmethod

@@ -2,9 +2,11 @@ from Database import Database  # type: ignore
 from Database.BaseDatabase import BaseDatabase
 from UserManager.User import Teacher
 
+from collections import OrderedDict
+
 class TeacherDatabase(BaseDatabase):
     
-    _loaded = dict()
+    _loaded = OrderedDict()
     __classes_loaded = []
     # _changes = []
     

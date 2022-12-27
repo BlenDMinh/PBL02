@@ -1,10 +1,11 @@
 from abc import ABC, abstractmethod, abstractclassmethod
 from Interface import IObject
 from Exception import RecordException
+from collections import OrderedDict
 
 class BaseDatabase(ABC):
     
-    _loaded = dict()
+    _loaded = OrderedDict()
     # _changes = []
     
     @classmethod
@@ -14,8 +15,8 @@ class BaseDatabase(ABC):
             if key not in cls._loaded:
                 try:
                     cls.FetchFromDatabase(key, True)
-                except RecordException:
-                    pass
+                except RecordException as e:
+                    print(e.message)
         return list(cls._loaded.values())
     
     @classmethod

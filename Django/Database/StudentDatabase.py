@@ -4,9 +4,11 @@ from Database.Student_ClassSectionDatabase import Student_ClassSectionDatabase
 from Database.ClassSectionDatabase import ClassSectionDatabase
 from UserManager.User import Student
 
+from collections import OrderedDict
+
 class StudentDatabase(BaseDatabase):
     
-    _loaded = dict()
+    _loaded = OrderedDict()
     __classes_loaded = []
     # _changes = []
     
